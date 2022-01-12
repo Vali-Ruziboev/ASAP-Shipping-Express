@@ -1,10 +1,13 @@
 const NavBar = () => {
     return (  
-        <div>
-            <h1>ASAP SHIPPING EXPRESS</h1>
-            
-        </div>
+        <lu>
+            <li>Get An Instant Quote</li>
+            <li>About Us</li>
+            <li>FAQs</li>
+            <li>Step-By-Step Guide</li>
+            <li>Contact Us</li>
+        </lu>
     );
 }
- 
+
 export default NavBar;
