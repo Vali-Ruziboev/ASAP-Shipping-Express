@@ -5,9 +5,37 @@ header{
   /* background-size: cover; */
   /* background-position: center; */
 }
-.quote-form{
-  margin:0 auto;
+
+.contact-us{
+  text-align: center;
+}
+.contact-us div{
+  display: inline-block;
+  margin: 0 1rem;
+  text-align: center;
   justify-content: center;
+}
+.contact-us svg{
+  width: 1em;
+  vertical-align: middle;
+  margin-right: .3rem;
+}
+.contact-us span{
+  font-size: 0.8em;
+  vertical-align: middle;
+}
+.navbar-wrapper {
+  display: flex;
+  justify-content: space-around;
+}
+
+.navbar-wrapper h1{
+  font-size: 1em;
+}
+.quote-form{
+  margin:1rem auto;
+  justify-content: center;
+  width:90%
 }
 .quote-form h1{
   font-size: 1em;
