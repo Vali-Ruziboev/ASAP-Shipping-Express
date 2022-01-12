@@ -5,3 +5,10 @@ header{
   /* background-size: cover; */
   /* background-position: center; */
 }
+.quote-form{
+  margin:0 auto;
+  justify-content: center;
+}
+.quote-form h1{
+  font-size: 1em;
+}

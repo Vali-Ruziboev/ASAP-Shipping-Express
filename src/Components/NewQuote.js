@@ -1,6 +1,6 @@
 const NewQuote = () => {
     return ( 
-        <form>
+        <form class='quote-form'>
             <h1>GET A FREE QUOTE NOW</h1>
             <p>(929) 419-5297</p>
             <span className='left-hand-of-or'></span>
