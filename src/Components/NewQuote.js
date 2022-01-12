@@ -3,9 +3,11 @@ const NewQuote = () => {
         <form class='quote-form'>
             <h1>GET A FREE QUOTE NOW</h1>
             <p>(929) 419-5297</p>
-            <span className='left-hand-of-or'></span>
-            <span>OR</span>
-            <span className='right-hand-of-or'></span>
+            <div className="or">
+                <span className='left-hand-of-or'></span>
+                <span>OR</span>
+                <span className='right-hand-of-or'></span>
+            </div>
             <label htmlFor="zip-from">SHIP FROM:</label>
             <input type="text" name='zip-from' placeholder='ZIP code or City' />
             <label htmlFor="zip-to">SHIP TO:</label>
