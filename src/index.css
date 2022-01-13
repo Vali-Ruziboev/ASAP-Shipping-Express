@@ -1,4 +1,10 @@
 :root{
+  /* prime */
+  --white-bg:rgb(255, 255, 255);
+  --streight-shadow:rgba(122, 122, 122, 0.5);
+  /* mirror background */
+  --mirror-bg:rgba(255, 255, 255, .5);
+  /* pictures */
   --car-carrier1-desktop:url(Pictures/Car_Carrier1-desktop.jpg);
   --car-carrier1-mobile:url(Pictures/Car_Carrier1-mobile.jpg);
   --car-carrier2-desktop:url(Pictures/Car_Carrier2-desktop.jpg);
