@@ -33,12 +33,18 @@ header{
   font-size: 1em;
 }
 .quote-form{
-  margin:1rem auto;
+  margin:3rem auto;
   justify-content: center;
-  width:90%
+  width:90%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 .quote-form h1{
   font-size: 1em;
+}
+.quote-form label{
+  align-self: flex-start;
 }
 .popup-wrapper{
   display: flex;
