@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import NavBar from "./NavBar";
-import NewQuote from "./NewQuote";
+import NewQuote from "./NewQuoteForm/NewQuote";
 import { motion, AnimatePresence } from "framer-motion";
 
 const Header = () => {
