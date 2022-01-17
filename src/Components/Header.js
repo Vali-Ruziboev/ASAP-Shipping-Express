@@ -3,6 +3,7 @@ import NavBar from "./NavBar";
 import NewQuote from "./NewQuoteForm/NewQuote";
 import { motion, AnimatePresence } from "framer-motion";
 
+
 const Header = () => {
     const [isMobile, setIsMobile] = useState(false);
     const [isMenuClicked, setIsMenuClicked] = useState(false);
@@ -43,8 +44,8 @@ const Header = () => {
                     
                 </div>}</AnimatePresence>
             </div>
-
             <NewQuote />
+                  
         </header>
     );
 }
