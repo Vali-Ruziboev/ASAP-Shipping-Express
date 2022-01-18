@@ -1,7 +1,8 @@
-import { useState } from "react"
+import { useState,useEffect } from "react"
 import {BrowserRouter as Router, Route, Switch, Link } from 'react-router-dom'
 import ContactInformation from "./ContactInformation"
 import QuoteSubmitted from "./QuoteSubmitted"
+import useFetch from "./useFetch"
 import VehicleInformation from "./VehicleInformation"
 const NewQuote = () => {
     const [shipFrom, setShipFrom] = useState('')
@@ -15,14 +16,37 @@ const NewQuote = () => {
     const [number, setNumber] = useState('')
     const [email, setEmail] = useState('')
     const [date, setDate] = useState('')
+    const [isPending, setIsPending] = useState(false)
+    const [error, setError] = useState(false)
+    const [data, setData] = useState(null)
     const handleSubmit = (e)=>{
         console.log(shipFrom, shipTo)
         e.preventDefault()
     }
+    // console.log(useFetch("Elk Grove Village,IL"))
+ 
+
+    const HandleOnChange = (e)=>{
+        setShipFrom(e.target.value)
+        // const {data, isPending, error} = useFetch(shipTo)
+        // if(!data&&e.target.value.length<6){
+        //     setIsPending(true)
+        //     setError(false)
+        // }else if(!data&&e.target.value.length>=6){
+        //     setError(true)
+        // }else{
+        //     setIsPending(false)
+        //     setError(false)
+        //     setData(data)
+        // }
+
+
+    }
+    
     return ( 
         <form onSubmit={(e)=>handleSubmit(e)} className='quote-form'>
             <h1>GET A FREE QUOTE NOW</h1>
-            <p>(929) 419-5297</p>
+            <a href="tel:(929) 419-5297">(929) 419-5297</a>
             <div  className="or">
                 <span className='left-hand-of-or'></span>
                 <span>OR</span>
@@ -32,7 +56,11 @@ const NewQuote = () => {
                 <Switch>
                     <Route exact path='/'>
                             <label htmlFor="zip-from">SHIP FROM:</label>
-                            <input type="text" name='zip-from' placeholder='ZIP code or City' value={shipFrom} onChange={(e)=>setShipFrom(e.target.value)} required/>
+                            <div className="zip-from">
+                                <input type="text" name='zip-from'  placeholder='ZIP code or City' value={shipFrom} onChange={(e)=>HandleOnChange(e)} required/>
+                                {isPending&&<p>Searching...</p>}
+                                {error&&<p>Could Not find the area by the given zipcode</p>}
+                            </div>
                             <label htmlFor="zip-to">SHIP TO:</label>
                             <input type="text" name='zip-to' placeholder='ZIP code or City' value={shipTo} onChange={(e)=>setShipTo(e.target.value)} required />
                             <Link to='/vehicle_information'><button>NEXT</button></Link>
