@@ -4,30 +4,40 @@ const useFetch = (zipcode) => {
     const [data, setData] = useState(null)
     const [isPending, setIsPending] = useState(true)
     const [error, setError] = useState(null)
+    const [isLimitUp, setIsLimitUp] = useState(false)
         useEffect(() => {
             const abortCont = new AbortController();
             fetch(url, {signal: abortCont.signal})
             .then(req=>{
-                if(!req.ok){
+                if(req.status===400){
                     throw Error('Data could not been fetched')
+                }else if(req.status ===404){
+                    throw Error('The zip code you provided was not found.')
+                }else if(req.status === 429){
+                    throw Error("Limit's up")
                 }
                 return req.json()
             })
             .then(data=>{
                 setIsPending(false)
+                setIsLimitUp(false)
                 setData(data)
                 setError(null)
             })
             .catch(err=>{
-                if(err.name = 'AbortError'){
+                if(err.name === 'AbortError'){
                     console.log('Fetch was Aborted!')
-                }else{
+                }else if(err.message==="Limit's up"){
+                    setIsLimitUp(true)
+                }
+                else{
+                    setIsLimitUp(false)
                     setIsPending(false)
                     setError(err.message)
                 }
             })
             return () => abortCont.abort()
         }, [zipcode]) 
-    return {data, isPending, error} 
+    return {data, isPending, error, isLimitUp} 
 }
 export default useFetch;

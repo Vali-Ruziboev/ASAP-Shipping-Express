@@ -70,3 +70,20 @@ li{
   list-style: none;
   cursor: pointer;
 }
+.input{
+  /* width: 100%; */
+  padding: 6px;
+  border-radius: 5px;
+  border:solid 1px grey;
+}
+.invalid{
+  border-color: red;
+}
+.invalid_input::after{
+  content: 'Invalid Input';
+  display: inline-block;
+  color: red;
+  margin-left: 90px;
+  text-align: end;
+
+}
