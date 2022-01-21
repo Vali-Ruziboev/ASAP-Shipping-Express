@@ -87,3 +87,6 @@ li{
   text-align: end;
 
 }
+.invalid-input-field{
+  color: red;
+}
