@@ -37,7 +37,7 @@ const useFetch = (zipcode) => {
                 }
             })
             return () => abortCont.abort()
-        }, [zipcode]) 
+        }, [url]) 
     return {data, isPending, error, isLimitUp} 
 }
 export default useFetch;
