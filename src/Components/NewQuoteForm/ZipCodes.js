@@ -59,15 +59,15 @@ const ZipCodes = ({ shipFrom, shipTo, setShipFrom, setShipTo }) => {
                 {isPendin&&<p>Searching...</p>}
                 {err&&<p>A zip code you provided was not found.</p>}
                 {data&&<p>{`${dat.city}, ${dat.state}, ${dat.zip_code}`}</p>}
-                <p className='invalid-input-field'>
+                <span className='invalid-input-field'>
                     {validator.message('zipcode', shipFrom, 'required')}
-                </p>
+                </span>
             </div>
             <label htmlFor="zip-to">SHIP TO:</label>
             <input type="text" name='zip-to' placeholder='ZIP code or City' value={shipTo} onChange={(e)=>setShipTo(e.target.value)} required />
-            <p className='invalid-input-field'>
+            <span className='invalid-input-field'>
                     {validator.message('zipcode', shipTo, 'required')}
-            </p>
+            </span>
             <button onClick={handleNext}>NEXT</button>
         </div>
     );

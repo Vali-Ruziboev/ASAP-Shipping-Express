@@ -5,9 +5,11 @@ import SimpleReactValidator from 'simple-react-validator'
 import useForceUpdate from 'use-force-update';
 const VehicleInformation = ({year, setYear, make, setMake, model, setModel, type, setType, isRunning, setIsRunning}) => {
     const [vehicleCount, setVehicleCount]=useState([1])
-    const [invalid, setInvalid] = useState(false)
     const handleVehicleCount = ()=>{
         setVehicleCount([...vehicleCount, 1])
+        setYear({...year,[vehicleCount.length]:''})
+        setMake({...make,[vehicleCount.length]:''})
+        setModel({...model,[vehicleCount.length]:''})
     }
     // refs
     const yes = useRef()
@@ -22,18 +24,10 @@ const VehicleInformation = ({year, setYear, make, setMake, model, setModel, type
     const forceUpdate = useForceUpdate()
     const history = useHistory()
 
-    const handleYear = (e)=>{
-        if((/\d/g).test(e)&&e>1000&&e<=currentYear){
-            console.log('valid input')
-            setYear(e)
-            setInvalid(false)
-        }else{
-            console.log('invalid input')
-            setYear(e)
-            setInvalid(true)
-        }
-        
+    const handleYear = (e, index)=>{
+            setYear({...year, [index]:e})
     }
+    console.log(year)
     useEffect(()=>{
         if(isRunning==='No'){
             no.current.checked = true
@@ -68,21 +62,21 @@ const VehicleInformation = ({year, setYear, make, setMake, model, setModel, type
                         <p>Vehicle:{index+1}</p>
                         <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 0 24 24" width="24px" fill="#000000"><path d="M0 0h24v24H0V0z" fill="none"/><path d="M19 6.41L17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41z"/></svg>
                     </div>}
-                    <label className={invalid?'invalid_input':''} htmlFor="year">Year</label>
-                    <input className={invalid?'invalid input':'input'} value={year} onChange={e=>handleYear(e.target.value)} type="text"  name='year' placeholder='Year' required/>
-                    <p className='invalid-input-field'>
-                        {validator.message('year', year, `required|min:1001,num|max:${currentYear},num`)}
-                    </p>
+                    <label  htmlFor="year">Year</label>
+                    <input  value={year[index]} onChange={(e)=>handleYear(e.target.value, index)} type="text"  name={`year_${index}`} placeholder='Year' required/>
+                    <span className='invalid-input-field'>
+                        {validator.message(`year`, year[index], `required|min:1886,num|max:${currentYear},num`)}
+                    </span>
                     <label htmlFor="make">Make</label>
-                    <input className='input' value={make} onChange={e=>setMake(e.target.value)} type="text"  name='make' placeholder='Make' required/>
-                    <p className='invalid-input-field'>
-                        {validator.message('make', make, 'required')}
-                    </p>
+                    <input  value={make[index]} onChange={e=>setMake({...make, [index]:e.target.value})} type="text"  name='make' placeholder='Make' required/>
+                    <span className='invalid-input-field'>
+                        {validator.message('make', make[index], 'required')}
+                    </span>
                     <label htmlFor="model">Model</label>
-                    <input className='input' value={model} onChange={e=>setModel(e.target.value)} type="text"  name='model' placeholder='Model' required/>
-                    <p className='invalid-input-field'>
+                    <input value={model[index]} onChange={e=>setModel({...model,[index]:e.target.value})} type="text"  name='model' placeholder='Model' required/>
+                    <span className='invalid-input-field'>
                         {validator.message('model', model, 'required')}
-                    </p>
+                    </span>
                     <p>Trailer Type:</p>
                     <label>
                         <input ref={open} onChange={e=>setType('Open')} type="radio" name='type' required/>Open
@@ -90,9 +84,9 @@ const VehicleInformation = ({year, setYear, make, setMake, model, setModel, type
                     <label >
                         <input ref={enclosed} onChange={e=>setType('Enclosed')} type="radio" name='type' required/>Enclosed
                     </label>
-                    <p className='invalid-input-field'>
+                    <span className='invalid-input-field'>
                         {validator.message('type', type, 'required')}
-                    </p>
+                    </span>
                     <p>Running?</p>
                     <label>
                         <input ref={yes} onChange={e=>setIsRunning('Yes')}  type="radio" name='running' required/>Yes
@@ -100,9 +94,9 @@ const VehicleInformation = ({year, setYear, make, setMake, model, setModel, type
                     <label>
                         <input ref={no} onChange={e=>setIsRunning('No')}  type="radio" name='running' required/>No
                     </label>
-                    <p className='invalid-input-field'>
+                    <span className='invalid-input-field'>
                         {validator.message('running', isRunning, 'required|alpha')}
-                    </p>
+                    </span>
                 </div>
             )
         })}
