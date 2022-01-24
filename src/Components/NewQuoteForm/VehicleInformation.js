@@ -4,18 +4,18 @@ import { useHistory } from 'react-router-dom'
 import SimpleReactValidator from 'simple-react-validator'
 import useForceUpdate from 'use-force-update';
 const VehicleInformation = ({year, setYear, make, setMake, model, setModel, type, setType, isRunning, setIsRunning}) => {
+    let is_running = document.getElementsByClassName('is_running')
+    let ship_type = document.getElementsByClassName('ship_type')
     const [vehicleCount, setVehicleCount]=useState([1])
     const handleVehicleCount = ()=>{
         setVehicleCount([...vehicleCount, 1])
         setYear({...year,[vehicleCount.length]:''})
         setMake({...make,[vehicleCount.length]:''})
         setModel({...model,[vehicleCount.length]:''})
+        setIsRunning({...isRunning, [vehicleCount.length]:'Yes'})
+        setType({...type, [vehicleCount.length]:'Open'})
     }
     // refs
-    const yes = useRef()
-    const no = useRef()
-    const open = useRef()
-    const enclosed = useRef()
     // getting current year
     const currentYear = new Date().getFullYear()
     // validator
@@ -27,21 +27,24 @@ const VehicleInformation = ({year, setYear, make, setMake, model, setModel, type
     const handleYear = (e, index)=>{
             setYear({...year, [index]:e})
     }
-    console.log(year)
+    console.log(isRunning)
     useEffect(()=>{
-        if(isRunning==='No'){
-            no.current.checked = true
-        }else{
-            setIsRunning('Yes')
-            yes.current.checked = true
+        for(let i=0;i<Object.keys(isRunning).length;i++){
+            if(isRunning[i]==='No'){
+                is_running[Object.keys(isRunning).length*i+i].checked = true
+            }else{
+                is_running[Object.keys(isRunning).length*i].checked = true
+            }
         }
-        if(type === "Enclosed"){
-            enclosed.current.checked = true
-        }else{
-            setType('Open')
-            open.current.checked = true
+        
+        for(let i=0;i<Object.keys(type).length;i++){
+            if(type[i] === "Enclosed"){
+                ship_type[Object.keys(type).length*i+i].checked = true
+            }else{
+                ship_type[Object.keys(type).length*i].checked = true
+            }
         }
-    },[])
+    },[vehicleCount])
     const handleNext =(e)=>{
         console.log(validator.allValid())
         if(validator.allValid()){
@@ -79,20 +82,20 @@ const VehicleInformation = ({year, setYear, make, setMake, model, setModel, type
                     </span>
                     <p>Trailer Type:</p>
                     <label>
-                        <input ref={open} onChange={e=>setType('Open')} type="radio" name='type' required/>Open
+                        <input className="ship_type" onChange={e=>setType('Open')} type="radio" name='type' required/>Open
                     </label>
                     <label >
-                        <input ref={enclosed} onChange={e=>setType('Enclosed')} type="radio" name='type' required/>Enclosed
+                        <input className="ship_type" onChange={e=>setType('Enclosed')} type="radio" name='type' required/>Enclosed
                     </label>
                     <span className='invalid-input-field'>
                         {validator.message('type', type, 'required')}
                     </span>
                     <p>Running?</p>
                     <label>
-                        <input ref={yes} onChange={e=>setIsRunning('Yes')}  type="radio" name='running' required/>Yes
+                        <input className='is_running' onChange={e=>setIsRunning('Yes')}  type="radio" name='running' required/>Yes
                     </label>
                     <label>
-                        <input ref={no} onChange={e=>setIsRunning('No')}  type="radio" name='running' required/>No
+                        <input className='is_running'  onChange={e=>setIsRunning('No')}  type="radio" name='running' required/>No
                     </label>
                     <span className='invalid-input-field'>
                         {validator.message('running', isRunning, 'required|alpha')}
