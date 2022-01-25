@@ -15,7 +15,6 @@ const VehicleInformation = ({year, setYear, make, setMake, model, setModel, type
         setIsRunning({...isRunning, [vehicleCount.length]:'Yes'})
         setType({...type, [vehicleCount.length]:'Open'})
     }
-    // refs
     // getting current year
     const currentYear = new Date().getFullYear()
     // validator
@@ -31,17 +30,17 @@ const VehicleInformation = ({year, setYear, make, setMake, model, setModel, type
     useEffect(()=>{
         for(let i=0;i<Object.keys(isRunning).length;i++){
             if(isRunning[i]==='No'){
-                is_running[Object.keys(isRunning).length*i+i].checked = true
+                is_running[2*i+i].checked = true
             }else{
-                is_running[Object.keys(isRunning).length*i].checked = true
+                is_running[2*i].checked = true
             }
         }
         
         for(let i=0;i<Object.keys(type).length;i++){
             if(type[i] === "Enclosed"){
-                ship_type[Object.keys(type).length*i+i].checked = true
+                ship_type[2*i+1].checked = true
             }else{
-                ship_type[Object.keys(type).length*i].checked = true
+                ship_type[2*i].checked = true
             }
         }
     },[vehicleCount])
@@ -54,6 +53,22 @@ const VehicleInformation = ({year, setYear, make, setMake, model, setModel, type
             forceUpdate()
         }
     }
+    const handleRemove = (index)=>{
+        console.log(Object.values(year)[2]);
+        if(year.length>index){
+            for(let i = index; i<year.length;i++){
+                let next_value = Object.values(year)[i+1]
+                setYear({...year,[i]:next_value})
+            }
+            delete year[index];
+        }
+        setVehicleCount(vehicleCount.slice(1))
+        
+        delete make[index];
+        delete model[index];
+        delete type[index];
+        delete isRunning[index];
+    }
     return ( 
     <>
         <p>Vehicle Information:</p>
@@ -63,7 +78,7 @@ const VehicleInformation = ({year, setYear, make, setMake, model, setModel, type
                     {index>0&&
                     <div className='indicator-and-close'>
                         <p>Vehicle:{index+1}</p>
-                        <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 0 24 24" width="24px" fill="#000000"><path d="M0 0h24v24H0V0z" fill="none"/><path d="M19 6.41L17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41z"/></svg>
+                        <svg onClick={()=>handleRemove(index)} xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 0 24 24" width="24px" fill="#000000"><path d="M0 0h24v24H0V0z" fill="none"/><path d="M19 6.41L17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41z"/></svg>
                     </div>}
                     <label  htmlFor="year">Year</label>
                     <input  value={year[index]} onChange={(e)=>handleYear(e.target.value, index)} type="text"  name={`year_${index}`} placeholder='Year' required/>
@@ -78,27 +93,27 @@ const VehicleInformation = ({year, setYear, make, setMake, model, setModel, type
                     <label htmlFor="model">Model</label>
                     <input value={model[index]} onChange={e=>setModel({...model,[index]:e.target.value})} type="text"  name='model' placeholder='Model' required/>
                     <span className='invalid-input-field'>
-                        {validator.message('model', model, 'required')}
+                        {validator.message('model', model[index], 'required')}
                     </span>
                     <p>Trailer Type:</p>
                     <label>
-                        <input className="ship_type" onChange={e=>setType('Open')} type="radio" name='type' required/>Open
+                        <input className="ship_type" onChange={e=>setType({...type,[index]:'Open'})} type="radio" name={`type_${index}`} required/>Open
                     </label>
                     <label >
-                        <input className="ship_type" onChange={e=>setType('Enclosed')} type="radio" name='type' required/>Enclosed
+                        <input className="ship_type" onChange={e=>setType({...type,[index]:'Enclosed'})} type="radio" name={`type_${index}`} required/>Enclosed
                     </label>
                     <span className='invalid-input-field'>
                         {validator.message('type', type, 'required')}
                     </span>
                     <p>Running?</p>
                     <label>
-                        <input className='is_running' onChange={e=>setIsRunning('Yes')}  type="radio" name='running' required/>Yes
+                        <input className='is_running' onChange={e=>setIsRunning({...isRunning,[index]:'Yes'})}  type="radio" name={`running_${index}`} required/>Yes
                     </label>
                     <label>
-                        <input className='is_running'  onChange={e=>setIsRunning('No')}  type="radio" name='running' required/>No
+                        <input className='is_running'  onChange={e=>setIsRunning({...isRunning,[index]:'No'})}  type="radio" name={`running_${index}`} required/>No
                     </label>
                     <span className='invalid-input-field'>
-                        {validator.message('running', isRunning, 'required|alpha')}
+                        {validator.message('running', isRunning, 'required')}
                     </span>
                 </div>
             )
