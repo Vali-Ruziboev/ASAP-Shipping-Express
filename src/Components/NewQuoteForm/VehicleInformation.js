@@ -54,20 +54,53 @@ const VehicleInformation = ({year, setYear, make, setMake, model, setModel, type
         }
     }
     const handleRemove = (index)=>{
-        console.log(Object.values(year)[2]);
-        if(year.length>index){
-            for(let i = index; i<year.length;i++){
-                let next_value = Object.values(year)[i+1]
-                setYear({...year,[i]:next_value})
+        const rs = new Promise(()=>{
+            if(Object.keys(year).length>index){
+                const pr = new Promise(()=>{
+                    for(let i = index; i<Object.keys(year).length-1;i++){
+                        let next_value = {...year}
+                        next_value[i] = Object.values(year)[i+1]
+                        return setYear(next_value)
+                    }
+                })
+                pr.then(()=>{
+                    let newObj1 = {...year}
+                    delete newObj1[Object.keys(year).length-1]
+                    return setYear(newObj1)
+                })
             }
-            delete year[index];
-        }
-        setVehicleCount(vehicleCount.slice(1))
+            if(Object.keys(isRunning).length>index){
+                const pr = new Promise(()=>{for(let i = index; i<Object.keys(isRunning).length-1;i++){
+                    let next_value = {...isRunning}
+                    next_value[i] = Object.values(isRunning)[i+1]
+                    return setIsRunning(next_value)
+                }})
+                pr.then(()=>{
+                    let newObj2 = {...isRunning}
+                    delete newObj2[Object.keys(isRunning).length-1]
+                    return setIsRunning(newObj2)
+                })
+            }
+            if(Object.keys(type).length>index){
+                const pr = new Promise(()=>{
+                    for(let i = index; i<Object.keys(type).length-1;i++){
+                    let next_value = {...type}
+                    next_value[i] = Object.values(type)[i+1]
+                    return setType(next_value)
+                }})
+                pr.then(()=>{
+                    let newObj3 = {...type}
+                    delete newObj3[Object.keys(type).length-1]
+                    return setType(newObj3)
+                })
+            }
+        })
+        rs.then(()=>setVehicleCount(vehicleCount.slice(1)))
         
-        delete make[index];
-        delete model[index];
-        delete type[index];
-        delete isRunning[index];
+        // delete make[index];
+        // delete model[index];
+        // delete type[index];
+        // delete isRunning[index];
     }
     return ( 
     <>
