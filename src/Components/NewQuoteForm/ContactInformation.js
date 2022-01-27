@@ -1,20 +1,46 @@
-import { useHistory, Link } from "react-router-dom";
-const ContactInformation = ({ name, setName, number, setNumber, email, setEmail, date, setDate }) => {
+import { useHistory } from "react-router-dom";
+import { useState, useEffect } from "react";
+import SimpleReactValidator from "simple-react-validator";
+import useForceUpdate from "use-force-update";
+import moment from "moment";
+const ContactInformation = ({ firstName, setFirstName, lastName, setLastName, number, setNumber, email, setEmail, date, setDate, validate, zipsValid }) => {
+    const [validator] = useState(new SimpleReactValidator())
+    const forceUpdate = useForceUpdate()
     const history = useHistory()
+    const handleSubmit = ()=>{
+        if(validator.allValid()){
+            history.push('/quote_submitted')
+        }else{
+            validator.showMessages()
+            forceUpdate()
+        }
+    }
     const previous = ()=>history.push('/vehicle_information')
+    useEffect(()=>{
+        if(validate.map(i=>i.some(j=>j==='')).some(t=>t===true)||zipsValid.some(i=>i==='')){
+            history.push('/')
+        }
+    },[])
     return ( 
         <div>
             <p>Contact Information</p>
-            <label htmlFor="name">Name</label>
-            <input type="text" name='name' placeholder='Enter full name' value={name} onChange={e=>setName(e.target.value)} required />
+            <label htmlFor="first_name">First Name</label>
+            <input type="text" name='first_name' placeholder='Enter first name' value={firstName} onChange={e=>setFirstName(e.target.value)} required />
+            <span className='invalid-input-field'>{validator.message('first name', firstName, 'required')}</span>
+            <label htmlFor="last_name">Last Name</label>
+            <input type="text" name='last_name' placeholder='Enter last name' value={lastName} onChange={e=>setLastName(e.target.value)} required />
+            <span className='invalid-input-field'>{validator.message('last name', lastName, 'required')}</span>
             <label htmlFor="number">Phone Number</label>
             <input type="text" placeholder='(555) 555-5555' name='number' value={number} onChange={e=>setNumber(e.target.value)} required />
+            <span className='invalid-input-field'>{validator.message('number', number, 'required|phone')}</span>
             <label htmlFor="email">Email Address</label>
             <input type="email" name="email" value={email} onChange={e=>setEmail(e.target.value)} required />
+            <span className='invalid-input-field'>{validator.message('email', email, 'required|email')}</span>
             <label htmlFor="date">Pickup Date</label>
-            <input type="date" name="date" value={date} onChange={e=>setDate(e.target.value)} required />
+            <input type="date" name="date" value={date[date]}  required />
+            <span className='invalid-input-field'>{validator.message('date', date && moment(date, 'YYYY-MM-DD'), [{after_or_equal: moment().add(1, 'month')}], 'date')}</span>
             <button onClick={previous}>Previous</button>
-            <Link to="/quote_submitted"><button>Submit</button></Link>
+            <button onClick={handleSubmit}>Submit</button>
 
         </div>
     );

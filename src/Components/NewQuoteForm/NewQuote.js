@@ -8,16 +8,21 @@ import ZipCodes from "./ZipCodes"
 const NewQuote = () => {
     const [shipFrom, setShipFrom] = useState('')
     const [shipTo, setShipTo] = useState('')
-    const [year, setYear] = useState({0:''})
-    const [make, setMake] = useState({0:''})
-    const [model, setModel] = useState({0:''})
-    const [type, setType] = useState({0:'Open'})
-    const [isRunning, setIsRunning] = useState({0:'Yes'})
-    const [name, setName] = useState('')
+    const [year, setYear] = useState([''])
+    const [make, setMake] = useState([''])
+    const [model, setModel] = useState([''])
+    const [type, setType] = useState(['Open'])
+    const [isRunning, setIsRunning] = useState(['Yes'])
+    const [firstName, setFirstName] = useState('')
+    const [lastName, setLastName] = useState('')
     const [number, setNumber] = useState('')
     const [email, setEmail] = useState('')
-    const [date, setDate] = useState('')
-
+    const [date, setDate] = useState({date:''})
+    const zipCodes = [shipFrom, shipTo]
+    const vehicleInfo = [year, make, model, type, isRunning]
+    console.log(date);
+    console.log(year)
+    console.log(make);
     const handleSubmit = (e)=>{
         console.log(shipFrom, shipTo)
         e.preventDefault()
@@ -40,10 +45,10 @@ const NewQuote = () => {
                             <ZipCodes shipFrom={shipFrom} setShipFrom={setShipFrom} shipTo={shipTo} setShipTo={setShipTo} />
                     </Route>
                     <Route path='/vehicle_information'>
-                        <VehicleInformation year = {year} setYear = {setYear} make={make} setMake={setMake} model={model} setModel={setModel} type={type}  setType ={setType} isRunning={isRunning}  setIsRunning = {setIsRunning}/>
+                        <VehicleInformation validate={zipCodes} year = {year} setYear = {setYear} make={make} setMake={setMake} model={model} setModel={setModel} type={type}  setType ={setType} isRunning={isRunning}  setIsRunning = {setIsRunning}/>
                     </Route>
                     <Route path='/contact_information'>
-                        <ContactInformation name={name} setName = {setName} number={number} setNumber = {setNumber} email ={email} setEmail = {setEmail} date = {date} setDate={setDate} />
+                        <ContactInformation validate={vehicleInfo} zipsValid={zipCodes} firstName={firstName} setFirstName = {setFirstName} lastName={lastName} setLastName={setLastName} number={number} setNumber = {setNumber} email ={email} setEmail = {setEmail} date = {date} setDate={setDate} />
                     </Route>
                     <Route path="/quote_submitted">
                         <QuoteSubmitted />

@@ -53,9 +53,9 @@ const ZipCodes = ({ shipFrom, shipTo, setShipFrom, setShipTo }) => {
     }
     return ( 
         <div>
-            <label htmlFor="zip-from">SHIP FROM:</label>
+            <label htmlFor="zip_code">SHIP FROM:</label>
             <div className="zip-from">
-                <input type="text" name='zip-from'  placeholder='ZIP code or City' value={shipFrom} onChange={(e)=>handleOnChange(e)} required/>
+                <input type="text" name='zip_code'  placeholder='ZIP code or City' value={shipFrom} onChange={(e)=>handleOnChange(e)} required/>
                 {isPendin&&<p>Searching...</p>}
                 {err&&<p>A zip code you provided was not found.</p>}
                 {data&&<p>{`${dat.city}, ${dat.state}, ${dat.zip_code}`}</p>}
@@ -63,8 +63,8 @@ const ZipCodes = ({ shipFrom, shipTo, setShipFrom, setShipTo }) => {
                     {validator.message('zipcode', shipFrom, 'required')}
                 </span>
             </div>
-            <label htmlFor="zip-to">SHIP TO:</label>
-            <input type="text" name='zip-to' placeholder='ZIP code or City' value={shipTo} onChange={(e)=>setShipTo(e.target.value)} required />
+            <label htmlFor="zip_code">SHIP TO:</label>
+            <input type="text" name='zip_code' placeholder='ZIP code or City' value={shipTo} onChange={(e)=>setShipTo(e.target.value)} required />
             <span className='invalid-input-field'>
                     {validator.message('zipcode', shipTo, 'required')}
             </span>
