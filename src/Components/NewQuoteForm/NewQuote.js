@@ -17,12 +17,13 @@ const NewQuote = () => {
     const [lastName, setLastName] = useState('')
     const [number, setNumber] = useState('')
     const [email, setEmail] = useState('')
-    const [date, setDate] = useState({date:''})
+    const [date, setDate] = useState('')
     const zipCodes = [shipFrom, shipTo]
     const vehicleInfo = [year, make, model, type, isRunning]
+    // console.log(date);
+    // console.log(year)
+    // console.log(make);
     console.log(date);
-    console.log(year)
-    console.log(make);
     const handleSubmit = (e)=>{
         console.log(shipFrom, shipTo)
         e.preventDefault()

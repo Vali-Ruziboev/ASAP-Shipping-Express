@@ -15,6 +15,10 @@ const ContactInformation = ({ firstName, setFirstName, lastName, setLastName, nu
             forceUpdate()
         }
     }
+    
+    console.log(moment(date));
+    console.log(moment());
+
     const previous = ()=>history.push('/vehicle_information')
     useEffect(()=>{
         if(validate.map(i=>i.some(j=>j==='')).some(t=>t===true)||zipsValid.some(i=>i==='')){
@@ -37,8 +41,8 @@ const ContactInformation = ({ firstName, setFirstName, lastName, setLastName, nu
             <input type="email" name="email" value={email} onChange={e=>setEmail(e.target.value)} required />
             <span className='invalid-input-field'>{validator.message('email', email, 'required|email')}</span>
             <label htmlFor="date">Pickup Date</label>
-            <input type="date" name="date" value={date[date]}  required />
-            <span className='invalid-input-field'>{validator.message('date', date && moment(date, 'YYYY-MM-DD'), [{after_or_equal: moment().add(1, 'month')}], 'date')}</span>
+            <input type="date" name="date" value={date} onChange={e=>setDate(e.target.value)}  required />
+            <span className='invalid-input-field'>{validator.message('date',moment(date), [{after_or_equal: moment()}])}</span>
             <button onClick={previous}>Previous</button>
             <button onClick={handleSubmit}>Submit</button>
 
