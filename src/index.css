@@ -19,6 +19,10 @@
   --car-carrier6-mobile:url(Pictures/Car_Carrier6-mobile.jpg);
   --car-carrier7-desktop:url(Pictures/Car_Carrier7-desktop.jpg);
   --car-carrier7-mobile:url(Pictures/Car_Carrier7-mobile.jpg);
+
+  --header:rgb(3, 140, 37);
+  --cultured:rgb(245, 245, 245);
+  --shadow:0 0 5px 1px rgba(0, 0, 0, 0.5);
 }
 *{
   margin:0;

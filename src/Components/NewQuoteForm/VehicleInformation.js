@@ -99,32 +99,36 @@ const VehicleInformation = ({year, setYear, make, setMake, model, setModel, type
                     <span className='invalid-input-field'>
                         {validator.message('model', model[index], 'required')}
                     </span>
-                    <p>Trailer Type:</p>
-                    <label>
-                        <input className="ship_type" onChange={e=>handleChange('Open', index, setType, type)} type="radio" name={`type_${index}`} required/>Open
-                    </label>
-                    <label >
-                        <input className="ship_type" onChange={e=>handleChange('Enclosed', index, setType, type)} type="radio" name={`type_${index}`} required/>Enclosed
-                    </label>
-                    <span className='invalid-input-field'>
-                        {validator.message('type', type, 'required')}
-                    </span>
-                    <p>Running?</p>
-                    <label>
-                        <input className='is_running' onChange={e=>handleChange('Yes', index, setIsRunning, isRunning)}  type="radio" name={`running_${index}`} required/>Yes
-                    </label>
-                    <label>
-                        <input className='is_running'  onChange={e=>handleChange('No', index, setIsRunning, isRunning)}  type="radio" name={`running_${index}`} required/>No
-                    </label>
-                    <span className='invalid-input-field'>
-                        {validator.message('running', isRunning, 'required')}
-                    </span>
+                    <div className="radio_wrapper">
+                        <p>Trailer Type:</p>
+                        <label className="radio">
+                            <input className="ship_type radio" onChange={e=>handleChange('Open', index, setType, type)} type="radio" name={`type_${index}`} required/>Open
+                        </label>
+                        <label className="radio">
+                            <input className="ship_type radio" onChange={e=>handleChange('Enclosed', index, setType, type)} type="radio" name={`type_${index}`} required/>Enclosed
+                        </label>
+                        <span className='invalid-input-field'>
+                            {validator.message('type', type, 'required')}
+                        </span>
+                        <p>Running?</p>
+                        <label className="radio">
+                            <input className='is_running radio' onChange={e=>handleChange('Yes', index, setIsRunning, isRunning)}  type="radio" name={`running_${index}`} required/>Yes
+                        </label>
+                        <label className="radio">
+                            <input className='is_running radio'  onChange={e=>handleChange('No', index, setIsRunning, isRunning)}  type="radio" name={`running_${index}`} required/>No
+                        </label>
+                        <span className='invalid-input-field'>
+                            {validator.message('running', isRunning, 'required')}
+                        </span>
+                    </div>
                 </div>
             )
         })}
         <p onClick={handleVehicleCount}>Add Another Vehicle</p>
-        <button onClick={()=>history.push('/')}>Previous</button>
-        <button onClick={handleNext}>Next</button>
+        <div className="btns">
+            <button onClick={()=>history.push('/')}>Previous</button>
+            <button onClick={handleNext}>Next</button>
+        </div>
     </> 
     );
 }

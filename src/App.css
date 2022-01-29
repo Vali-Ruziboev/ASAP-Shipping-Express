@@ -1,13 +1,24 @@
 header{
-  height: 100vh;
-  /* background-image: var(--car-carrier1-desktop); */
-  /* background-repeat: no-repeat; */
-  /* background-size: cover; */
-  /* background-position: center; */
+  min-height: 100vh;
+  display: flex;
+  /* align-items: center; */
+  justify-content: center;
+  background-image: var(--car-carrier1-desktop);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
 }
-
+.nav-wrapper{
+  position: fixed;
+  top: 0;
+}
 .contact-us{
   text-align: center;
+  background-color: var(--header);
+  box-shadow: var(--shadow);
+  color: var(--cultured);
+  border-radius: 0 0 5px 5px;
 }
 .contact-us div{
   display: inline-block;
@@ -26,30 +37,47 @@ header{
 }
 .navbar-wrapper {
   display: flex;
-  justify-content: space-around;
+  position: fixed;
+  width: 100%;
+  justify-content: space-evenly;
+  padding-bottom: 5px;
+  padding-top: 15px;
+  background-color: white;
+  color: var(--header);
+  top: 2.5rem;
+  z-index: -1;
 }
 
 .navbar-wrapper h1{
   font-size: 1em;
+  
 }
 .quote-form{
-  margin:3rem auto;
+  margin-top: 9rem;
+  margin-bottom: 3rem;
   justify-content: center;
+  height: max-content;
   width:90%;
   display: flex;
   flex-direction: column;
   align-items: center;
+  background-color: var(--cultured);
+  padding: 1rem;
+  border-radius: 10px;
 }
 .quote-form h1{
   font-size: 1em;
 }
 .quote-form label{
-  align-self: flex-start;
+  /* align-self: flex-start; */
+}
+.quote-form input{
+  width: 100%;
 }
 .popup-wrapper{
   display: flex;
   top: 0;
-  position: absolute;
+  position: fixed;
   width: 100%;
   height: 100%;
   justify-content: center;
@@ -89,4 +117,32 @@ li{
 }
 .invalid-input-field{
   color: red;
+}
+.zip_form{
+  box-sizing: border-box;
+  /* display: inherit; */
+  width: 90%;
+  /* position: inherit; */
+}
+  
+.zip_form div{
+  margin: 0.5rem 0;
+}
+.radio_wrapper{
+  margin: 0.5rem 0;
+}
+.radio{
+  margin: 0 0.2rem;
+  margin-bottom: 0.5rem;
+  width: fit-content !important;
+}
+.contact_info{
+  margin: 0.5rem 0;
+}
+.btns{
+  margin: 0.3rem 0;
+  display: flex;
+  width: 100%;
+  align-items: center;
+  justify-content: space-around;
 }
