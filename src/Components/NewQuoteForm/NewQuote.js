@@ -23,7 +23,6 @@ const NewQuote = () => {
     // console.log(date);
     // console.log(year)
     // console.log(make);
-    console.log(date);
     const handleSubmit = (e)=>{
         console.log(shipFrom, shipTo)
         e.preventDefault()
