@@ -13,6 +13,7 @@ header{
   width: 100%;
   position: fixed;
   top: 0;
+  z-index: 2;
 }
 .contact-us{
   text-align: center;
@@ -73,9 +74,9 @@ header{
 .quote-form h1{
   font-size: 1em;
 }
-.quote-form label{
+/* .quote-form label{
   /* align-self: flex-start; */
-}
+
 .quote-form input{
   width: 100%;
 }
@@ -89,6 +90,7 @@ header{
   align-items: center;
   background-color: var(--mirror-bg);
   overflow: hidden;
+  z-index: 5;
 }
 .popup-wrapper div{
   padding: 2rem;
@@ -97,9 +99,9 @@ header{
   box-shadow: 0 0 15px 1px var(--streight-shadow);
   position: relative;
 }
-.popup-wrapper div svg{
-  top: 0.5rem;
-  right: 0.5rem;
+.exit_icon{
+  top: 0.1rem;
+  right: 0.3rem;
   position: absolute;
   fill: var(--maximum-red);
   font-weight: 900;
@@ -161,18 +163,26 @@ li{
   justify-content: space-around;
 }
 .testimonial{
-  height: 100vh;
+  min-height: 100vh;
   text-align: center;
   padding: 1rem 0;
   overflow-x: hidden;
   background-color: var(--cultured);
+  max-width: 100vw;
+  position: relative;
 }
 .slide_wrapper{
   width: max-content;
   display: flex;
-  overflow-x: hidden;
+  margin-right: 100vw;
+  /* overflow-x: hidden; */
+}
+.review_header{
+  display: flex;
+  justify-content: space-around;
 }
 .slide{
+  position: relative;
   max-width: 90vw;
   margin: 0.5rem 5vw;
   height: 10rem;
@@ -194,4 +204,42 @@ li{
 }
 .customer em{
   font-size: 11px;
+}
+
+.legend{
+  position: absolute;
+  width:90%;
+  bottom: 5px;
+  text-align: center;
+}
+.legend p{
+  margin: 0 auto;
+  padding: 5px;
+  width: fit-content;
+  background-color: rgba(3, 140, 37, 0.8);
+  cursor: pointer;
+  border-radius: 5px;
+  color: var(--cultured);
+  user-select: none;
+}
+.legend p:hover{
+  background-color: rgba(3, 140, 37, 0.7);
+}
+.review_preview{
+  position: absolute;
+  height: 100%;
+  top: 0;
+  text-align: start;
+  display: flex;
+  padding: .5rem;
+  padding-top: 3rem;
+}
+.review_preview div{
+  position: relative;
+  padding: .5rem;
+  background: white;
+  overflow-y: scroll;
+  border-radius: 10px;
+  height: max-content;
+  padding-top: 1.3rem;
 }
