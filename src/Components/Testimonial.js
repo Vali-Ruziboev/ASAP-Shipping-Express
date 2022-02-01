@@ -1,6 +1,6 @@
 import { useState, useRef } from "react";
 import { MdStarRate } from 'react-icons/md'
-import { IoClose } from 'react-icons/io5'
+import { IoIosArrowBack, IoIosArrowForward } from 'react-icons/io'
 import { motion, AnimatePresence } from "framer-motion";
 
 const Testimonial = () => {
@@ -23,25 +23,38 @@ const Testimonial = () => {
     const handleClose = ()=>{
         setIsPreviewed(false)
     }
+    const [margin, setMargin]= useState(0)
+    const handleSlideBack = ()=>{
+        console.log('back');
+    }
+    const handleSlideNext = ()=>{
+        console.log('next');
+    }
     return ( 
         <div className='testimonial'>
             <h3>Recent Reviews</h3>
-            <div className="slide_wrapper">
+            <div className="slides_wrapper">
+                <div className="slide_navigator">
+                    <svg onClick={handleSlideBack} className='arrow' xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="6 0 24 24" width="24px" fill="#000000"><path d="M0 0h24v24H0V0z" fill="none" opacity=".87"/><path  d="M17.51 3.87L15.73 2.1 5.84 12l9.9 9.9 1.77-1.77L9.38 12l8.13-8.13z"/></svg>
+                    <svg onClick={handleSlideNext} className='arrow'  xmlns="http://www.w3.org/2000/svg" enableBackground="new 0 0 24 24" height="24px" viewBox="-6 0 24 24" width="24px" fill="#000000"><g><path d="M0,0h24v24H0V0z" fill="none"/></g><g><polygon points="6.23,20.23 8,22 18,12 8,2 6.23,3.77 14.46,12"/></g></svg>
+                </div>
                 {testimonialsArray.map((i, index)=>{
                     return(
-                        <div key={index} className="slide">
-                            <div className="review_header">
-                                <h4>{i.title}</h4>
-                                <div className="five_star">
-                                    {f_star.map((f, index)=>{return(<MdStarRate color='yellow' key={index}/>)})}
-                                </div> 
+                        <div key={index} className={`slide slide_no${index}`}>
+                            <div className="slide_container">
+                                <div className="review_header">
+                                    <h4>{i.title}</h4>
+                                    <div className="five_star">
+                                        {f_star.map((f, index)=>{return(<MdStarRate color='yellow' key={index}/>)})}
+                                    </div> 
+                                </div>
+                                <div className="customer">
+                                    <h5>{i.name}</h5>
+                                    <em>submitted on {i.date}</em>
+                                </div>
+                                <p>{i.content}</p>
+                                <div className="legend"><p onClick={(e)=>handlePreview(index)}>Read more</p></div>
                             </div>
-                            <div className="customer">
-                                <h5>{i.name}</h5>
-                                <em>submitted on {i.date}</em>
-                            </div>
-                            <p>{i.content}</p>
-                            <div className="legend"><p onClick={(e)=>handlePreview(index)}>Read more</p></div>
                         </div>
                     )
                 })}
