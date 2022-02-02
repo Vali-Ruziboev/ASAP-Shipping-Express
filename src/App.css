@@ -188,6 +188,8 @@ li{
   text-align: start;
   padding: 0.8rem;
   height: 11.7rem;
+  user-select: none;
+  transition: 0.5s ease-in-out;
 }
 .slide_container{
   background-color: var(--white-bg);
@@ -267,6 +269,6 @@ li{
   cursor: pointer;
 }
 
-.slide_no0{
+/* .slide_no0{
   margin-left: -100vw;
-}
+} */

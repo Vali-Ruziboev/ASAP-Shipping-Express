@@ -1,6 +1,5 @@
 import { useState, useRef } from "react";
 import { MdStarRate } from 'react-icons/md'
-import { IoIosArrowBack, IoIosArrowForward } from 'react-icons/io'
 import { motion, AnimatePresence } from "framer-motion";
 
 const Testimonial = () => {
@@ -25,10 +24,33 @@ const Testimonial = () => {
     }
     const [margin, setMargin]= useState(0)
     const handleSlideBack = ()=>{
-        console.log('back');
+        const slide=document.getElementsByClassName("slide")[0]
+        if(margin>0){
+            slide.style.marginLeft = `${-margin+100}vw`
+            setMargin(margin-100)
+
+        }
     }
     const handleSlideNext = ()=>{
-        console.log('next');
+        const slide=document.getElementsByClassName("slide")
+        if(margin<(slide.length-1)*100){
+            slide[0].style.marginLeft = `${-margin-100}vw`
+            setMargin(margin+100)
+        }
+    }
+    const checkContentHeight = (index)=>{
+        if(document.getElementsByClassName("content")[index]){
+            let e = document.getElementsByClassName("content")[index]
+            const topDifference = Math.round(e.getBoundingClientRect().top)-Math.round(e.parentNode.parentNode.getBoundingClientRect().top)
+            const elementHeight = e.clientHeight+topDifference
+            const parentHeight = Math.round(e.parentNode.parentNode.getBoundingClientRect().height)
+            if(parentHeight>elementHeight){
+                return false
+            }else{
+                return true
+            }
+            
+        }
     }
     return ( 
         <div className='testimonial'>
@@ -40,7 +62,7 @@ const Testimonial = () => {
                 </div>
                 {testimonialsArray.map((i, index)=>{
                     return(
-                        <div key={index} className={`slide slide_no${index}`}>
+                        <div key={index}  className="slide" >
                             <div className="slide_container">
                                 <div className="review_header">
                                     <h4>{i.title}</h4>
@@ -52,8 +74,8 @@ const Testimonial = () => {
                                     <h5>{i.name}</h5>
                                     <em>submitted on {i.date}</em>
                                 </div>
-                                <p>{i.content}</p>
-                                <div className="legend"><p onClick={(e)=>handlePreview(index)}>Read more</p></div>
+                                <p className='content'>{i.content}</p>
+                                {checkContentHeight(index)&& <div className="legend"><p onClick={(e)=>handlePreview(index)}>Read more</p></div>}
                             </div>
                         </div>
                     )
