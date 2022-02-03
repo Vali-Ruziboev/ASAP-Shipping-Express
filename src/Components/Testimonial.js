@@ -95,7 +95,55 @@ const Testimonial = () => {
                 </div>
                 </motion.div> 
             }</AnimatePresence>
-            
+            <div className="why-asap-shipping-wrapper">
+                <h3>Why you should book with ASAP Shipping Express:</h3>
+                <div className="reason-wrapper">
+                    <div className="reason">
+                        <span className='green-num'>20</span>
+                        <p>Year of Experience</p>
+                    </div>
+                    <div className="reason">
+                        <div className="indicator">
+                            <span className="green-num">71</span>
+                            <span>K</span>
+                        </div>
+                        <p>Happy Customers</p>
+                    </div>
+                    <div className="reason">
+                        <div className="indicator">
+                            <span className='geen-num'>100</span>
+                            <span>K+</span>
+                        </div>
+                        <p>Vehicles Shipped</p>
+                    </div>
+                    <div className="reason">
+                        <h4>No Down payment to scedule</h4>
+                        <p>NO down payment is required to book your order and you will not be charged any payment untill we confirm a carrier for your vehicle.We will contact you to let you know when your order is dispatched. </p>
+                    </div>
+                    <div className="reason">
+                        <h4>Price Guarantee</h4>
+                        <p>Our State-of-art car shipping cost quoting technology allows us to provide you with the best price to ship your car 100% of the time with no hidden fees.</p>
+                    </div>
+                    <div className="reason">
+                        <h4>5-Star, Stress Free Service</h4>
+                        <p>
+                            We are 5 rated shipping service with Better Business Bureau, and have many reviews from customers on Google, Transport review and more!. Your car will get from point A to point B without you having to break a single sweat.
+                        </p> 
+                    </div>
+                    <div className="reason">
+                        <h4>Fully Covered</h4>
+                        <p>The total cost includes full coverage insurance. We verify that all of our car transport carriers have their own active cargo insurance at all times.</p>
+                    </div>
+                    <div className="reason">
+                        <h4>Experienced Specialists</h4>
+                        <p>Our Transport Specialists and Customer Service Representatives are here to help! Our experienced transport team is trained to handle every aspect of the shipping process from start to finish.</p>
+                    </div>
+                    <div className="reason">
+                        <h4>16K+ Auto Carriers</h4>
+                        <p>Our auto transporter company has a huge network of haulers who are personally vetted auto shipping experts, ensuring your vehicle is transported by trusted members of the industry. These vehicle transport companies will treat your car like their own.</p>
+                    </div>
+                </div>
+            </div>
         </div>
     );
 }
