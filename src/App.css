@@ -269,6 +269,33 @@ li{
   cursor: pointer;
 }
 
-/* .slide_no0{
-  margin-left: -100vw;
-} */
+.why-asap-shipping-wrapper{
+  padding:1rem;
+}
+
+.indicator-wrapper{
+  display: block;
+  margin: 1rem 0;
+}
+.reason{
+  display: inline-block;
+  min-width: 200px;
+  max-width: 15rem;
+  vertical-align: top;
+  margin: 1rem 1rem;
+}
+.indicator{
+  color: var(--header);
+  font-weight: 800;
+}
+.reason p{
+  color: var(--paragraph);
+}
+.reason svg{
+  fill: var(--header);
+  width: 3rem;
+  height: 3rem;
+}
+.reason span{
+  font-size: 2rem;
+}

@@ -25,6 +25,10 @@
   --shadow:0 0 5px 1px rgba(0, 0, 0, 0.5);
   --light-shadow:0 0 6px 1px rgba(0, 0, 0, 0.2);
   --maximum-red:rgb(215, 42, 29);
+  --head-text:rgb(34, 30, 27);
+  --paragraph:rgb(71, 71, 71);
+  --highlited-text: rgb(0, 63, 163)
+
 }
 *{
   margin:0;
@@ -40,6 +44,7 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  color: var(--head-text);
 }
 
 code {
