@@ -21,10 +21,15 @@
   --car-carrier7-mobile:url(Pictures/Car_Carrier7-mobile.jpg);
 
   --header:rgb(3, 140, 37);
+  --india-green:rgb(48, 135, 8);
   --cultured:rgb(245, 245, 245);
   --shadow:0 0 5px 1px rgba(0, 0, 0, 0.5);
   --light-shadow:0 0 6px 1px rgba(0, 0, 0, 0.2);
   --maximum-red:rgb(215, 42, 29);
+  --head-text:rgb(34, 30, 27);
+  --paragraph:rgb(71, 71, 71);
+  --highlited-text: rgb(0, 63, 163)
+
 }
 *{
   margin:0;
@@ -40,6 +45,8 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  color: var(--head-text);
+  background-color: var(--cultured);
 }
 
 code {
