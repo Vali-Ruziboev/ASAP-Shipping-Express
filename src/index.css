@@ -21,6 +21,7 @@
   --car-carrier7-mobile:url(Pictures/Car_Carrier7-mobile.jpg);
 
   --header:rgb(3, 140, 37);
+  --india-green:rgb(48, 135, 8);
   --cultured:rgb(245, 245, 245);
   --shadow:0 0 5px 1px rgba(0, 0, 0, 0.5);
   --light-shadow:0 0 6px 1px rgba(0, 0, 0, 0.2);
@@ -45,6 +46,7 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   color: var(--head-text);
+  background-color: var(--cultured);
 }
 
 code {
