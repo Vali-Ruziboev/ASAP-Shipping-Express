@@ -33,9 +33,11 @@ header{
   vertical-align: middle;
   margin-right: .3rem;
 }
-.contact-us span{
+.contact-us a{
   font-size: 0.8em;
   vertical-align: middle;
+  text-decoration: none;
+  color: var(--cultured);
 }
 .navbar-wrapper {
   display: flex;
@@ -332,4 +334,43 @@ li{
 .faqs_btn{
   margin: 0rem auto !important;
   width: 7rem !important;
+}
+.contact_us_today{
+  margin: 2rem 0;
+  height: max-content;
+}
+.contact_us_today div{
+  margin: 2rem 0;
+  display: inline-block;
+  vertical-align: middle;
+}
+.company-info{
+  line-height: 2rem;
+  padding: 0 1.5rem;
+}
+.company-info a{
+  font-size: 0.8em;
+}
+.svg_text{
+  display: block !important;
+}
+.svg_text svg{
+  vertical-align: middle;
+  width: 1rem;
+  margin-right: 0.2rem;
+}
+.svg_text a{
+  vertical-align: middle;
+  text-decoration: none;
+  color: var(--paragraph);
+}
+.map{
+  width: 100%;
+  min-width: 250px;
+  max-width: 500px;
+  height: 30rem;
+}
+footer{
+  height: 30rem;
+  background-color: var(--head-text);
 }
