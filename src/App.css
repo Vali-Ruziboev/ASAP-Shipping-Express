@@ -371,6 +371,60 @@ li{
   height: 30rem;
 }
 footer{
-  height: 30rem;
+  position: relative;
+  height: max-content;
   background-color: var(--head-text);
+  padding: 2rem;
+  color: var(--cultured);
+}
+footer h3{
+  margin-bottom: 1rem;
+}
+footer ul{
+  display: block;
+  margin: 0 auto;
+  max-width: 40rem;
+}
+footer li{
+  margin: 1rem 1rem;
+  display: inline-block;
+  transition: 0.2s ease-in-out;
+}
+footer li:hover{
+  color: var(--header);
+}
+.social-media svg{
+  margin: 1rem 0.5rem;
+  fill: var(--cultured);
+  transition: 0.3s ease-in-out;
+
+}
+.face_book:hover{
+  fill: rgb(66 103 178);
+}
+.twitter:hover{
+  fill: rgb(29 161 242);
+}
+.pinterest:hover{
+  fill: rgb(230 0 35);
+}
+.google:hover{
+  fill: rgb(72, 133, 237);
+}
+.instagram:hover{
+  fill: rgb(188, 42, 141);
+}
+.linked_in:hover{
+  fill: rgb(14, 118, 168);
+}
+.copyright{
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  font-size: 12px;
+  width: 100vw;
+  padding: 0.2rem;
+  background-color: var(--header);
+  color: var(--cultured);
+  border-radius: 8px 8px 0 0;
 }
