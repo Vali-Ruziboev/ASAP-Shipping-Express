@@ -1,4 +1,4 @@
-import { useState, useRef } from "react";
+import { useState, useRef, useEffect } from "react";
 import { MdStarRate } from 'react-icons/md'
 import { motion, AnimatePresence } from "framer-motion";
 
@@ -52,6 +52,29 @@ const Testimonial = () => {
             
         }
     }
+    const [experience, setExperience]=useState(0)
+    const [customers, setCustomers]=useState(0)
+    const [vehicles, setVehicles]=useState(0)
+    useEffect(()=>{
+        window.addEventListener('scroll', function handle(){
+            const indicator = document.getElementsByClassName("indicator-wrapper")[0].getBoundingClientRect()
+            const top = indicator.top
+            const scroll = window.scrollY + indicator.height
+            if(scroll>top){
+                handleLoop(setExperience, 20)
+                handleLoop(setCustomers, 71)
+                handleLoop(setVehicles, 100)
+                window.removeEventListener('scroll', handle)
+            }
+        })
+    },[])
+    const handleLoop = (Function, number)=>{
+        for(let i=0; i<=number;i++){
+            setTimeout(() => {
+                Function(i)
+            }, 0);
+        }
+    }
     return ( 
         <div className='testimonial'>
             <h3>Recent Reviews</h3>
@@ -100,19 +123,19 @@ const Testimonial = () => {
                 <div className="reason-wrapper">
                     <div className="indicator-wrapper">
                         <div className="reason">
-                            <span className='indicator'>20</span>
+                            <span className='indicator'>{experience}</span>
                             <h4>Year of Experience</h4>
                         </div>
                         <div className="reason">
                             <div className="indicator">
-                                <span>71</span>
+                                <span>{customers}</span>
                                 <span>K</span>
                             </div>
                             <h4>Happy Customers</h4>
                         </div>
                         <div className="reason">
                             <div className="indicator">
-                                <span>100</span>
+                                <span>{vehicles}</span>
                                 <span>K+</span>
                             </div>
                             <h4>Vehicles Shipped</h4>

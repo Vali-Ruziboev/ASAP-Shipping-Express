@@ -13,7 +13,7 @@ const Header = () => {
         }
     },[ ])
     return ( 
-        <header>
+        <header id='header'>
             <div className="nav-wrapper">     
                 <div className="contact-us">
                     <div className="phone-number">

@@ -31,7 +31,7 @@ const NewQuote = () => {
     
 
     return ( 
-        <form onSubmit={(e)=>handleSubmit(e)} className='quote-form'>
+        <form id='new_quote' onSubmit={(e)=>handleSubmit(e)} className='quote-form'>
             <h1>GET A FREE QUOTE NOW</h1>
             <a href="tel:(929) 419-5297">(929) 419-5297</a>
             <div  className="or">
