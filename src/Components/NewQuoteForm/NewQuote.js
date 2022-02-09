@@ -2,7 +2,7 @@ import { useState } from "react"
 import {BrowserRouter as Router, Route, Switch } from 'react-router-dom'
 import ContactInformation from "./ContactInformation"
 import QuoteSubmitted from "./QuoteSubmitted"
-
+import { motion } from 'framer-motion'
 import VehicleInformation from "./VehicleInformation"
 import ZipCodes from "./ZipCodes"
 const NewQuote = () => {
@@ -31,7 +31,10 @@ const NewQuote = () => {
     
 
     return ( 
-        <form id='new_quote' onSubmit={(e)=>handleSubmit(e)} className='quote-form'>
+        <motion.form
+        initial={{x:'100vw'}}
+        animate={{x:0, transition:{duration:0.5, type:'spring', stiffness:200}}}
+        id='new_quote' onSubmit={(e)=>handleSubmit(e)} className='quote-form'>
             <h1>GET A FREE QUOTE NOW</h1>
             <a href="tel:(929) 419-5297">(929) 419-5297</a>
             <div  className="or">
@@ -55,7 +58,7 @@ const NewQuote = () => {
                     </Route>
                 </Switch>
             </Router>
-        </form>
+        </motion.form>
     );
 }
 

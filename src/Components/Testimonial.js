@@ -60,7 +60,7 @@ const Testimonial = () => {
             const indicator = document.getElementsByClassName("indicator-wrapper")[0].getBoundingClientRect()
             const top = indicator.top
             const scroll = window.scrollY + indicator.height
-            if(scroll>top){
+            if(scroll+200>top){
                 handleLoop(setExperience, 20)
                 handleLoop(setCustomers, 71)
                 handleLoop(setVehicles, 100)
