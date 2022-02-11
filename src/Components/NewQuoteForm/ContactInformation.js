@@ -27,7 +27,7 @@ const ContactInformation = ({ firstName, setFirstName, lastName, setLastName, nu
     },[])
     return ( 
         <div>
-            <p>Contact Information</p>
+            <h4>Contact Information</h4>
             <div className="contact_info">    
                 <label >First Name
                     <input type="text" name='first_name' placeholder='Enter first name' value={firstName} onChange={e=>setFirstName(e.target.value)} required />
@@ -55,7 +55,7 @@ const ContactInformation = ({ firstName, setFirstName, lastName, setLastName, nu
                 <span className='invalid-input-field'>{validator.message('date',moment(date), [{after_or_equal: moment()}])}</span>
             </div>
             <div className="btns">
-                <button onClick={previous}>Previous</button>
+                <button onClick={previous}>{`< Previous`}</button>
                 <button onClick={handleSubmit}>Submit</button>
             </div>
 

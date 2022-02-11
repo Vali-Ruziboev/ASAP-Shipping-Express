@@ -1,5 +1,6 @@
 import NavBar from "./NavBar";
 const Footer = () => {
+    const currentYear = new Date().getFullYear()
     return ( 
         <footer>
                 <h3>Company</h3>
@@ -26,7 +27,7 @@ const Footer = () => {
                     </a>
                 </div>
                 <div className="copyright">
-                    <p>&copy; 2021 - 2022 ASAP Auto Shipping Express - All Rights Reserved</p>
+                    <p>&copy; 2021 - {currentYear} ASAP Auto Shipping Express - All Rights Reserved</p>
                 </div>
             </footer>
     );
