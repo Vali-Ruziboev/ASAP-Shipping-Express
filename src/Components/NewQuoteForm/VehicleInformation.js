@@ -75,7 +75,7 @@ const VehicleInformation = ({year, setYear, make, setMake, model, setModel, type
     }
     return ( 
     <>
-        <p>Vehicle Information:</p>
+        <h4>Vehicle Information:</h4>
         { year.map((i, index)=>{
             return(
                 <div key={index}>
@@ -124,10 +124,10 @@ const VehicleInformation = ({year, setYear, make, setMake, model, setModel, type
                 </div>
             )
         })}
-        <p onClick={handleVehicleCount}>Add Another Vehicle</p>
+        <button onClick={handleVehicleCount}>+ Add Another Vehicle</button>
         <div className="btns">
-            <button onClick={()=>history.push('/')}>Previous</button>
-            <button onClick={handleNext}>Next</button>
+            <button onClick={()=>history.push('/')}>{"< Previous"}</button>
+            <button onClick={handleNext}>{"Next >"}</button>
         </div>
     </> 
     );

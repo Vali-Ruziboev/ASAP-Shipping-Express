@@ -38,9 +38,9 @@ const NewQuote = () => {
             <h1>GET A FREE QUOTE NOW</h1>
             <a href="tel:(929) 419-5297">(929) 419-5297</a>
             <div  className="or">
-                <span className='left-hand-of-or'></span>
+                <span className='line'></span>
                 <span>OR</span>
-                <span className='right-hand-of-or'></span>
+                <span className='line'></span>
             </div>
             <Router>
                 <Switch>

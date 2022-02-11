@@ -105,11 +105,59 @@ header::before{
 .quote-form h1{
   font-size: 1em;
 }
-/* .quote-form label{
-  /* align-self: flex-start; */
 
+.quote-form a{
+  color:var(--header);
+  font-weight: 700;
+  margin: 0.3rem 0;
+}
 .quote-form input{
   width: 100%;
+  padding: 0.3rem;
+  border-radius: 5px;
+  border: 1px solid;
+}
+.quote-form button{
+  padding: 0.5rem;
+  background-color: var(--header);
+  color: var(--cultured);
+  border-radius: 5px;
+  border: none;
+  cursor: pointer;
+  box-shadow: 0 0 1px 1px rgba(0, 0, 0, 0.2);
+}
+.quote-form h4{
+  margin: 0.5rem 0;
+}
+.quote-form label{
+  font-weight: lighter;
+}
+.quote-form p{
+  font-weight: 550;
+}
+.or{
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 700;
+}
+.line{
+  height: 1px;
+  width: 30%;
+  border-top: 1px solid var(--header);
+  margin: 0 0.3rem;
+}
+.indicator-and-close{
+  display: flex;
+  justify-content: space-around;
+}
+.indicator-and-close svg{
+  fill: var(--maximum-red);
+  cursor: pointer;
+}
+.indicator-and-close p{
+  font-weight: 600;
 }
 .popup-wrapper{
   display: flex;
@@ -200,6 +248,8 @@ li{
   overflow-x: hidden;
   max-width: 100vw;
   position: relative;
+  overflow-y: hidden;
+  user-select: none;
 }
 .slides_wrapper{
   width: max-content;
@@ -310,7 +360,7 @@ li{
 .reason-wrapper{
   display: block;
   margin: 0 auto;
-  max-width: 80rem;
+  max-width: 70rem;
 }
 .reason{
   display: inline-block;

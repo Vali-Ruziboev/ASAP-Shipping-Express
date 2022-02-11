@@ -1,4 +1,4 @@
-import { useState, useRef, useEffect } from "react";
+import { useState, useEffect } from "react";
 import { MdStarRate } from 'react-icons/md'
 import { motion, AnimatePresence, useAnimation } from "framer-motion";
 
@@ -56,27 +56,37 @@ const Testimonial = () => {
     const [experience, setExperience]=useState(0)
     const [customers, setCustomers]=useState(0)
     const [vehicles, setVehicles]=useState(0)
-    useEffect(()=>{
-        setIsPosition(true)
-    },[customers, vehicles, experience])
-    useEffect(()=>{
-        window.addEventListener('scroll', function handle(){
-            const indicator = document.getElementsByClassName("why-asap-shipping-wrapper")[0].getBoundingClientRect()
-            const top = indicator.top
-            const scroll = window.scrollY + indicator.height
-            if(scroll+200>top){
-                handleLoop(setExperience, 20)
-                handleLoop(setCustomers, 72)
-                handleLoop(setVehicles, 100)
+
+    const checkScrollHeight = ()=>{
+        const indicator = document.getElementsByClassName("why-asap-shipping-wrapper")[0].getBoundingClientRect()
+        const top = indicator.top
+        const scroll = window.scrollY + indicator.height
+            if(scroll+100>top){
+                handleLoop(experience, setExperience, 20)
+                handleLoop(customers, setCustomers, 72)
+                handleLoop(vehicles, setVehicles, 100)
                 setIsPosition(true)
-                window.removeEventListener('scroll', handle)
+                return true
             }
-        })
+    }
+
+    useEffect(()=>{
+        const check = checkScrollHeight()
+        if(!check){
+            window.addEventListener('scroll', function handle(){
+                    const m = checkScrollHeight()
+                    if(m){
+                        window.removeEventListener('scroll', handle)
+                    }
+            })
+        }
     },[])
-    const handleLoop = (Function, number)=>{
+    const handleLoop = (state, Function, number)=>{
         for(let i=0; i<=number;i+=2){
             setTimeout(() => {
-                Function(i)
+                if(state!==number){
+                    Function(i)
+                }
             }, 0);
         }
     }
@@ -95,16 +105,16 @@ const Testimonial = () => {
                 x:0, 
                 backgroundColor:'rgba(0,0,0,0.2)', 
                 rotate:720, 
-                transition:{duration:0.5}
+                transition:{delay:0.2,duration:1}
             })
             await animate.start({
                 backgroundColor:'rgba(0,0,0,0)',
-                transition:{delay:0.01, duration:0.5}
+                transition:{delay:0.1, duration:1}
             })
     }
     useEffect(()=>{
         sequence()
-    }, [])
+    }, [checkScrollHeight])
     return ( 
         <div className='testimonial'>
             <h3>Recent Reviews</h3>
