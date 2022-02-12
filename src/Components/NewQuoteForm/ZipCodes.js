@@ -1,9 +1,11 @@
-import { useHistory } from 'react-router-dom'
-import { useState } from 'react/cjs/react.development';
+import { useHistory, useLocation, useRouteMatch } from 'react-router-dom'
+import { useState } from 'react';
 import SimpleReactValidator from 'simple-react-validator'
 import useForceUpdate from 'use-force-update';
 
 const ZipCodes = ({ shipFrom, shipTo, setShipFrom, setShipTo }) => {
+    const location = useLocation()
+    console.log(location);
      // validator
     const [validator] = useState(new SimpleReactValidator())
     const forceUpdate = useForceUpdate();
@@ -14,7 +16,7 @@ const ZipCodes = ({ shipFrom, shipTo, setShipFrom, setShipTo }) => {
         const history = useHistory()
         const handleNext =(e)=>{
             if(validator.allValid()){
-                history.push('/vehicle_information')
+                history.push(`${location.pathname}/vehicle_information`)
             }else{
                 validator.showMessages()
                 forceUpdate()
