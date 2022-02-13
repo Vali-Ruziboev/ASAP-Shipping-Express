@@ -1,5 +1,5 @@
 import { useState } from "react"
-import {BrowserRouter as Router, Route, Switch, useLocation, useRouteMatch} from 'react-router-dom'
+import {BrowserRouter as Router, Route, Switch, useRouteMatch} from 'react-router-dom'
 import ContactInformation from "./ContactInformation"
 import QuoteSubmitted from "./QuoteSubmitted"
 import { motion } from 'framer-motion'
@@ -20,17 +20,20 @@ const NewQuote = () => {
     const [date, setDate] = useState('')
     const zipCodes = [shipFrom, shipTo]
     const vehicleInfo = [year, make, model, type, isRunning]
-    // console.log(date);
-    // console.log(year)
-    // console.log(make);
     const handleSubmit = (e)=>{
         console.log(shipFrom, shipTo)
         e.preventDefault()
     }
-    const location = useLocation()
-    const {path, url} = useRouteMatch()
+    const { path } = useRouteMatch()
     console.log(path);
-    console.log(url);
+    const updatedPath = (()=>{
+        if(path ==='/'){
+            return path
+        }else{
+            return `${path}/`
+        }
+    })()
+    console.log(updatedPath);
     return ( 
         <Router>
             <motion.form
@@ -44,15 +47,17 @@ const NewQuote = () => {
                     <span>OR</span>
                     <span className='line'></span>
                 </div>
-                    <ZipCodes shipFrom={shipFrom} setShipFrom={setShipFrom} shipTo={shipTo} setShipTo={setShipTo} />
                     <Switch>
-                        <Route path={`${location.pathname}/vehicle_information`}>
+                        <Route exact path={`${path}`}>
+                            <ZipCodes shipFrom={shipFrom} setShipFrom={setShipFrom} shipTo={shipTo} setShipTo={setShipTo} />
+                        </Route>
+                        <Route path={`${updatedPath}vehicle_information`}>
                             <VehicleInformation validate={zipCodes} year = {year} setYear = {setYear} make={make} setMake={setMake} model={model} setModel={setModel} type={type}  setType ={setType} isRunning={isRunning}  setIsRunning = {setIsRunning}/>
                         </Route>
-                        <Route path='/contact_information'>
+                        <Route path={`${updatedPath}contact_information`}>
                             <ContactInformation validate={vehicleInfo} zipsValid={zipCodes} firstName={firstName} setFirstName = {setFirstName} lastName={lastName} setLastName={setLastName} number={number} setNumber = {setNumber} email ={email} setEmail = {setEmail} date = {date} setDate={setDate} />
                         </Route>
-                        <Route path="/quote_submitted">
+                        <Route path={`${updatedPath}quote_submitted`}>
                             <QuoteSubmitted />
                         </Route>
                     </Switch>

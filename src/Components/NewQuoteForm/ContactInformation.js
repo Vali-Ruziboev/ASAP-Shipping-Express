@@ -1,4 +1,4 @@
-import { useHistory } from "react-router-dom";
+import { useHistory, useRouteMatch } from "react-router-dom";
 import { useState, useEffect } from "react";
 import SimpleReactValidator from "simple-react-validator";
 import useForceUpdate from "use-force-update";
@@ -7,9 +7,18 @@ const ContactInformation = ({ firstName, setFirstName, lastName, setLastName, nu
     const [validator] = useState(new SimpleReactValidator())
     const forceUpdate = useForceUpdate()
     const history = useHistory()
+    const { path } = useRouteMatch()
+    const updatedPath = (()=>{
+        if(path === '/contact_information'){
+            return ''
+        }else{
+            return `/${path.split('/')[1]}`
+        }
+    })()
+    console.log(updatedPath);
     const handleSubmit = ()=>{
         if(validator.allValid()){
-            history.push('/quote_submitted')
+            history.push(`${updatedPath}/quote_submitted`)
         }else{
             validator.showMessages()
             forceUpdate()
@@ -19,10 +28,10 @@ const ContactInformation = ({ firstName, setFirstName, lastName, setLastName, nu
     console.log(moment(date));
     console.log(moment());
 
-    const previous = ()=>history.push('/vehicle_information')
+    const previous = ()=>history.push(`${updatedPath}/vehicle_information`)
     useEffect(()=>{
         if(validate.map(i=>i.some(j=>j==='')).some(t=>t===true)||zipsValid.some(i=>i==='')){
-            history.push('/')
+            history.push(`${updatedPath}`)
         }
     },[])
     return ( 
