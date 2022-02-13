@@ -1,6 +1,5 @@
-import { useEffect } from 'react';
-import { useRef, useState } from 'react';
-import { useHistory } from 'react-router-dom'
+import { useEffect, useState } from 'react';
+import { useHistory, useRouteMatch } from 'react-router-dom'
 import SimpleReactValidator from 'simple-react-validator'
 import useForceUpdate from 'use-force-update';
 const VehicleInformation = ({year, setYear, make, setMake, model, setModel, type, setType, isRunning, setIsRunning, validate}) => {
@@ -14,6 +13,15 @@ const VehicleInformation = ({year, setYear, make, setMake, model, setModel, type
         setIsRunning([...isRunning, 'Yes'])
         setType([...type, 'Open'])
     }
+    const { path } = useRouteMatch()
+    const updatedPath = (()=>{
+        if(path === '/vehicle_information'){
+            return '/'
+        }else{
+            return `/${path.split('/')[1]}/`
+        }
+    })()
+    console.log(updatedPath);
     // getting current year
     const currentYear = new Date().getFullYear()
     // validator
@@ -30,8 +38,10 @@ const VehicleInformation = ({year, setYear, make, setMake, model, setModel, type
 
     console.log(isRunning)
     useEffect(()=>{
+        console.log(updatedPath);
         if(validate.some(i=>i==='')){
-            history.push('/')
+            history.push(`${updatedPath}`)
+            console.log(updatedPath);
         }
         for(let i=0;i<is_running.length/2;i++){
             if(isRunning[i]==='Yes'){
@@ -55,7 +65,7 @@ const VehicleInformation = ({year, setYear, make, setMake, model, setModel, type
     },[handleVehicleCount])
     const handleNext =(e)=>{
         if(validator.allValid()){
-            history.push('/contact_information')
+            history.push(`${updatedPath}contact_information`)
         }else{
             validator.showMessages()
             forceUpdate()
@@ -126,7 +136,7 @@ const VehicleInformation = ({year, setYear, make, setMake, model, setModel, type
         })}
         <button onClick={handleVehicleCount}>+ Add Another Vehicle</button>
         <div className="btns">
-            <button onClick={()=>history.push('/')}>{"< Previous"}</button>
+            <button onClick={()=>history.push(`${updatedPath}`)}>{"< Previous"}</button>
             <button onClick={handleNext}>{"Next >"}</button>
         </div>
     </> 

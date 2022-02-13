@@ -10,14 +10,14 @@ function App() {
   return (
     <Router>
     <div className="App">
-      <Header />
+      {/* <Header /> */}
       <Switch>
-        <Route exact path='/'>
-          <Testimonial />
-          <WeShipEveryWhere />
-        </Route>
         <Route path='/faqs'>
           <Faqs />
+        </Route>
+        <Route path='/'>
+          <Testimonial />
+          <WeShipEveryWhere />
         </Route>
       </Switch>
       <Footer />

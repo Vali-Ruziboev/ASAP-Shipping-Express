@@ -1,6 +1,7 @@
 import { useState, useEffect } from "react";
 import { MdStarRate } from 'react-icons/md'
 import { motion, AnimatePresence, useAnimation } from "framer-motion";
+import Header from "./Header";
 
 const Testimonial = () => {
     const f_star = new Array(5).fill('')
@@ -58,16 +59,18 @@ const Testimonial = () => {
     const [vehicles, setVehicles]=useState(0)
 
     const checkScrollHeight = ()=>{
-        const indicator = document.getElementsByClassName("why-asap-shipping-wrapper")[0].getBoundingClientRect()
-        const top = indicator.top
-        const scroll = window.scrollY + indicator.height
-            if(scroll+100>top){
-                handleLoop(experience, setExperience, 20)
-                handleLoop(customers, setCustomers, 72)
-                handleLoop(vehicles, setVehicles, 100)
-                setIsPosition(true)
-                return true
-            }
+        if(document.getElementsByClassName("why-asap-shipping-wrapper")[0]){
+            const indicator = document.getElementsByClassName("why-asap-shipping-wrapper")[0].getBoundingClientRect()
+            const top = indicator.top
+            const scroll = window.scrollY + indicator.height
+                if(scroll+100>top){
+                    handleLoop(experience, setExperience, 20)
+                    handleLoop(customers, setCustomers, 72)
+                    handleLoop(vehicles, setVehicles, 100)
+                    setIsPosition(true)
+                    return true
+                }
+        }
     }
 
     useEffect(()=>{
@@ -115,131 +118,134 @@ const Testimonial = () => {
     useEffect(()=>{
         sequence()
     }, [checkScrollHeight])
-    return ( 
-        <div className='testimonial'>
-            <h3>Recent Reviews</h3>
-            <div className="slides_wrapper">
-                <div className="slide_navigator">
-                    <svg onClick={handleSlideBack} className='arrow' xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="6 0 24 24" width="24px" fill="#000000"><path d="M0 0h24v24H0V0z" fill="none" opacity=".87"/><path  d="M17.51 3.87L15.73 2.1 5.84 12l9.9 9.9 1.77-1.77L9.38 12l8.13-8.13z"/></svg>
-                    <svg onClick={handleSlideNext} className='arrow'  xmlns="http://www.w3.org/2000/svg" enableBackground="new 0 0 24 24" height="24px" viewBox="-6 0 24 24" width="24px" fill="#000000"><g><path d="M0,0h24v24H0V0z" fill="none"/></g><g><polygon points="6.23,20.23 8,22 18,12 8,2 6.23,3.77 14.46,12"/></g></svg>
-                </div>
-                {testimonialsArray.map((i, index)=>{
-                    return(
-                        <div key={index}  className="slide" >
-                            <div className="slide_container">
-                                <div className="review_header">
-                                    <h4>{i.title}</h4>
-                                    <div className="five_star">
-                                        {f_star.map((f, index)=>{return(<MdStarRate color='yellow' key={index}/>)})}
-                                    </div> 
+    return (
+        <>
+            <Header />
+            <div className='testimonial'>
+                <h3>Recent Reviews</h3>
+                <div className="slides_wrapper">
+                    <div className="slide_navigator">
+                        <svg onClick={handleSlideBack} className='arrow' xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="6 0 24 24" width="24px" fill="#000000"><path d="M0 0h24v24H0V0z" fill="none" opacity=".87"/><path  d="M17.51 3.87L15.73 2.1 5.84 12l9.9 9.9 1.77-1.77L9.38 12l8.13-8.13z"/></svg>
+                        <svg onClick={handleSlideNext} className='arrow'  xmlns="http://www.w3.org/2000/svg" enableBackground="new 0 0 24 24" height="24px" viewBox="-6 0 24 24" width="24px" fill="#000000"><g><path d="M0,0h24v24H0V0z" fill="none"/></g><g><polygon points="6.23,20.23 8,22 18,12 8,2 6.23,3.77 14.46,12"/></g></svg>
+                    </div>
+                    {testimonialsArray.map((i, index)=>{
+                        return(
+                            <div key={index}  className="slide" >
+                                <div className="slide_container">
+                                    <div className="review_header">
+                                        <h4>{i.title}</h4>
+                                        <div className="five_star">
+                                            {f_star.map((f, index)=>{return(<MdStarRate color='yellow' key={index}/>)})}
+                                        </div> 
+                                    </div>
+                                    <div className="customer">
+                                        <h5>{i.name}</h5>
+                                        <em>submitted on {i.date}</em>
+                                    </div>
+                                    <p className='content'>{i.content}</p>
+                                    {checkContentHeight(index)&& <div className="legend"><p onClick={(e)=>handlePreview(index)}>Read more</p></div>}
                                 </div>
-                                <div className="customer">
-                                    <h5>{i.name}</h5>
-                                    <em>submitted on {i.date}</em>
-                                </div>
-                                <p className='content'>{i.content}</p>
-                                {checkContentHeight(index)&& <div className="legend"><p onClick={(e)=>handlePreview(index)}>Read more</p></div>}
                             </div>
-                        </div>
-                    )
-                })}
-            </div>
-            <AnimatePresence>{isPreviewed&&
-                <motion.div 
-                className="review_preview" 
-                initial={{scale:0}}
-                animate={{scale:1, transition:{type:"spring",stiffness:200}}} 
-                exit={{scale:0}}>
-                <div>
-                    <motion.svg onClick={handleClose} className="exit_icon" animate={{rotate:360, transition:{duration:0.4, delay:0.2}}} xmlns="http://www.w3.org/2000/svg" height="24px" strokeWidth="4" viewBox="0 0 24 24" width="24px" fill="#000000"><path d="M0 0h24v24H0V0z" fill="none"/><path d="M19 6.41L17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41z"/></motion.svg>
-                    <p>
-                    {previewContent}
-                    </p>
+                        )
+                    })}
                 </div>
-                </motion.div> 
-            }</AnimatePresence>
-            <div className="why-asap-shipping-wrapper">
-                {isPositoin&&<motion.h3
-                initial={{y:-50, opacity:0}}
-                animate={{y:0, opacity:1, transition:{duration:1}}}
-                >Why ASAP Shipping Express?</motion.h3>}
-                {isPositoin && <div className="reason-wrapper">
-                    <motion.div
-                        initial={{y:-50, opacity:0}}
-                        animate={{y:0, opacity:1, transition:{duration:1}}}
-                    className="indicator-wrapper">
-                        <div className="reason">
-                            <span className='indicator'>{experience}</span>
-                            <h4>Year of Experience</h4>
-                        </div>
-                        <div className="reason">
-                            <div className="indicator">
-                                <span>{customers}</span>
-                                <span>K</span>
-                            </div>
-                            <h4>Happy Customers</h4>
-                        </div>
-                        <div className="reason">
-                            <div className="indicator">
-                                <span>{vehicles}</span>
-                                <span>K+</span>
-                            </div>
-                            <h4>Vehicles Shipped</h4>
-                        </div>
-                    </motion.div>
-                    <motion.div
-                    initial={initial_left}
-                    animate={animate}
-                    className="reason">
-                        <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 0 24 24" width="24px" fill="#000000"><path d="M0 0h24v24H0V0z" fill="none"/><path d="M20 4H4c-1.11 0-1.99.89-1.99 2L2 18c0 1.11.89 2 2 2h16c1.11 0 2-.89 2-2V6c0-1.11-.89-2-2-2zm0 14H4v-6h16v6zm0-10H4V6h16v2z"/></svg>
-                        <h4>No Down payment to scedule</h4>
-                        <p>NO down payment is required to book your order and you will not be charged any payment untill we confirm a carrier for your vehicle.We will contact you to let you know when your order is dispatched. </p>
-                    </motion.div>
-                    <motion.div
-                    initial={initial_right}
-                    animate={animate}
-                    className="reason">
-                        <svg xmlns="http://www.w3.org/2000/svg" enableBackground="new 0 0 24 24" height="24px" viewBox="0 0 24 24" width="24px" fill="#000000"><g><path d="M0,0h24v24H0V0z" fill="none"/></g><g><g><path d="M11,13V9c0-0.55-0.45-1-1-1H6V6h5V4H8.5V3h-2v1H5C4.45,4,4,4.45,4,5v4c0,0.55,0.45,1,1,1h4v2H4v2h2.5v1h2v-1H10 C10.55,14,11,13.55,11,13z"/><polygon points="19.59,12.52 13.93,18.17 11.1,15.34 9.69,16.76 13.93,21 21,13.93"/></g></g></svg>
-                        <h4>Price Guarantee</h4>
-                        <p>Our State-of-art car shipping cost quoting technology allows us to provide you with the best price to ship your car 100% of the time with no hidden fees.</p>
-                    </motion.div>
-                    <motion.div
-                    initial={initial_left}
-                    animate={animate}
-                    className="reason">
-                        <svg xmlns="http://www.w3.org/2000/svg" enableBackground="new 0 0 24 24" height="24px" viewBox="0 0 24 24" width="24px" fill="#000000"><g><rect fill="none" height="24" width="24"/></g><g><g><circle cx="12" cy="6" r="2"/><path d="M21,16v-2c-2.24,0-4.16-0.96-5.6-2.68l-1.34-1.6C13.68,9.26,13.12,9,12.53,9h-1.05c-0.59,0-1.15,0.26-1.53,0.72l-1.34,1.6 C7.16,13.04,5.24,14,3,14v2c2.77,0,5.19-1.17,7-3.25V15l-3.88,1.55C5.45,16.82,5,17.48,5,18.21C5,19.2,5.8,20,6.79,20H9v-0.5 c0-1.38,1.12-2.5,2.5-2.5h3c0.28,0,0.5,0.22,0.5,0.5S14.78,18,14.5,18h-3c-0.83,0-1.5,0.67-1.5,1.5V20h7.21 C18.2,20,19,19.2,19,18.21c0-0.73-0.45-1.39-1.12-1.66L14,15v-2.25C15.81,14.83,18.23,16,21,16z"/></g></g></svg>
-                        <h4>5-Star, Stress Free Service</h4>
+                <AnimatePresence>{isPreviewed&&
+                    <motion.div 
+                    className="review_preview" 
+                    initial={{scale:0}}
+                    animate={{scale:1, transition:{type:"spring",stiffness:200}}} 
+                    exit={{scale:0}}>
+                    <div>
+                        <motion.svg onClick={handleClose} className="exit_icon" animate={{rotate:360, transition:{duration:0.4, delay:0.2}}} xmlns="http://www.w3.org/2000/svg" height="24px" strokeWidth="4" viewBox="0 0 24 24" width="24px" fill="#000000"><path d="M0 0h24v24H0V0z" fill="none"/><path d="M19 6.41L17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41z"/></motion.svg>
                         <p>
-                            We are 5 rated shipping service with Better Business Bureau, and have many reviews from customers on Google, Transport review and more!. Your car will get from point A to point B without you having to break a single sweat.
-                        </p> 
-                    </motion.div>
-                    <motion.div
-                    initial={initial_right}
-                    animate={animate}
-                    className="reason">
-                        <svg xmlns="http://www.w3.org/2000/svg" enableBackground="new 0 0 24 24" height="24px" viewBox="0 0 24 24" width="24px" fill="#000000"><g><rect fill="none" height="24" width="24"/></g><g><path d="M12,2L4,5v6.09c0,5.05,3.41,9.76,8,10.91c4.59-1.15,8-5.86,8-10.91V5L12,2z M18,11.09c0,4-2.55,7.7-6,8.83 c-3.45-1.13-6-4.82-6-8.83v-4.7l6-2.25l6,2.25V11.09z"/></g></svg>
-                        <h4>Fully Covered</h4>
-                        <p>The total cost includes full coverage insurance. We verify that all of our car transport carriers have their own active cargo insurance at all times.</p>
-                    </motion.div>
-                    <motion.div
-                    initial={initial_left}
-                    animate={animate}
-                    className="reason">
-                        <svg xmlns="http://www.w3.org/2000/svg" enableBackground="new 0 0 24 24" height="24px" viewBox="0 0 24 24" width="24px" fill="#000000"><rect fill="none" height="24" width="24"/><g><path d="M4,13c1.1,0,2-0.9,2-2c0-1.1-0.9-2-2-2s-2,0.9-2,2C2,12.1,2.9,13,4,13z M5.13,14.1C4.76,14.04,4.39,14,4,14 c-0.99,0-1.93,0.21-2.78,0.58C0.48,14.9,0,15.62,0,16.43V18l4.5,0v-1.61C4.5,15.56,4.73,14.78,5.13,14.1z M20,13c1.1,0,2-0.9,2-2 c0-1.1-0.9-2-2-2s-2,0.9-2,2C18,12.1,18.9,13,20,13z M24,16.43c0-0.81-0.48-1.53-1.22-1.85C21.93,14.21,20.99,14,20,14 c-0.39,0-0.76,0.04-1.13,0.1c0.4,0.68,0.63,1.46,0.63,2.29V18l4.5,0V16.43z M16.24,13.65c-1.17-0.52-2.61-0.9-4.24-0.9 c-1.63,0-3.07,0.39-4.24,0.9C6.68,14.13,6,15.21,6,16.39V18h12v-1.61C18,15.21,17.32,14.13,16.24,13.65z M8.07,16 c0.09-0.23,0.13-0.39,0.91-0.69c0.97-0.38,1.99-0.56,3.02-0.56s2.05,0.18,3.02,0.56c0.77,0.3,0.81,0.46,0.91,0.69H8.07z M12,8 c0.55,0,1,0.45,1,1s-0.45,1-1,1s-1-0.45-1-1S11.45,8,12,8 M12,6c-1.66,0-3,1.34-3,3c0,1.66,1.34,3,3,3s3-1.34,3-3 C15,7.34,13.66,6,12,6L12,6z"/></g></svg>
-                        <h4>Experienced Specialists</h4>
-                        <p>Our Transport Specialists and Customer Service Representatives are here to help! Our experienced transport team is trained to handle every aspect of the shipping process from start to finish.</p>
-                    </motion.div>
-                    <motion.div
-                    initial={initial_right}
-                    animate={animate}
-                    className="reason">
-                        <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 0 24 24" width="24px" fill="#000000"><path d="M0 0h24v24H0V0z" fill="none"/><path d="M20 8h-3V4H3c-1.1 0-2 .9-2 2v11h2c0 1.66 1.34 3 3 3s3-1.34 3-3h6c0 1.66 1.34 3 3 3s3-1.34 3-3h2v-5l-3-4zm-.5 1.5l1.96 2.5H17V9.5h2.5zM6 18c-.55 0-1-.45-1-1s.45-1 1-1 1 .45 1 1-.45 1-1 1zm2.22-3c-.55-.61-1.33-1-2.22-1s-1.67.39-2.22 1H3V6h12v9H8.22zM18 18c-.55 0-1-.45-1-1s.45-1 1-1 1 .45 1 1-.45 1-1 1z"/></svg>
-                        <h4>16K+ Auto Carriers</h4>
-                        <p>Our auto transporter company has a huge network of haulers who are personally vetted auto shipping experts, ensuring your vehicle is transported by trusted members of the industry. These vehicle transport companies will treat your car like their own.</p>
-                    </motion.div>
-                </div>}
+                        {previewContent}
+                        </p>
+                    </div>
+                    </motion.div> 
+                }</AnimatePresence>
+                <div className="why-asap-shipping-wrapper">
+                    {isPositoin&&<motion.h3
+                    initial={{y:-50, opacity:0}}
+                    animate={{y:0, opacity:1, transition:{duration:1}}}
+                    >Why ASAP Shipping Express?</motion.h3>}
+                    {isPositoin && <div className="reason-wrapper">
+                        <motion.div
+                            initial={{y:-50, opacity:0}}
+                            animate={{y:0, opacity:1, transition:{duration:1}}}
+                        className="indicator-wrapper">
+                            <div className="reason">
+                                <span className='indicator'>{experience}</span>
+                                <h4>Year of Experience</h4>
+                            </div>
+                            <div className="reason">
+                                <div className="indicator">
+                                    <span>{customers}</span>
+                                    <span>K</span>
+                                </div>
+                                <h4>Happy Customers</h4>
+                            </div>
+                            <div className="reason">
+                                <div className="indicator">
+                                    <span>{vehicles}</span>
+                                    <span>K+</span>
+                                </div>
+                                <h4>Vehicles Shipped</h4>
+                            </div>
+                        </motion.div>
+                        <motion.div
+                        initial={initial_left}
+                        animate={animate}
+                        className="reason">
+                            <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 0 24 24" width="24px" fill="#000000"><path d="M0 0h24v24H0V0z" fill="none"/><path d="M20 4H4c-1.11 0-1.99.89-1.99 2L2 18c0 1.11.89 2 2 2h16c1.11 0 2-.89 2-2V6c0-1.11-.89-2-2-2zm0 14H4v-6h16v6zm0-10H4V6h16v2z"/></svg>
+                            <h4>No Down payment to scedule</h4>
+                            <p>NO down payment is required to book your order and you will not be charged any payment untill we confirm a carrier for your vehicle.We will contact you to let you know when your order is dispatched. </p>
+                        </motion.div>
+                        <motion.div
+                        initial={initial_right}
+                        animate={animate}
+                        className="reason">
+                            <svg xmlns="http://www.w3.org/2000/svg" enableBackground="new 0 0 24 24" height="24px" viewBox="0 0 24 24" width="24px" fill="#000000"><g><path d="M0,0h24v24H0V0z" fill="none"/></g><g><g><path d="M11,13V9c0-0.55-0.45-1-1-1H6V6h5V4H8.5V3h-2v1H5C4.45,4,4,4.45,4,5v4c0,0.55,0.45,1,1,1h4v2H4v2h2.5v1h2v-1H10 C10.55,14,11,13.55,11,13z"/><polygon points="19.59,12.52 13.93,18.17 11.1,15.34 9.69,16.76 13.93,21 21,13.93"/></g></g></svg>
+                            <h4>Price Guarantee</h4>
+                            <p>Our State-of-art car shipping cost quoting technology allows us to provide you with the best price to ship your car 100% of the time with no hidden fees.</p>
+                        </motion.div>
+                        <motion.div
+                        initial={initial_left}
+                        animate={animate}
+                        className="reason">
+                            <svg xmlns="http://www.w3.org/2000/svg" enableBackground="new 0 0 24 24" height="24px" viewBox="0 0 24 24" width="24px" fill="#000000"><g><rect fill="none" height="24" width="24"/></g><g><g><circle cx="12" cy="6" r="2"/><path d="M21,16v-2c-2.24,0-4.16-0.96-5.6-2.68l-1.34-1.6C13.68,9.26,13.12,9,12.53,9h-1.05c-0.59,0-1.15,0.26-1.53,0.72l-1.34,1.6 C7.16,13.04,5.24,14,3,14v2c2.77,0,5.19-1.17,7-3.25V15l-3.88,1.55C5.45,16.82,5,17.48,5,18.21C5,19.2,5.8,20,6.79,20H9v-0.5 c0-1.38,1.12-2.5,2.5-2.5h3c0.28,0,0.5,0.22,0.5,0.5S14.78,18,14.5,18h-3c-0.83,0-1.5,0.67-1.5,1.5V20h7.21 C18.2,20,19,19.2,19,18.21c0-0.73-0.45-1.39-1.12-1.66L14,15v-2.25C15.81,14.83,18.23,16,21,16z"/></g></g></svg>
+                            <h4>5-Star, Stress Free Service</h4>
+                            <p>
+                                We are 5 rated shipping service with Better Business Bureau, and have many reviews from customers on Google, Transport review and more!. Your car will get from point A to point B without you having to break a single sweat.
+                            </p> 
+                        </motion.div>
+                        <motion.div
+                        initial={initial_right}
+                        animate={animate}
+                        className="reason">
+                            <svg xmlns="http://www.w3.org/2000/svg" enableBackground="new 0 0 24 24" height="24px" viewBox="0 0 24 24" width="24px" fill="#000000"><g><rect fill="none" height="24" width="24"/></g><g><path d="M12,2L4,5v6.09c0,5.05,3.41,9.76,8,10.91c4.59-1.15,8-5.86,8-10.91V5L12,2z M18,11.09c0,4-2.55,7.7-6,8.83 c-3.45-1.13-6-4.82-6-8.83v-4.7l6-2.25l6,2.25V11.09z"/></g></svg>
+                            <h4>Fully Covered</h4>
+                            <p>The total cost includes full coverage insurance. We verify that all of our car transport carriers have their own active cargo insurance at all times.</p>
+                        </motion.div>
+                        <motion.div
+                        initial={initial_left}
+                        animate={animate}
+                        className="reason">
+                            <svg xmlns="http://www.w3.org/2000/svg" enableBackground="new 0 0 24 24" height="24px" viewBox="0 0 24 24" width="24px" fill="#000000"><rect fill="none" height="24" width="24"/><g><path d="M4,13c1.1,0,2-0.9,2-2c0-1.1-0.9-2-2-2s-2,0.9-2,2C2,12.1,2.9,13,4,13z M5.13,14.1C4.76,14.04,4.39,14,4,14 c-0.99,0-1.93,0.21-2.78,0.58C0.48,14.9,0,15.62,0,16.43V18l4.5,0v-1.61C4.5,15.56,4.73,14.78,5.13,14.1z M20,13c1.1,0,2-0.9,2-2 c0-1.1-0.9-2-2-2s-2,0.9-2,2C18,12.1,18.9,13,20,13z M24,16.43c0-0.81-0.48-1.53-1.22-1.85C21.93,14.21,20.99,14,20,14 c-0.39,0-0.76,0.04-1.13,0.1c0.4,0.68,0.63,1.46,0.63,2.29V18l4.5,0V16.43z M16.24,13.65c-1.17-0.52-2.61-0.9-4.24-0.9 c-1.63,0-3.07,0.39-4.24,0.9C6.68,14.13,6,15.21,6,16.39V18h12v-1.61C18,15.21,17.32,14.13,16.24,13.65z M8.07,16 c0.09-0.23,0.13-0.39,0.91-0.69c0.97-0.38,1.99-0.56,3.02-0.56s2.05,0.18,3.02,0.56c0.77,0.3,0.81,0.46,0.91,0.69H8.07z M12,8 c0.55,0,1,0.45,1,1s-0.45,1-1,1s-1-0.45-1-1S11.45,8,12,8 M12,6c-1.66,0-3,1.34-3,3c0,1.66,1.34,3,3,3s3-1.34,3-3 C15,7.34,13.66,6,12,6L12,6z"/></g></svg>
+                            <h4>Experienced Specialists</h4>
+                            <p>Our Transport Specialists and Customer Service Representatives are here to help! Our experienced transport team is trained to handle every aspect of the shipping process from start to finish.</p>
+                        </motion.div>
+                        <motion.div
+                        initial={initial_right}
+                        animate={animate}
+                        className="reason">
+                            <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 0 24 24" width="24px" fill="#000000"><path d="M0 0h24v24H0V0z" fill="none"/><path d="M20 8h-3V4H3c-1.1 0-2 .9-2 2v11h2c0 1.66 1.34 3 3 3s3-1.34 3-3h6c0 1.66 1.34 3 3 3s3-1.34 3-3h2v-5l-3-4zm-.5 1.5l1.96 2.5H17V9.5h2.5zM6 18c-.55 0-1-.45-1-1s.45-1 1-1 1 .45 1 1-.45 1-1 1zm2.22-3c-.55-.61-1.33-1-2.22-1s-1.67.39-2.22 1H3V6h12v9H8.22zM18 18c-.55 0-1-.45-1-1s.45-1 1-1 1 .45 1 1-.45 1-1 1z"/></svg>
+                            <h4>16K+ Auto Carriers</h4>
+                            <p>Our auto transporter company has a huge network of haulers who are personally vetted auto shipping experts, ensuring your vehicle is transported by trusted members of the industry. These vehicle transport companies will treat your car like their own.</p>
+                        </motion.div>
+                    </div>}
+                </div>
             </div>
-        </div>
+        </>
     );
 }
 

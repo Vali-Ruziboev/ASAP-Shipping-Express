@@ -1,11 +1,20 @@
-import { useHistory, useLocation, useRouteMatch } from 'react-router-dom'
+import { useHistory, useRouteMatch } from 'react-router-dom'
 import { useState } from 'react';
 import SimpleReactValidator from 'simple-react-validator'
 import useForceUpdate from 'use-force-update';
 
 const ZipCodes = ({ shipFrom, shipTo, setShipFrom, setShipTo }) => {
-    const location = useLocation()
-    console.log(location);
+    const history = useHistory()
+    const { path } = useRouteMatch()
+    const updatedPath = (()=>{
+        if(path ==='/'){
+            return path
+        }else{
+            return `${path}/`
+        }
+    })()
+    console.log(updatedPath);
+    console.log(path);
      // validator
     const [validator] = useState(new SimpleReactValidator())
     const forceUpdate = useForceUpdate();
@@ -13,14 +22,13 @@ const ZipCodes = ({ shipFrom, shipTo, setShipFrom, setShipTo }) => {
         setShipFrom(e.target.value)
         
         }
-        const history = useHistory()
-        const handleNext =(e)=>{
-            if(validator.allValid()){
-                history.push(`${location.pathname}/vehicle_information`)
-            }else{
-                validator.showMessages()
-                forceUpdate()
-        }
+    const handleNext =(e)=>{
+        if(validator.allValid()){
+            history.push(`${updatedPath}vehicle_information`)
+        }else{
+            validator.showMessages()
+            forceUpdate()
+    }
     }
     return ( 
         <div className="zip_form">
