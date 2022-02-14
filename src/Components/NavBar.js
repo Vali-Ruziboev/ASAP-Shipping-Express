@@ -4,8 +4,8 @@ const NavBar = () => {
         <ul className='navbar'>
             <li><a href="#header"> Get a Quote</a></li>
             <li><Link to='/faqs'>FAQs</Link></li>
-            <li>Step-By-Step Guide</li>
-            <li>Contact Us</li>
+            <li><Link to='step_by_step_guide'>Step-By-Step Guide</Link></li>
+            <li><Link to='contact_us'>Contact Us</Link></li>
         </ul>
     );
 }

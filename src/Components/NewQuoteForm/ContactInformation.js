@@ -15,7 +15,6 @@ const ContactInformation = ({ firstName, setFirstName, lastName, setLastName, nu
             return `/${path.split('/')[1]}`
         }
     })()
-    console.log(updatedPath);
     const handleSubmit = ()=>{
         if(validator.allValid()){
             history.push(`${updatedPath}/quote_submitted`)
@@ -25,8 +24,6 @@ const ContactInformation = ({ firstName, setFirstName, lastName, setLastName, nu
         }
     }
     
-    console.log(moment(date));
-    console.log(moment());
 
     const previous = ()=>history.push(`${updatedPath}/vehicle_information`)
     useEffect(()=>{

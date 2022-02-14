@@ -21,11 +21,9 @@ const NewQuote = () => {
     const zipCodes = [shipFrom, shipTo]
     const vehicleInfo = [year, make, model, type, isRunning]
     const handleSubmit = (e)=>{
-        console.log(shipFrom, shipTo)
         e.preventDefault()
     }
     const { path } = useRouteMatch()
-    console.log(path);
     const updatedPath = (()=>{
         if(path ==='/'){
             return path
@@ -33,7 +31,6 @@ const NewQuote = () => {
             return `${path}/`
         }
     })()
-    console.log(updatedPath);
     return ( 
         <Router>
             <motion.form

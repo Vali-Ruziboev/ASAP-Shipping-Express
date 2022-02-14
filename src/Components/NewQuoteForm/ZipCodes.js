@@ -13,8 +13,6 @@ const ZipCodes = ({ shipFrom, shipTo, setShipFrom, setShipTo }) => {
             return `${path}/`
         }
     })()
-    console.log(updatedPath);
-    console.log(path);
      // validator
     const [validator] = useState(new SimpleReactValidator())
     const forceUpdate = useForceUpdate();
