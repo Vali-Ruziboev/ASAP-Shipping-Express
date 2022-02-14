@@ -21,7 +21,6 @@ const VehicleInformation = ({year, setYear, make, setMake, model, setModel, type
             return `/${path.split('/')[1]}/`
         }
     })()
-    console.log(updatedPath);
     // getting current year
     const currentYear = new Date().getFullYear()
     // validator
@@ -36,12 +35,9 @@ const VehicleInformation = ({year, setYear, make, setMake, model, setModel, type
             func(copy)
     }
 
-    console.log(isRunning)
     useEffect(()=>{
-        console.log(updatedPath);
         if(validate.some(i=>i==='')){
             history.push(`${updatedPath}`)
-            console.log(updatedPath);
         }
         for(let i=0;i<is_running.length/2;i++){
             if(isRunning[i]==='Yes'){

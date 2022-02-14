@@ -2,6 +2,7 @@ import { useEffect, useState } from "react";
 import NavBar from "./NavBar";
 import NewQuote from "./NewQuoteForm/NewQuote";
 import { motion, AnimatePresence, useAnimation } from "framer-motion";
+import { Link } from "react-router-dom";
 
 
 const Header = () => {
@@ -46,10 +47,10 @@ const Header = () => {
                 <motion.div initial={{y:-200,width:10,}}
                 animate={anim}
                 className="navbar-wrapper">
-                    <motion.h1
+                    <Link to='/'><motion.h1
                     initial={{x:'-100vh'}}
                     animate={{x:0, transition:{delay:1.5, duration:0.6, type:'spring',stiffness:50}}}
-                    >ASAP SHIPPING EXPRESS</motion.h1>
+                    >ASAP SHIPPING EXPRESS</motion.h1></Link>
                     {!isMobile && <NavBar />}
                     {isMobile && <motion.svg
                     initial={{scale:0}}

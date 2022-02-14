@@ -415,6 +415,25 @@ li{
   padding: 2rem;
   min-height: 25rem;
 }
+.states svg{
+  max-width: 90vw;
+  max-height:85vh;
+}
+.states svg path{
+  fill: var(--header) !important;
+  stroke: var(--head-text);
+}
+.states svg path:hover{
+  fill: rgba(3, 140, 37, 0.8) !important;
+}
+#state_text{
+  fill: var(--cultured);
+  user-select: none;
+}
+#lakes path{
+  fill: rgb(0, 123, 174) !important;
+  stroke: var(--head-text) !important;
+}
 .seal_pad{
   padding: 10px 0;
 }
