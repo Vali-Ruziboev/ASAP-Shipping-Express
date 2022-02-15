@@ -476,6 +476,10 @@ li{
   max-width: 500px;
   height: 30rem;
 }
+.faqs{
+  text-align: center;
+}
+
 footer{
   position: relative;
   height: max-content;
