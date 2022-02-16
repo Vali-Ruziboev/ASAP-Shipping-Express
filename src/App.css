@@ -477,8 +477,56 @@ li{
   height: 30rem;
 }
 .faqs{
-  text-align: center;
+  padding: 1rem;
 }
+.faqs h2{
+  display: block;
+  margin: 0 auto;
+  width: fit-content;
+  text-align: center;
+} 
+.faqs-container{
+  max-width: 36rem;
+  display: block;
+  margin: 0 auto;
+}
+.question{
+  margin: 1rem 0;
+  box-shadow: var(--shadow);
+}
+.head{
+  padding: 1rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  cursor: pointer;
+  background-color: var(--head-text);
+  color: var(--cultured);
+}
+.head svg{
+  fill: var(--cultured);
+}
+.question p{
+  padding: 1rem;
+  background-color: var(--paragraph);
+  color: var(--cultured);
+  box-shadow: inset var(--shadow);
+}
+
+/* .question-enter {
+  opacity: 0;
+}
+.question-enter-active {
+  opacity: 1;
+  transition: opacity 500ms ease-in;
+}
+.question-exit {
+  opacity: 1;
+}
+.question-exit-active {
+  opacity: 0;
+  transition: opacity 500ms ease-in;
+} */
 
 footer{
   position: relative;
