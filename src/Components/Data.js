@@ -54,4 +54,48 @@ export const faqsData = [
         question:"How do I pay for my auto shipping?",
         answer:"We accept all major credit cards, electronic transfer. If a balance is due upon delivery, it can be paid directly to the driver and can be paid in cash, cashier's check, company check, or postal money order."
     }
+];
+
+
+export const StepByStepGuideData = [
+    {
+        header:"Give Yourself Time", 
+        body:`It is important to understand that car shipping across the country takes time. It's best to schedule your shipment as early as possible, as several variables may influence the length of the process. Below is a guide of the estimated delivery time windows:In-State Delivery: 1-3 Days.\n Up to 1000 Miles: 3-5 Days.\n1000-1250 Miles: 4-5 Days.\n 1250-2000 Miles: 6-8 Days.\n2000-3000 Miles: 7-9 Days.\n3000 Miles and Above: 9-11 Days.`
+    }, 
+    {
+        header:"Clean Your Vehicle", 
+        body:"You want your vehicle to look its best for the journey. This means cleaning it inside and out. Washing your car will also expose any dents, scratches, or other forms of damage you'll want to document before shipment.\n\n\nAlso, since the transportation can be a bumpy ride, make sure loose items are removed from the vehicle's interior. Unsecured objects can be tossed around in transit, possibly causing damage. This can include anything from air fresheners and change, to electronics and chargers, etc."
+    },
+    {
+        header:"Inspect Your Vehicle", 
+        body:"Take note of any existing damage anywhere in or on your vehicle. For insurance, it is crucial to spot any irregularities before sending your vehicle off to be shipped. In addition to checking for exterior damage, make sure the tires have appropriate pressure and examine the vehicle's undercarriage for leaks. Any significant leaks must be repaired prior to shipping."
+    },
+    {
+        header:"Remove Custom Accessories", 
+        body:"Custom accessories such as spoilers may be stylish, but they are vulnerable to loss or damage if left on the vehicle during shipping. To avoid this, simply remove them prior to shipment."
+    },
+    {
+        header:"Leave Gas Tank Empty", 
+        body:"Unlike with car rental services, for us, it is actually important to leave your vehicle with a quarter-tank of gas or less. Too much fuel in the tank will add weight to the car. Since the vehicle is not being driven, there is no need to worry about it containing sufficient fuel."
+    },
+    {
+        header:"Choose Pick-Up Option", 
+        body:"With Door-To-Door Auto Transport, the driver can pick the vehicle up directly from your home or another predetermined location. Depending on where you live, this option may be unavailable. Some neighborhoods are not accessible to our big trucks. Alternatively, you could drop off your vehicle."
+    },
+    {
+        header:"Inspect with Driver", 
+        body:"The truck driver will also perform an inspection upon picking up the vehicle. Communicate thoroughly with the driver to record any and all existing damage. You know your vehicle better than anyone else. Also, make sure that when the driver loads up the vehicle that it is properly secured."
+    },
+    {
+        header:"Lock the Car and Disable the Alarm", 
+        body:"Nobody should be entering your vehicle at any point in the shipment process. Ensure that the vehicle is locked upon being loaded onto the truck. However, the last thing the truck driver wants is for your car alarm to go off every time he hits a bump. Make sure any alarms are disabled."
+    },
+    {
+        header:"Be Patient", 
+        body:"The health and safety of your vehicle are imperative. Weather and road conditions could affect the shipment time. Additionally, regulations prevent truck drivers from traveling too great a distance in a single day. You will receive the driver's phone number before transportation. Contact the driver directly to track the shipment, or you may contact a dispatch agent."
+    },
+    {
+        header:"Pick Up Vehicle", 
+        body:"You will need to coordinate with the truck driver regarding where to receive your newly transported vehicle. It is important that the agreed-upon location be accessible by a large truck. Locations may include large parking lots or wide streets. Inspect the vehicle with the driver and update the Bill Of Landing (or BOL) as necessary. This is the contract between you and the truck driver that will serve as your receipt for the transit."
+    }
 ]
