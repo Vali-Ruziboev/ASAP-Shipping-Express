@@ -414,7 +414,11 @@ li{
 .states{
   padding: 2rem;
   min-height: 25rem;
+  background-image: url(Pictures/map_bg.svg);
+  background-size: contain;
+  position: relative;
 }
+
 .states svg{
   max-width: 90vw;
   max-height:85vh;
@@ -512,21 +516,20 @@ li{
   color: var(--cultured);
   box-shadow: inset var(--shadow);
 }
-
-/* .question-enter {
-  opacity: 0;
+.guides_container h2{
+  width: fit-content;
+  display: block;
+  margin: 2rem auto;
 }
-.question-enter-active {
-  opacity: 1;
-  transition: opacity 500ms ease-in;
+.guide_wrapper{
+  display: block;
+  margin: 2rem auto;
+  width: 60%;
 }
-.question-exit {
-  opacity: 1;
+.guide_wrapper p{
+  margin-left: 1rem;
+  line-height: 2rem;
 }
-.question-exit-active {
-  opacity: 0;
-  transition: opacity 500ms ease-in;
-} */
 
 footer{
   position: relative;
