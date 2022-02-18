@@ -251,6 +251,8 @@ li{
   position: relative;
   overflow-y: hidden;
   user-select: none;
+  background-image: url(Pictures/bg-2.svg);
+  background-size: contain;
 }
 .slides_wrapper{
   width: max-content;
@@ -414,7 +416,7 @@ li{
 .states{
   padding: 2rem;
   min-height: 25rem;
-  background-image: url(Pictures/map_bg.svg);
+  background-image: url(Pictures/undraw_connected_world_wuay.svg);
   background-size: contain;
   position: relative;
 }
@@ -433,6 +435,7 @@ li{
 #state_text{
   fill: var(--cultured);
   user-select: none;
+  pointer-events: none;
 }
 #lakes path{
   fill: rgb(0, 123, 174) !important;
@@ -448,6 +451,10 @@ li{
 .contact_us_today{
   margin: 2rem 0;
   height: max-content;
+  background-image: url(Pictures/undraw_my_current_location_re_whmt.svg);
+  background-size: contain;
+  background-repeat: no-repeat;
+  
 }
 .contact_us_today div{
   margin: 2rem 0;
@@ -482,6 +489,7 @@ li{
 }
 .faqs{
   padding: 1rem;
+  background-image: url(Pictures/undraw_faq_re_31cw.svg);
 }
 .faqs h2{
   display: block;
@@ -516,6 +524,17 @@ li{
   color: var(--cultured);
   box-shadow: inset var(--shadow);
 }
+.guides:before{
+  content: '';
+  display: block;
+  margin: 2rem auto;
+  width:100%;
+  height: 20rem;
+  background-image: url(Pictures/undraw_completed_steps_re_h9wc.svg);
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center;
+}
 .guides_container h2{
   width: fit-content;
   display: block;
@@ -530,7 +549,20 @@ li{
   margin-left: 1rem;
   line-height: 2rem;
 }
-
+.contact_us_wrapper{
+  display: flex;
+  justify-content: center;
+}
+.contact_us{
+  display: flex;
+  flex-direction: column;
+  width: fit-content;
+  align-items: flex-start;
+}
+.contact_us h3{
+  width: 100%;
+  text-align: center !important;
+}
 footer{
   position: relative;
   height: max-content;
