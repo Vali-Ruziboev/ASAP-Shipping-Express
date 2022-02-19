@@ -554,14 +554,49 @@ li{
   justify-content: center;
 }
 .contact_us{
+  margin: 2rem 0.5rem;
   display: flex;
   flex-direction: column;
   width: fit-content;
+  min-width: 30%;
   align-items: flex-start;
+  padding: 2rem;
+  box-shadow: var(--shadow);
+  border-radius: 10px;
 }
 .contact_us h3{
   width: 100%;
   text-align: center !important;
+  font-size: 2em;
+}
+.contact_us textarea{
+  width: 100%;
+  display: block;
+  max-width: 70vw;
+  border-radius: 10px;
+  border: 1px solid;
+  padding: 0.5rem;
+}
+.contact_us input{
+  padding: 0.5rem;
+  display: block;
+  width: 100%;
+  max-width: 30rem;
+  border-radius: 10px;
+  border: 1px solid;
+}
+.contact_us label{
+  margin: 1rem 0;
+  width: 100%;
+}
+.contact_us button{
+  padding: 0.5rem 2rem;
+  background-color: var(--header);
+  border: none;
+  box-shadow: var(--shadow);
+  border-radius: 10px;
+  cursor: pointer;
+  color:var(--cultured);
 }
 footer{
   position: relative;
