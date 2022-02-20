@@ -253,6 +253,7 @@ li{
   user-select: none;
   background-image: url(Pictures/bg-2.svg);
   background-size: contain;
+  background-attachment: fixed;
 }
 .slides_wrapper{
   width: max-content;
@@ -490,6 +491,7 @@ li{
 .faqs{
   padding: 1rem;
   background-image: url(Pictures/undraw_faq_re_31cw.svg);
+  background-attachment: fixed;
 }
 .faqs h2{
   display: block;
