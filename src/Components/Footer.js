@@ -4,7 +4,7 @@ const Footer = () => {
     const currentYear = new Date().getFullYear()
     return ( 
         <footer>
-                <h3>Company</h3>
+                <h3><Link to='/'>Company</Link></h3>
                     <NavBar />
                     <li><Link to = "terms_and_conditions">Terms and Conditions</Link> </li>
                 <div className="social-media">

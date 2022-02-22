@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 
 const WeShipEveryWhere = () => {
     return ( 
@@ -112,7 +113,7 @@ const WeShipEveryWhere = () => {
             <div className="seal">
                 <h3>Still have questions?</h3>
                 <p className="seal_pad">Check-out:</p>
-                <h4 className="faqs_btn">FAQs</h4>
+                <h4 className="faqs_btn"><Link to="/faqs">FAQs</Link></h4>
                 <p className="seal_pad">OR</p>
                 <p>Give us a callback at <a href="tel:(929) 419-5297">(555) 555-5555</a> to speak with one of our experienced transport specialists.</p>
             </div>
