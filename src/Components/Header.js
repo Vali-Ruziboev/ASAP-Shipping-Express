@@ -72,7 +72,10 @@ const Header = () => {
                             </motion.div>
                         
                     </div>}</AnimatePresence>
-            <NewQuote />  
+            <div className="header_body">
+                <h1 className="intro">Hello</h1>
+                <NewQuote />  
+            </div>
         </header>
     );
 }

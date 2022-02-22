@@ -10,6 +10,7 @@ header{
   background-attachment: fixed;
   overflow: hidden;
   position: relative;
+  align-items: center;
   
 }
 header::before{
@@ -19,6 +20,22 @@ header::before{
   min-height: 1000%;
   background-color: rgba(0, 0, 0, 0.3);
 }
+.header_body{
+  width: 80%;
+  height: max-content;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.intro{
+  width: max-content;
+  color: var(--cultured);
+}
+.header_body form{
+  width: max-content !important;
+}
+
 .nav-wrapper{
   width: 100%;
   position: fixed;
@@ -61,8 +78,8 @@ header::before{
   position: relative;
   width: 100%;
   justify-content: space-evenly;
-  padding-bottom: 5px;
-  padding-top: 15px;
+  align-items: center;
+  padding: 15px 0;
   background-color: white;
   color: var(--header);
   box-shadow: var(--shadow);
@@ -85,10 +102,22 @@ header::before{
 }
 .nav-wrapper ul{
   display: flex;
+  justify-content: space-between;
+  width: 40%;
+  align-items: center;
 }
+ 
+.nav-wrapper li:last-child{
+  padding: 1rem;
+  background-color: var(--header);
+  border-radius: 10px;
+  color: var(--cultured);
+  box-shadow: var(--shadow);
+}
+
 .quote-form{
-  margin-top: 9rem;
-  margin-bottom: 3rem;
+  /* margin-top: 9rem;
+  margin-bottom: 3rem; */
   justify-content: center;
   height: max-content;
   width:90%;
@@ -633,6 +662,14 @@ li{
   border-radius: 10px;
   cursor: pointer;
   color:var(--cultured);
+}
+.terms_conditions{
+  width: 60%;
+  display: block;
+  margin: 2rem auto;
+}
+.terms_conditions p{
+  margin: 2rem 0;
 }
 footer{
   position: relative;
