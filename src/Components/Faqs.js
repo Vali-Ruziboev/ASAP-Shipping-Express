@@ -3,6 +3,7 @@ import { TransitionGroup, CSSTransition  } from 'react-transition-group';
 import Header from "./Header";
 import { faqsData } from "./Data";
 import { useState } from "react";
+import image from '../Pictures/faqs.jpg'
 
 const Faqs = () => {
     const [clicked, setClicked] = useState(null)
@@ -15,7 +16,7 @@ const Faqs = () => {
     }
     return ( 
         <>
-            <Header />
+            <Header image={image} intro='Frequently Asked Questions.'/>
             <div className="faqs">
                 <h2>Frequently Asked Questions</h2>
                 <div className="faqs-container">

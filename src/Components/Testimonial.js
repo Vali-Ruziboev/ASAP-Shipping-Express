@@ -2,6 +2,8 @@ import { useState, useEffect } from "react";
 import { MdStarRate } from 'react-icons/md'
 import { motion, AnimatePresence, useAnimation } from "framer-motion";
 import Header from "./Header";
+import picture from '../Pictures/Car_Carrier1-desktop.jpg'
+console.log(picture);
 
 const Testimonial = () => {
     const f_star = new Array(5).fill('')
@@ -120,7 +122,7 @@ const Testimonial = () => {
     }, [checkScrollHeight])
     return (
         <>
-            <Header />
+            <Header image={picture} intro='Ship Your Vehicle with ASAP Shipping Express.' />
             <div className='testimonial'>
                 <h3>Recent Reviews</h3>
                 <div className="slides_wrapper">
