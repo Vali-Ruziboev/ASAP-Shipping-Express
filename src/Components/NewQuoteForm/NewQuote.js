@@ -35,7 +35,7 @@ const NewQuote = () => {
         <Router>
             <motion.form
             initial={{x:'100vw'}}
-            animate={{x:0, transition:{duration:0.5, type:'spring', stiffness:200}}}
+            animate={{x:0, transition:{delay:0.5,duration:0.5, type:'spring', stiffness:200}}}
             id='new_quote' onSubmit={(e)=>handleSubmit(e)} className='quote-form'>
                 <h1>GET A FREE QUOTE NOW</h1>
                 <a href="tel:(929) 419-5297">(929) 419-5297</a>

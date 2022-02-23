@@ -5,7 +5,8 @@ import { motion, AnimatePresence, useAnimation } from "framer-motion";
 import { Link } from "react-router-dom";
 
 
-const Header = () => {
+const Header = ({image, intro}) => {
+    console.log(image);
     const [isMobile, setIsMobile] = useState(false);
     const [isMenuClicked, setIsMenuClicked] = useState(false);
     useEffect(()=>{
@@ -30,7 +31,7 @@ const Header = () => {
         sequence()
     }, [])
     return ( 
-        <header id='header'>
+        <header style={{backgroundImage:`url(${image})`}} id='header'>
             <div className="nav-wrapper">     
                 <motion.div initial={{translateY:-100}}
                 animate={{translateY:0, transition:{duration:0.5}}}
@@ -73,7 +74,7 @@ const Header = () => {
                         
                     </div>}</AnimatePresence>
             <div className="header_body">
-                <h1 className="intro">Hello</h1>
+                <motion.h1 initial={{opacity:0, y:-100}} animate={{opacity:1, y:0, transition:{delay:1, duration:2}}} className="intro">{intro}</motion.h1>
                 <NewQuote />  
             </div>
         </header>

@@ -1,3 +1,4 @@
+import image from '../Pictures/contact_us.jpg';
 import { useState, useRef } from "react";
 import Header from "./Header";
 import emailjs, {init} from '@emailjs/browser';
@@ -25,7 +26,7 @@ const Contact_Us = () => {
     }
     return ( 
         <div>
-            <Header />
+            <Header image={image} intro='Give us a call at (555) 555-5555 to talk to one of our specialists.' />
             <div className="contact_us_wrapper">
                 <form className="contact_us" onSubmit={(e)=>handleSubmit(e)}>
                     <h3>Contact Us</h3>

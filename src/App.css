@@ -3,7 +3,6 @@ header{
   min-height: 100vh;
   display: flex;
   justify-content: center;
-  background-image: var(--car-carrier1-desktop);
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
@@ -30,7 +29,12 @@ header::before{
 
 .intro{
   width: max-content;
-  color: var(--cultured);
+  color: white !important;
+  z-index: 1;
+  font-size: 3.5rem;
+  width: 60%;
+  text-align: center;
+  text-shadow:0px 0px 10px rgba(0, 0, 0, 1);
 }
 .header_body form{
   width: max-content !important;
@@ -77,9 +81,9 @@ header::before{
   display: flex;
   position: relative;
   width: 100%;
-  justify-content: space-evenly;
+  justify-content: space-between;
   align-items: center;
-  padding: 15px 0;
+  padding: 15px 2rem;
   background-color: white;
   color: var(--header);
   box-shadow: var(--shadow);
@@ -106,15 +110,21 @@ header::before{
   width: 40%;
   align-items: center;
 }
- 
+
 .nav-wrapper li:last-child{
-  padding: 1rem;
+  padding: 0.8rem;
   background-color: var(--header);
   border-radius: 10px;
   color: var(--cultured);
   box-shadow: var(--shadow);
+  transition: 0.2s ease-in-out;
+  border: 1px solid transparent;
 }
-
+.nav-wrapper li:last-child:hover{
+  background-color: white;
+  border: 1px solid var(--header);
+  color: var(--header);
+}
 .quote-form{
   /* margin-top: 9rem;
   margin-bottom: 3rem; */

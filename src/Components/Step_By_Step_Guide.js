@@ -1,10 +1,11 @@
 import Header from "./Header";
 import { StepByStepGuideData } from "./Data"
+import image from '../Pictures/Step-By-Step_Guide.jpg'
 
 const Step_By_Step_Guide = () => {
     return ( 
         <div className="guides_container">
-            <Header />
+            <Header image={image} intro='We walk you through all the important steps to prepare your vehicle for transportation.'/>
             <div className="guides">
                 <h2>Step By Step Guide</h2>
                 {StepByStepGuideData.map((d, i)=>{
