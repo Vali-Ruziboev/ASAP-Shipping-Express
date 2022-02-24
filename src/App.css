@@ -85,8 +85,9 @@ header::before{
   align-items: center;
   padding: 15px 2rem;
   background-color: white;
-  color: var(--header);
+  color: var(--head-text);
   box-shadow: var(--shadow);
+  font-weight: 800;
   z-index: -1;
 }
 .navbar-wrapper::before{
@@ -104,13 +105,21 @@ header::before{
   font-size: 1em;
   
 }
-.nav-wrapper ul{
+.navbar-wrapper-wrap{
+  width: 30%;
+}
+.nav-wrapper div ul{
   display: flex;
   justify-content: space-between;
-  width: 40%;
+  width: 100%;
   align-items: center;
 }
-
+.nav-wrapper li{
+  transition: 0.2s ease-in-out;
+}
+.nav-wrapper li:hover{
+  color: var(--header);
+}
 .nav-wrapper li:last-child{
   padding: 0.8rem;
   background-color: var(--header);
