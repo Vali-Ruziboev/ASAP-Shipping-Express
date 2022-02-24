@@ -52,7 +52,10 @@ const Header = ({image, intro}) => {
                     initial={{x:'-100vh'}}
                     animate={{x:0, transition:{delay:1.5, duration:0.6, type:'spring',stiffness:50}}}
                     >ASAP SHIPPING EXPRESS</motion.h1></Link>
-                    {!isMobile && <NavBar />}
+                    {!isMobile && <motion.div className="navbar-wrapper-wrap" 
+                    initial={{scale:0}}
+                    animate={{scale:1, transition:{delay:2.1, duration:0.6, type:'spring',stiffness:150}}}
+                    ><NavBar /></motion.div>}
                     {isMobile && <motion.svg
                     initial={{scale:0}}
                     animate={{scale:1, transition:{delay:2.1, duration:0.6, type:'spring',stiffness:50}}}
