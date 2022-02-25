@@ -17,7 +17,7 @@ header::before{
   position: absolute;
   width: 100%;
   min-height: 1000%;
-  background-color: rgba(0, 0, 0, 0.3);
+  background-color: rgba(0, 0, 0, 0.5);
 }
 .header_body{
   width: 80%;
@@ -94,6 +94,7 @@ header::before{
   content: '';
   width: 100%;
   top: -1rem;
+  left: 0;
   position: absolute;
   height: 1rem;
   background-color: white;
@@ -154,7 +155,15 @@ header::before{
 .quote-form h1{
   font-size: 1em;
 }
-
+.submitted_quote{
+  text-align: center;
+}
+.submitted_quote p{
+  padding: 0.5rem;
+}
+.submitted_quote h1{
+  margin: 0.5rem 0;
+}
 .quote-form a{
   color:var(--header);
   font-weight: 700;
@@ -672,6 +681,21 @@ li{
 .contact_us label{
   margin: 1rem 0;
   width: 100%;
+  position: relative;
+}
+.contact_us span{
+  position: absolute;
+  width: 100%;
+  color: var(--cultured);
+}
+.contact_us span p{
+  display: block;
+  margin: 0 auto;
+  width: max-content;
+  padding:0.5rem;
+  background-color: rgb(17, 202, 57);
+  border-radius: 10px;
+  
 }
 .contact_us button{
   padding: 0.5rem 2rem;
@@ -681,6 +705,18 @@ li{
   border-radius: 10px;
   cursor: pointer;
   color:var(--cultured);
+  transition: 1s ease-in-out;
+}
+.contact_us button svg{
+  width: 20px;
+  height: 20px;
+  fill:var(--cultured);
+  animation: load infinite linear 1s;
+}
+@keyframes load{
+  100% {
+    transform:rotate(-360deg)
+  }
 }
 .terms_conditions{
   width: 60%;

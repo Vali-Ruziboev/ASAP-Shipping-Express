@@ -3,7 +3,7 @@ import { useState, useEffect } from "react";
 import SimpleReactValidator from "simple-react-validator";
 import useForceUpdate from "use-force-update";
 import moment from "moment";
-const ContactInformation = ({ firstName, setFirstName, lastName, setLastName, number, setNumber, email, setEmail, date, setDate, validate, zipsValid }) => {
+const ContactInformation = ({ firstName, setFirstName, lastName, setLastName, number, setNumber, email, setEmail, date, setDate, validate, zipsValid, submit}) => {
     const [validator] = useState(new SimpleReactValidator())
     const forceUpdate = useForceUpdate()
     const history = useHistory()
@@ -15,8 +15,9 @@ const ContactInformation = ({ firstName, setFirstName, lastName, setLastName, nu
             return `/${path.split('/')[1]}`
         }
     })()
-    const handleSubmit = ()=>{
+    const handleSubmit = (e)=>{
         if(validator.allValid()){
+            submit(e)
             history.push(`${updatedPath}/quote_submitted`)
         }else{
             validator.showMessages()
@@ -24,7 +25,6 @@ const ContactInformation = ({ firstName, setFirstName, lastName, setLastName, nu
         }
     }
     
-
     const previous = ()=>history.push(`${updatedPath}/vehicle_information`)
     useEffect(()=>{
         if(validate.map(i=>i.some(j=>j==='')).some(t=>t===true)||zipsValid.some(i=>i==='')){
@@ -58,7 +58,7 @@ const ContactInformation = ({ firstName, setFirstName, lastName, setLastName, nu
             <div className="contact_info">    
                 <label htmlFor="date">Pickup Date</label>
                 <input type="date" name="date" value={date} onChange={e=>setDate(e.target.value)}  required />
-                <span className='invalid-input-field'>{validator.message('date',moment(date), [{after_or_equal: moment()}])}</span>
+                <span className='invalid-input-field'>{validator.message('date',date, 'required')}</span>
             </div>
             <div className="btns">
                 <button onClick={previous}>{`< Previous`}</button>
