@@ -49,7 +49,7 @@ const Header = ({image, intro}) => {
                 animate={anim}
                 className="navbar-wrapper">
                     <Link to='/'><motion.h1
-                    initial={{x:'-100vh'}}
+                    initial={{x:'-200vh'}}
                     animate={{x:0, transition:{delay:1.5, duration:0.6, type:'spring',stiffness:50}}}
                     >ASAP SHIPPING EXPRESS</motion.h1></Link>
                     {!isMobile && <motion.div className="navbar-wrapper-wrap" 

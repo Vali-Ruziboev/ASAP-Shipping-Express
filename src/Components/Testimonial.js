@@ -3,7 +3,6 @@ import { MdStarRate } from 'react-icons/md'
 import { motion, AnimatePresence, useAnimation } from "framer-motion";
 import Header from "./Header";
 import picture from '../Pictures/Car_Carrier1-desktop.jpg'
-console.log(picture);
 
 const Testimonial = () => {
     const f_star = new Array(5).fill('')
