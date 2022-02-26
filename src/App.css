@@ -477,6 +477,7 @@ li{
   background-image: url(Pictures/undraw_connected_world_wuay.svg);
   background-size: contain;
   position: relative;
+  user-select: none;
 }
 
 .states svg{

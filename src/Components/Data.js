@@ -112,3 +112,62 @@ export const terms_and_conditions = [
     "Shipper warrants that he/she will pay the price quoted due to ASAP Auto Shipping for delivered vehicles, and will not seek to charge back a credit card or stop a check to offset any dispute of damage claims. This agreement and any shipment hereunder are subject to all terms and conditions of the Carrier's tariff and the uniform straight bill of lading, copies of which are available at the office of Carrier. Department of Transportation regulations require that all claims be filled in writing and all tariffs be paid in full before claim be processed.",
     "ASAP Auto Shipping U.S. Department of Transportation Broker's license # 1053670. This supersedes all prior written or oral representation of ASAP Auto Shipping and constitutes the entire agreement between Shipper and ASAP Auto Shipping and may not be changed except in writing signed by an officer of ASAP Auto Shipping. ASAP Auto Shipping has the authorization to cancel the order at any time.",
 ]
+
+export const states = {
+    alabama:[
+        {
+            header:'Ship your vehicle in Alabama with ASAP Auto Shipping',
+            content:'Alabama is in the southern United States and is better known as the Heart of Dixie. Its Capital city is Montgomery, but its biggest metropolitan and industrialized city is Birmingham. If you are visiting Alabama, you will experience very hot and humid summers with a lot of harsh weather such as tropical storms, tornadoes, hurricanes, and large thunderstorms. Alabama winters are very mild, calm and pretty comfortable.\nMobile is the only salt water port in the state and also the oldest city in Alabama. There are many water ports located along the rivers in Alabama in Decatur, Birmingham, and Montgomery.  When it comes to transportation in Alabama, there are four major toll roads, six major interstates, and lots of U.S. highways. Another interesting fact about Alabama is that, in 1886, Montgomery, Alabama introduced the world’s first Electric Trolley System. Also, when it comes to making iron and steel, Alabama is the only state with all the necessary major natural resources.',
+        },
+        {
+            header:'Important Things To Remember About Shipping your vehicle in Alabama',
+            content:'If you considering moving to or from Alabama, review our Auto Transport Alabama services.  Moving can be very stressful, and deciding whether or not to ship your vehicle is a big decision that could save you a lot of time and money.  Wear and tear on your vehicle when driving long distances is not good and auto transport to or from Alabama is a good way to save a lot of time, stress and hassle with your move. There are several factors you may want to consider for Alabama Auto Transport:\nThe time of year can play a big factor in the cost to ship a vehicle.\nWhether you need open or enclosed Car Shipping will make a difference in the price.\nDoor to door Delivery can cost more than dropping off at a terminal.',
+        }
+    ],
+    alaska:[
+        {
+            header:'Ship your vehicle in Alaska with ASAP Auto Shipping',
+            content:"The time of the year is the biggest determining factor when it comes to shipping a car to or from Alaska.  Alaska has some of the harshest weather in the U.S because of its very cold and snowy winters. Supply and demand of carriers is also something that will affect car shipping quotes going to or from Alaska.  It's not as popular of a state for snow bird shipping cars like some of the more southern states in the U.S.",
+        },
+        {
+            header:"Alaska Vehicle Transport",
+            content:"Car shipping Alaska things you may want to think about and consider before you transport a car.\nEnclosed Car shipping versus open air is the biggest factor when it comes to cost because carriers who use enclosed car shipping are typically more expensive. The equipment they use costs more and the insurance they carry is higher than open air carriers.  Most open-air car shipping carriers have about 250,000 worth of cargo insurance and enclosed car shipping carriers usually have a 1,000,000 in coverage policy.",
+        },
+        {
+            header:"Car Transport in Alaska - Pricing Factors",
+            content:"Car shipping Alaska and its residents will also face higher auto transport costs because the travel conditions in Alaska is more difficult than the lower 48 states.  We suggest you do your research and get several quotes from car shipping companies before going into contract with an Alaskan auto shipping. What are some of the key factors that will go into a quote for auto transport Alaska?\nCurrent Fuel Cost\nHigher weigh station fees and tolls\nInsurance on the vehicles for open-air carriers due to harsh weather conditions\nThe time of year you plan on shipping a car to or from Alaska",
+        }
+    ],
+    arizona:[
+        {
+            header:"Ship your vehicle in Arizona with ASAP Auto Shipping",
+            content:"The state of Arizona is known to be quite a hot dry state because it is located in the southwest part of the U.S., and has been known to reach temperatures of over 115 degrees during the summer. What's really cool about Arizona is that even as hot as the state gets, it also gets snow during the winter in the mountains of flagstaff. Its nick names are the copper state and the Grand Canyon state. The state has a population of around 7 million people and is approximately 113, 998 Sq. miles. Arizona was also the 48th state and the last of the contiguous states to be admitted to the union on February 14th, 1912. Arizona is considered to be one of the more popular states for travel, which is why so many people choose car shipping Arizona with ASAP Auto Shipping.",
+        },
+        {
+            header:"Shipping vehicles in Arizona",
+            content:"There are over 50,000 people moving to Arizona each year, so there is a lot of car shipping going on. One of the main reasons so many people are moving here is that there are many opportunities for work. Forbes magazine ranked it the #1 state for projected annual growth with over $260 billion gross made in 2012. Transportation, tourism, trade, government, and health services are the top employment sectors in Arizona.\nIf you are considering moving to Arizona, please check out our auto transport services for your car shipping because we have excellent auto shipping Arizona services. We have helped many people move their vehicle to and from Arizona using our preferred carriers because they do the best work. One of the biggest car shipping seasons for Arizona is during the winter because a lot of snowbirds from the northeast move down to Arizona to avoid the cold winters. Auto transport pricing is generally higher during those months coming to Arizona and likewise after winter is over, because all the snowbirds head back. Car shipping carriers generally charge more leaving Arizona due to basic supply and demand.",
+        },
+        {
+            header:"Arizona vehicles Shipping - Pricing",
+            content:"Some of the things to consider when getting a car shipping quote include:\nDiesel fuel pricing at the time you are looking to ship a car\nThe number of miles you are traveling to ship a car to or from Arizona\nWhether you need enclosed or open carrier shipping for your auto transport\nThe weight and size of your car will also make a difference in the auto transport quote",
+        },
+        {
+            header:"Why Choose ASAP Auto Shipping for Transporting your vehicle in Arizona?",
+            content:"You will save money and time using ASAP Auto Shipping\nCar Shipping Arizona.\nAt ASAP Auto Shipping we have a preferred network of carriers that we trust and use regularly for Arizona Auto Transport. Our car shipping experts will help answer any questions you have and hold your hand through getting a quote and then shipping your vehicle from start to finish.\nIf you ship a vehicle with ASAP Auto Shipping, you are choosing the easiest and most beneficial car shipping Arizona service. To get started, just fill out our quote request form, or call at 555-555-5555 to speak with one of our vehicle transport experts. We pride ourselves in providing accurate and transparent car shipping quotes, which is why we have so many 5 star reviews.",
+        }
+    ],
+    arkansas:[
+        {
+            header:"Ship your vehicle in Arkansas with ASAP Auto Shipping",
+            content:"Arkansas is part of the tornado alley, so if you are shipping a car to or from or even through this state consider the weather, because it can be very harsh. It has very hot and humid summers that breeds rough weather. If you are considering on moving to Arkansas, they have the 5th lowest cost of living and the 2nd lowest cost of doing business according to CNBC, and they have the 13th largest state highway system in the United States with well maintained roads to make auto transport a breeze.",
+        },
+        {
+            header:"Transporting vehicles in Arkansas - Things That Affect The Cost",
+            content:"Car Transport to Arkansas with ASAP Auto Shipping.\nWhen it comes to car shipping, Arkansas has such a vast network of interstate and state highways that carriers can use during the car shipping process. Other things that will come in to play when you are factoring the cost of shipping a car in Arkansas are the fuel cost, toll roads, and weight stations.  When you are considering shipping a vehicle, it's always important to think of all the cost and get more than one car shipping estimate to find the best auto transporter for your situation.\nThe actual cost for the carrier shipping your car is split among all the vehicles that are on the auto transport truck itself.  Weight and size of your car can also determine the price the auto transport carrier needs to charge base on the demand in the direction you are going and how much space and weight he has left on his truck.  We specialize in finding you the best price and value without sacrificing quality for your car shipping in Arkansas.",
+        },
+        {
+            header:"Why Choose ASAP Auto Shipping for Transporting your vehicle in Arkinsas?",
+            content:"At ASAP Auto Shipping, we have a vast network of preferred carriers we use for car shipping Arkansas and we only use carriers that we fully vet with insurance and have a solid reputation of great service. We have spent many years putting together the best car shipping companies for our clients to use for auto transport Arkansas and we will only use the best for our clients if they need auto transport services. Check out past reviews of people we have shipped cars to or from Arkansas for.\nIf you need to ship a car to Arkansas, we have several options.  We have open or enclosed as well as expedited car shipping.  The best way to get a quote is to call us at 555 555-5555, or fill out our instant quote form on this page.  All the ways will give you a hassle-free auto transport experience with ASAP Auto Shipping",
+        }
+    ]
+}
