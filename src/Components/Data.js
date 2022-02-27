@@ -169,5 +169,168 @@ export const states = {
             header:"Why Choose ASAP Auto Shipping for Transporting your vehicle in Arkinsas?",
             content:"At ASAP Auto Shipping, we have a vast network of preferred carriers we use for car shipping Arkansas and we only use carriers that we fully vet with insurance and have a solid reputation of great service. We have spent many years putting together the best car shipping companies for our clients to use for auto transport Arkansas and we will only use the best for our clients if they need auto transport services. Check out past reviews of people we have shipped cars to or from Arkansas for.\nIf you need to ship a car to Arkansas, we have several options.  We have open or enclosed as well as expedited car shipping.  The best way to get a quote is to call us at 555 555-5555, or fill out our instant quote form on this page.  All the ways will give you a hassle-free auto transport experience with ASAP Auto Shipping",
         }
+    ],
+    california:[
+        {
+            header:"Ship your vehicle in California with ASAP Auto Shipping",
+            content:"When it comes to car shipping California, let's first talk about why this state is the most popular of all the states in the US. If it were its own country, it would have the 6th largest economy in the entire world. Because of its economy, a lot of car shipping California happens. The cost of living in this state is very high and surprisingly enough it is ranked 3rd worst for having the worst roads in the country. This is due to the ever-growing population and the higher number of cars per household, which causes serve traffic in many areas of the state. With all that being said, car shipping to California and car shipping from California can be higher than many other states.",
+        },
+        {
+            header:"Transport Cars To or From California",
+            content:"California is at the top of the list for International auto shipping because of the Port of Oakland, Port of Los Angeles, and the Port of Long Beach. Over a quarter of all the US cargo traffic comes from California and thousands of cars a year get shipped to and from these ports for international car shipping.\nPeople looking to ship a car to California or ship a car from California, you can easily cut down on the stress by calling ASAP Auto Shipping to walk you through the Auto Transport Process. Things to consider that might affect the cost of car shipping in California are the price of gas in this state, the large demand for car shipping to or from California, and the amount of car carriers available during the time you need to ship a car to California. It is typically more expensive shipping a car to California than it is shipping a car from California, as more people are moving there than leaving the state.",
+        },
+        {
+            header:"Why Choose ASAP Auto Shipping for Transporting your vehicle in California?",
+            content:"Why should you use ASAP Auto Shipping for your auto transport California?  We take in to account all the different factors of a car shipping quote from start to finish to suit your exact needs. At ASAP Auto Shipping, our goal is to use the best car shipping companies to ship our client’s vehicles. Double vetting all our carriers for safety rating with Federal Motor Carrier Safety Association, as well as their insurances, is of upmost importance to us. ASAP Auto Shipping also provides our own contingency cargo policy for 100,000 dollars per occurrence during the car shipping process in case the carriers insurance fails or reaches it limits.\nOur company is a 5 out of 5 star California Car Shipping Company. The carriers we use have shipped thousands of cars to and from California.  We have California Car Shipping experts ready to help you seven days a week. You can start by filling out our quote form for an instant car shipping quote or call us at 555-555-5555 to speak with an Auto Transport expert.  Our agent will help you answer any question you have about shipping a vehicle in general.",
+        }
+    ],
+    colorado:[
+        {
+            header:"Ship your vehicle in Colorado with ASAP Auto Shipping",
+            content:"Thousands of people travel to Colorado every year to see the Mile-High City of Denver.  Denver is such a beautiful state as it has the Rocky Mountain Range, deserts, canyons, and great forests. Colorado is a very popular car shipping state, as it’s a major hub for dropping off and picking up cars going to and from other states throughout the country.  The Denver International Airport is also known as world class and a very busy place.  A lot of people have cars shipped to and from the airport, so you will see a lot of car shipping companies going in and out of the airport to meet the clients and their cars.  It’s the fifth busiest airport in the world.",
+        },
+        {
+            header:"Colorado Car Shipping Factors To Consider",
+            content:"Auto Transport Colorado with ASAP Auto Shipping is the best choice for car shipping no matter what type of car you are shipping.  We make sure we use only the best of the best car carriers for shipping our client’s cars.  If you are deciding the move to or from Colorado, one thing you will most likely consider is where to ship your car versus drive it.  The time of year can affect the cost of shipping a car in Colorado.  Colorado can have some severe winter weather, which can cause delays on the major interstates driving up the price for auto transport.",
+        }
+    ],
+    connecticut:[
+        {
+            header:"Ship your vehicle in Connecticut with ASAP Auto Shipping",
+            content:"Connecticut is part of New England, bordered by Massachusetts, New York, and Rhode Island.  Even though this state is tiny, a large part of it is considered to be part of the New York Metropolitan Area.  Many Connecticut people drive to New York daily for their jobs.  Due to the number of commuters there are many traffic issues along Interstate 95 heading in and out of New York City.",
+        },
+        {
+            header:"Things to Consider to Transport vehicles in Connecticut",
+            content:"If you are thinking about moving to Connecticut and shipping your car, here are some things to think about: weather, traffic, fuel cost, and availability of car shipping companies Connecticut.  You should always get more than one quote when shipping a car or signing a contract with an Auto Transport Company.  Never pay any money up front when booking Auto Transport Connecticut.  ASAP Auto Shipping has spent a lot of time vetting the good transport carriers from the bad ones.",
+        },
+        {
+            header:"Auto Shipping in Connecticut With ASAP Auto Shipping",
+            content:"It doesn't matter if you have a 5,000-dollar car to ship or a 500,000-dollar car to ship, you will still get the upmost attention to service during the car shipping experience at ASAP Auto Shipping. The open and enclosed carrier we use have a very high safety rating with the Federal Motor Carrier Safety Administration and up to date insurance with a minimum of 1,000,000 dollars for enclosed car shipping and 250,000 for open car shipping.\nASAP Auto Shipping will transport your car with total peace of mind.  All we need to get started is the year, make, and model of your car, then the pick-up zip code and drop of zip code.  You can either do this by filling out our instant car shipping quote form or call one of our shipping experts at 555-555-5555.",
+        }
+    ],
+    delaware:[
+        {
+            header:"Car Shipping To Delaware, Car Shipping From Delaware",
+            content:"Delaware car shipping with ASAP Auto Shipping.  Delaware is a unique state, and one interesting fact is that it does not have any commercial airline service.  It’s a small state with only one major interstate, I-95, going through it, which goes through the county of New Castle.\nASAP Auto Shipping offers excellent car shipping service to and from Delaware.  Our auto transport service is fast, secure, and reliable for Delaware residents or anyone looking to ship a car to Delaware.",
+        },
+        {
+            header:"Auto Shipping in Delaware",
+            content:"For Delaware residents, our Auto Transport services come in handy as it saves a lot of wear and tear on your vehicle.  Whether you are buying a car online and want to ship it back home to Delaware, or moving to Delaware for a job, consider using ASAP Auto Shipping car shipping Delaware services.  Our auto transport Delaware saves you time and money for sure!",
+        },
+        {
+            header:"Auto Shipping Delaware Pricing Factors",
+            content:"The biggest factor in car shipping Delaware prices is the time of year, due to the snowbirds that travel down south for the winter. During the end of the fall season, the northern snow birds start shipping their cars south for the winter, which drives up pricing.  On the flip side, if you are down south during this time the pricing going north becomes cheaper.  For example, during prime snowbird season shipping a car from Delaware to Florida can run as high as 900 dollars for an open carrier and as high as 1400 for enclosed carriers.  However, that same route going north during this time shipping car from Florida to Delaware can be as low as 500 dollars for open carrier and 700 for enclosed carriers.",
+        },
+        {
+            header:"Transporting A Car To Delaware",
+            content:"Delaware residents rely on ASAP Auto Shipping for car shipping services for over 6 years now.  Our auto shipping agents have over 30 years of combined experience with car shipping Delaware.  You can easily get a quote 2 different ways for Auto Transport Delaware. You can fill out our instant car shipping quote form, or call us at 555 555-5555 and speak with a live auto shipping agent that will answer any questions you may have. If you need to know the differences of open car shipping verses enclosed car shipping, we can help!",
+        },
+    ],
+    florida:[
+        {
+            header:"Auto Shipping in Florida With ASAP Auto Shipping",
+            content:"The state of Florida is known for many things. It's your biggest traveled to state for snowbirds, which is why a lot of car shipping is going to and from Florida.  It’s the southern most contiguous state in the US. Florida is quite large, with over 65,755 square miles, making it the 22nd most extensive and 3rd most populous, with over 21,000 people living there. Miami is the largest metropolitan for most populous urban area with many types of ethnicities living there.\nMiami is also known as the melting pot of the US. Florida is a very popular vacation spot for tourist all over the world. Miami is the 12th largest urban economy in the United States and the largest in Florida, by far, with over $345 Billion GDP in 2018. Over 50 of the Worlds billionaires also call south Florida home.  Many wealthy people travel by private jet and ship cars to and from home while traveling.",
+        },
+        {
+            header:"Relevant Information You May Want To Know About Car Transport in Florida",
+            content:"There are many things to consider when it comes to auto shipping Florida.  The biggest cost factor of car shipping Florida is the time of year.  Since so many snowbirds ship cars to Florida during the winter, it can get expensive shipping a car to Florida at that time.  However, if you are shipping a car from Florida at that time, it can be much cheaper, which is why a lot of Northern dealerships buy cars from Florida auctions during snowbird season. The cost to ship a car up north out of Florida is about 40% less than during the summer months.\nCar shipping from the Northeast to Florida during the beginning of winter runs on average of about 900 dollars for a medium size vehicle. Car shipping on that same route going north out of Florida can be as low as 450 dollars. It's basic supply and demand for the carrier filling their trucks.  The direction the snowbirds are heading either drives up the cost to ship a car or drives it down. With those factors in play, to get the best price on shipping a car to Florida is to plan ahead of time and call ASAP Auto Shipping. Our Auto Transport Florida services are second to none and we have a very extensive preferred carrier network that we ship cars with regularly.  We also specialize in Boat Shipping to Florida and if you need a quote on shipping a boat, we are the best in the business",
+        },
+        {
+            header:"Florida Resident Can Rely On Our Car Shipping Florida Services",
+            content:"At ASAP Auto Shipping, we only work with the best auto transport companies.  We double vet all our carriers and make sure they have a very high safety rating with the FMCSA\nWe offer open or enclosed car shipping Florida services. You can request a quote to ship a car on this page or give us a call at 555-555-5555 to speak with one of our car shipping experts.",
+        }
+    ],
+    georgia:[
+        {
+            header:"Auto Shipping Georgia with ASAP Auto Shipping",
+            content:"With ASAP Auto Shipping car shipping Georgia is fast and easy.  Georgia is known for a lot of international car shipping because of the Port of Savannah. This port is a serious shipping point due to the Savannah River in Georgia. Georgia’s economy primarily focuses around the U.S. military, shipping and textile production. Georgia is also known for its peaches!",
+        },
+        {
+            header:"Military Vehicle Transport Ports",
+            content:"We know that our Military men and women can be quickly relocated and need car shipping services. ASAP Auto Shipping is proud to be one of the preferred auto shipping companies for our U.S. Military. We also offer military car shipping discounts. No matter what military auto shipping port you need your car delivered to, we can help get it done fast and efficient.",
+        },
+        {
+            header:"Cost Factors With Car Shipping Georgia",
+            content:"Because the Port of Savannah's shipping, Georgia has an extensive highway system going to all different directions of the country. This makes international car shipping and domestic car shipping easy in and out of Georgia.  Some of the things you will want to consider as you get an auto shipping quote is the current price of diesel fuel, open or enclosed shipping, the weight and size of your car, and the current demand for auto carriers going the direction you want to ship a car.",
+        },
+        {
+            header:"Ways To Contact Auto Shipping Companies In Georgia",
+            content:"If you are looking to ship a car you can fill out our instant car shipping form or call us at 555-555-5555 to speak with one of our dedicated car shipping experts.  We will hold your hand through the entire auto shipping process.",
+        }
+    ],
+    hawaii:[
+        {
+            header:"Hawaii Auto Shipping with ASAP Auto Shipping",
+            content:"Hawaii is known for its beautiful tropical landscape and is a very large tourist destination spot. It’s the only state that is entirely made up of islands and doesn’t lie in the territory of the Americas. Hawaii attracts tourists year-round due to the mild climate being consistent throughout the whole year. Car Transport can be very costly if you need this service to or from Hawaii, due to it being an island, and the only way to ship a car is by air or ship. If you need car shipping Hawaii services call ASAP Auto Shipping and we will save you money and time buy finding the best option for you based on your time restrictions of needing it done.",
+        },
+        {
+            header:"Cost Factors When Shipping A Car To Hawaii",
+            content:"Car Transport to Hawaii with ASAP Auto Shipping.  When shipping a car to Hawaii, it's very close to shipping a car internationally and is much more complicated verses domestic car shipping. Whether you are retiring and planning on moving to Hawaii to live out your retirement years, or you are Military and being relocated to a base in Hawaii, ASAP Auto Shipping can handle the Transport of your car to Hawaii no problem. The biggest factor for shipping a car to Hawaii is supply and demand of the container ships or cargo planes going that way. When getting a quote to ship a car to Hawaii, be prepared to plan ahead and lock in your rates.",
+        },
+        {
+            header:"Hawaii Vehicle Transport",
+            content:"Shipping a car to Hawaii usually involves two parts of transport of your car. The first part is domestic car shipping to the Port.  The second step is the international car shipping from the port to the island. ASAP Auto Shipping works with you to find out your exact time restrictions and budget to find you the best carrier to get your car to the port in a timely manner, so that your vehicle is in Hawaii at the time you need it.  We have over 20 years of combined experience shipping cars to Hawaii and internationally. Call us now at 555-555-5555 to get a free car shipping Hawaii quote. You can also get an instant quote with our car shipping form on this page.",
+        }
+    ],
+    idaho:[
+        {
+            header:"Auto Shipping in Idaho With ASAP Auto Shipping",
+            content:"As many of you know, Idaho is known for potatoes and produces almost 1/3 of all the potatoes in the U.S. As far as the economy goes, manufacturing, food processing and lumber are the main industries in Idaho and Idaho also has two time zones. On the east side of the state they have the mountain time zone and on the west they use the pacific time. It’s a land lock state but this does not restrict it to still doing quite a bit of international shipping, as the state moves many barges along the Snake and Columbia Rivers up to Portland.  When it comes to car shipping Idaho, there are 7 major interstates going through it, so Auto Transport is not too tough.  ASAP Auto Shipping does a lot of Idaho Auto Transport and has a large list of preferred auto transport carriers we use regularly.",
+        },
+        {
+            header:"Auto Shipping Idaho",
+            content:"If you are thinking about moving to or from Idaho, you may need our Idaho Auto Transport services. Shipping a car can sometimes be stressful especially during a complete move.  ASAP Auto Shipping is one of the Best Car Transport Companies Idaho and we can make your move and car shipping process stress free. In many cases, it's much cheaper to ship a car across country vs drive it, so let us focus on shipping your car so you can focus on your move. Contact us today for a free car shipping quote by filling out our instant quote form or calling us at 555-555-5555 to speak with a car shipping expert right now.  We are a five-star Idaho Auto Transport Company and will walk you through the auto shipping process from start to finish.",
+        },
+        {
+            header:"Some Cost Factors Of Car Shipping Idaho",
+            content:"There are many things that come into play with Idaho Car Transport, such as the year, make, and model, the time of year, the cost of diesel fuel, and finally the supply and demand of carriers looking for Idaho car shipping. The time of the year can affect Idaho car shipping residents, because a lot of them move south for the winter and need car shipping Idaho services. To keep car shipping cost down, it's best to plan ahead and call ASAP Auto Shipping to lock in your price and spot for Idaho Auto Shipping. Also, whether you want open car shipping or enclosed will affect the price and pick up times for your Idaho Auto Transport.",
+        }
+    ],
+    illinois:[
+        {
+            header:"Car Shipping Illinois with ASAP Auto Shipping",
+            content:"There are many things you should consider if you need to ship a car to Illinois.  ASAP Auto Shipping can provide you with affordable car shipping services from anywhere in the United States to Illinois.  We are considered one of the best car shipping companies in Illinois for many reasons.  Many dealerships in Illinois rely on us for all their Auto Transport Illinois services.  Some interesting facts about Illinois are that they are the home of the largest bottle of ketchup. The ice cream sundae originated in Evanston, and Illinois has the only river in the world that flows backwards.\nBecause Chicago is the 3rd most populous city in the U.S., there is a ton of car shipping to and from Chicago daily. There are also many snowbirds from Illinois that travel south for the winter and use Auto Transport companies to move their cars while they fly making it much easier in general.  We only work with the best auto transport companies to ship a car to Illinois.  Whether you are shipping a rare classic car, your family car, or even a commercial truck, we will make sure our Illinois car shipping services are the best, and your experience will go smooth from start to finish.",
+        },
+        {
+            header:"Cost Factors of Shipping a Car to or From Illinois",
+            content:"We know that getting the best price is always a top priority for shipping a car, which is why we work with only our double vetted auto transport carriers list to negotiate the best price for you with a trusted carrier.  Some of the things you may want to consider is the time of year, the cost of diesel fuel, the distance traveled, and the supply and demand of the transport carriers in your area when you need the car shipping services Illinois.  ASAP Auto Shipping provided open car shipping and enclosed for its Illinois residents.  The main difference is the protection of the car from the outside elements, and the price difference is much higher on enclosed car shipping.",
+        },
+        {
+            header:"Cost to Ship a Car to Illinois",
+            content:"No matter what people tell you, most auto transport companies you talk with are brokers, not carriers.  The job of a car shipping broker is the find you a qualified carrier for the pick-up times you need and verify that the carrier is up to date on all his licenses and insurances.  ASAP Auto Shipping spends a lot of time weeding out the bad auto transport companies for you, making sure your car shipping experience goes smoothly. Our car shipping experts will walk you through the entire process from getting the quote to meeting the driver and paying them on the drop off.\nYou can get a car shipping quote 2 easy ways with us. Fill out our instant car shipping quote form, or call us at 555-555-5555 to speak with one of our car shipping experts.",
+        } 
+    ],
+    indiana:[
+        {
+            header:"Auto Transport Indiana with ASAP Auto Shipping",
+            content:"Indiana is in what is known as the Corn Belt, a part of the United States that stretches from Indiana to Eastern Nebraska.  This state ships over 70 million tons of cargo each year by water and is 14th in the United States. Indiana is a Midwest state, also called the Hoosier State.  Residents of this state are commonly known as Hoosiers.  Indiana’s economy is evenly split between agriculture and manufacturing.  It's also know for its train travel and with its extensive highway system, it is known for  being the “Crossroads of America.”",
+        },
+        {
+            header:"Things To Know About Car Shipping Indiana",
+            content:"If you are thinking about moving to or from Indiana you may be considering Indiana car shipping services.  The idea of shipping a car can be overwhelming, but it does not have to be, as moving is stressful enough.  At ASAP Auto Shipping car shipping services, we take the stress out of the auto transport process so you can focus on the move itself.  Like Illinois and may other Midwestern states, it is a snowbird state and a lot of residents move south for the winter, which results in Indiana car shipping services needed.  The snowbird season starts in late October and runs through Thanksgiving.  When looking for the best car transport companies, ASAP Auto Shipping is at the top of the list for Indiana Car Shipping.",
+        },
+        {
+            header:"What Makes Our Car Shipping Indiana 5-Star’s?",
+            content:"We have spent years weeding out the bad auto transport carriers from the good car shipping companies.  It very important to choose a company with a solid reputation and good online reviews.  We are Indiana Auto Shipping experts and give each customer the service they deserve when shipping a car.  It's our job to make sure you find an auto hauler that fits your pick up and drop off time needs at an affordable price.\nWe have an extensive list of Indiana Auto Transport Companies and work daily to ship cars for our clients.  We only use carriers that have a very high DOT safety rating and up to date insurance that we verify.  All of our car shipping companies have a minimum of 250,000 in cargo insurance for open car shipping and 1,000,000 in coverage for enclosed car shipping. We also provide our own contingency cargo policy for 100,000 per occurrence for each car we ship, in case the carrier’s insurance fails for some reason.",
+        },
+        {
+            header:"Vehicle Shipping Indiana",
+            content:"It's important that you do your homework on the best car shipping companies Indiana before you choose one.  You can get an instant car shipping quote by using our car shipping form on this page or calling us at 555-555-5555 to speak with a car shipping expert.  Once you book and Indiana car shipping with us, we will start our search to find you the best car carrier to fit your exact needs for a fair price.",
+        },
+        
+    ],
+    iowa:[
+        {
+            header:"Car Shipping Iowa With ASAP Auto Shipping",
+            content:"Iowa is considered a Midwestern state and is bordered by two large rivers; the Big Sioux River and the Mississippi River.  For most of its existence, Iowa has been known for agriculture, but in recent years the economy has also added manufacturing, finance, and biotechnology to its list of industries.\nCar shipping Iowa is fairly easy, due to 4 main interstates that run through it. (I-80, I-35, I-29, and I-74) Iowa also has lots of U.S. and state routes running through it.  ASAP Auto Shipping has years of experience with Iowa Car Shipping and have plenty of 5-star car shipping reviews to back that up.  We are also a #1 choice for heavy haul carriers of farm equipment in Iowa.",
+        },
+        {
+            header:"Iowa Auto Shipping",
+            content:"If you are considering on making a move to Iowa or from Iowa, you may need to ship a car or two.  If you have never shipped a car, it can be stressful and that’s not something you need when you are moving, as that is stressful enough.  Let ASAP Auto Shipping take the stress off your Iowa Auto Transport.  When shipping a car, you need to consider the time of year, as the supply and demand for auto shipping companies in your area may differ.\nSome of the other things you may want to consider for Car Shipping Iowa is how fast you need your car picked up, since Iowa is in the middle of the country and many carriers are going north and south and easy and west, making Iowa a drive through state. Timing can be crucial for Iowa car shipping services.  We are considered one of the best car shipping companies in Iowa due to the time we have put in to creating our preferred carrier network of auto transport companies.  We only work with the best auto transport carriers for our clients and won't sacrifice quality for a cheap auto transport price.",
+        },
+        {
+            header:"Iowa Car Transport Cost Factors",
+            content:"Whether you need Domestic Car Shipping or International Car Shipping, make sure you are working with a reputable company that is licensed, bonded, and insured.  We know the cost to ship a car is always at the top of the list when deciding which Iowa car shipping company to use.  Some of the things a car shipping company may need to know to prepare an auto transport quote is the year, make, and model of your car.  Also, how fast you need to your car picked up is a big determining factor in the cost to transport a car.\nThe current price of diesel fuel will dictate price a bit, as well as the time of year and the availability of auto shipping carriers in your area.  Some people will require Enclosed Car Shipping, which usually costs about 30-40% more than open car shipping. The reason for this is enclosed car carriers can only fit at most 6 cars versus an open car carrier fitting up to 9 cars.  Enclosed car Shipping carriers also usually carry a million-dollar cargo policy as they often transport more higher end cars than open car carriers.",
+        } 
     ]
 }
