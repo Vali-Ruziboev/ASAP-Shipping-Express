@@ -7,6 +7,8 @@ import Faqs from './Components/Faqs';
 import Step_By_Step_Guide from './Components/Step_By_Step_Guide';
 import Contact_Us from './Components/Contact_Us';
 import Terms_and_conditions from './Components/Terms_and_conditions';
+import State from './Components/State';
+import Location from './Components/Location';
 
 function App() {
   return (
@@ -25,9 +27,13 @@ function App() {
         <Route path='/terms_and_conditions'>
           <Terms_and_conditions />
         </Route>
+        <Route path='/:state'>
+            <State />
+        </Route>
         <Route path='/'>
           <Testimonial />
           <WeShipEveryWhere />
+          <Location/>
         </Route>
       </Switch>
       <Footer />

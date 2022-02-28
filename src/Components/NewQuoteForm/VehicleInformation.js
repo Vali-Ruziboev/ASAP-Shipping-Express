@@ -21,6 +21,7 @@ const VehicleInformation = ({year, setYear, make, setMake, model, setModel, type
             return `/${path.split('/')[1]}/`
         }
     })()
+    console.log(updatedPath);
     // getting current year
     const currentYear = new Date().getFullYear()
     // validator

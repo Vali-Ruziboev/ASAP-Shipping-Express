@@ -1,5 +1,5 @@
 import { useState } from "react"
-import {BrowserRouter as Router, Route, Switch, useRouteMatch} from 'react-router-dom'
+import {BrowserRouter as Router, Route, Switch, useRouteMatch, useLocation} from 'react-router-dom'
 import ContactInformation from "./ContactInformation"
 import QuoteSubmitted from "./QuoteSubmitted"
 import { motion } from 'framer-motion'
@@ -59,7 +59,8 @@ const NewQuote = () => {
                 console.log('FAILED...', error);
             });
     }
-    const { path } = useRouteMatch()
+    // const { path } = useRouteMatch()
+    const path = useLocation().pathname
     const updatedPath = (()=>{
         if(path ==='/'){
             return path

@@ -448,7 +448,8 @@ li{
 .reason span{
   font-size: 2rem;
 }
-.ready_and_states_wrapper{
+.ready_and_states_wrapper,
+.location{
   text-align: center;
 }
 .seal{
@@ -499,6 +500,19 @@ li{
 #lakes path{
   fill: rgb(0, 123, 174) !important;
   stroke: var(--head-text) !important;
+}
+.state{
+  width: 70%;
+  display: block;
+  margin: 0 auto;
+  padding: 2rem 0;
+}
+.state h1{
+  margin: 1rem 0;
+}
+.state p{
+  margin: 0.7rem 0;
+  text-indent: 1rem;
 }
 .seal_pad{
   padding: 10px 0;

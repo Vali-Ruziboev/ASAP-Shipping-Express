@@ -6,7 +6,6 @@ import { Link } from "react-router-dom";
 
 
 const Header = ({image, intro}) => {
-    console.log(image);
     const [isMobile, setIsMobile] = useState(false);
     const [isMenuClicked, setIsMenuClicked] = useState(false);
     useEffect(()=>{
