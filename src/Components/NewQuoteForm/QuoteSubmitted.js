@@ -1,6 +1,7 @@
 import { Link, useRouteMatch } from 'react-router-dom'
 const QuoteSubmitted = () => {
     const { path } = useRouteMatch()
+    console.log(path);
     const updatedPath = (()=>{
         if(path === '/quote_submitted'){
             return ''

@@ -1,3 +1,4 @@
+import alabama from '../Pictures/alabama.jpg'
 export const faqsData = [
     {
         question: "How much does it cost to ship a car?",
@@ -114,8 +115,11 @@ export const terms_and_conditions = [
 ]
 
 export const states = {
+    
     alabama:[
-        {
+        {   
+            img:alabama,
+            title:'Alabama Auto Shipping',
             header:'Ship your vehicle in Alabama with ASAP Auto Shipping',
             content:'Alabama is in the southern United States and is better known as the Heart of Dixie. Its Capital city is Montgomery, but its biggest metropolitan and industrialized city is Birmingham. If you are visiting Alabama, you will experience very hot and humid summers with a lot of harsh weather such as tropical storms, tornadoes, hurricanes, and large thunderstorms. Alabama winters are very mild, calm and pretty comfortable.\nMobile is the only salt water port in the state and also the oldest city in Alabama. There are many water ports located along the rivers in Alabama in Decatur, Birmingham, and Montgomery.  When it comes to transportation in Alabama, there are four major toll roads, six major interstates, and lots of U.S. highways. Another interesting fact about Alabama is that, in 1886, Montgomery, Alabama introduced the world’s first Electric Trolley System. Also, when it comes to making iron and steel, Alabama is the only state with all the necessary major natural resources.',
         },
