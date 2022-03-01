@@ -39,6 +39,7 @@ const VehicleInformation = ({year, setYear, make, setMake, model, setModel, type
     useEffect(()=>{
         if(validate.some(i=>i==='')){
             history.push(`${updatedPath}`)
+            console.log('worked');
         }
         for(let i=0;i<is_running.length/2;i++){
             if(isRunning[i]==='Yes'){

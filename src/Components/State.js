@@ -1,10 +1,22 @@
-import { useParams } from 'react-router-dom';
+import { useEffect } from 'react';
+import { useParams, useLocation, useHistory } from 'react-router-dom';
 import { states } from './Data'
 import Header from './Header'
+import PageNotFound from './PageNotFound';
 import WeShipEveryWhere from './WeShipEveryWhere';
 const State = () => {
+    const location = useLocation()
     const { state } = useParams()
-    if(Object.keys(states).includes(state)){
+    const history = useHistory()
+    console.log(location.pathname, `${state}/vehicle_information`);
+    useEffect(()=>{
+        console.log('pushing');
+        history.push(`/${state}`)
+    },[])
+    if(location.pathname==`/${state}/vehicle_information`||location.pathname==`/${state}/contact_information`||location.pathname==`/${state}/`||location.pathname==`/${state}/quote_submitted`){
+        history.push(`/${state}`)
+    }
+    if(Object.keys(states).includes(state)&&location.pathname===`/${state}`){
         console.log(states[state][0].title);
         return (
             <div>
@@ -24,6 +36,8 @@ const State = () => {
                 <WeShipEveryWhere/>
             </div>
         );
+    }else{
+        <PageNotFound/>
     }
 }
 

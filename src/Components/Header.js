@@ -2,7 +2,7 @@ import { useEffect, useState } from "react";
 import NavBar from "./NavBar";
 import NewQuote from "./NewQuoteForm/NewQuote";
 import { motion, AnimatePresence, useAnimation } from "framer-motion";
-import { Link } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 
 
 const Header = ({image, intro}) => {
@@ -13,6 +13,10 @@ const Header = ({image, intro}) => {
             setIsMobile(true)
         }
     },[ ])
+    const location = useLocation()
+    useEffect(() => {
+        window.scrollTo(0, 0);
+    }, [location]);
     const anim = useAnimation()
     const sequence = async ()=>{
         await anim.start({

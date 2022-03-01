@@ -9,6 +9,7 @@ import Contact_Us from './Components/Contact_Us';
 import Terms_and_conditions from './Components/Terms_and_conditions';
 import State from './Components/State';
 import Location from './Components/Location';
+import PageNotFound from './Components/PageNotFound';
 
 function App() {
   return (
@@ -30,13 +31,16 @@ function App() {
         <Route path='/:state'>
             <State />
         </Route>
-        <Route path='/'>
+        <Route exact path='/'>
           <Testimonial />
           <WeShipEveryWhere />
           <Location/>
         </Route>
+        <Route path='/*'>
+            <PageNotFound/>
+        </Route>
+        <Footer />
       </Switch>
-      <Footer />
     </div>
     </Router>
   );

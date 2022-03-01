@@ -59,8 +59,8 @@ const NewQuote = () => {
                 console.log('FAILED...', error);
             });
     }
-    // const { path } = useRouteMatch()
-    const path = useLocation().pathname
+    const { path } = useRouteMatch()
+    // const path = useLocation().pathname
     const updatedPath = (()=>{
         if(path ==='/'){
             return path
