@@ -123,13 +123,14 @@ export const states = {
             header:'Ship your vehicle in Alabama with ASAP Auto Shipping',
             content:'Alabama is in the southern United States and is better known as the Heart of Dixie. Its Capital city is Montgomery, but its biggest metropolitan and industrialized city is Birmingham. If you are visiting Alabama, you will experience very hot and humid summers with a lot of harsh weather such as tropical storms, tornadoes, hurricanes, and large thunderstorms. Alabama winters are very mild, calm and pretty comfortable.\nMobile is the only salt water port in the state and also the oldest city in Alabama. There are many water ports located along the rivers in Alabama in Decatur, Birmingham, and Montgomery.  When it comes to transportation in Alabama, there are four major toll roads, six major interstates, and lots of U.S. highways. Another interesting fact about Alabama is that, in 1886, Montgomery, Alabama introduced the world’s first Electric Trolley System. Also, when it comes to making iron and steel, Alabama is the only state with all the necessary major natural resources.',
         },
-        {
+        {   
             header:'Important Things To Remember About Shipping your vehicle in Alabama',
             content:'If you considering moving to or from Alabama, review our Auto Transport Alabama services.  Moving can be very stressful, and deciding whether or not to ship your vehicle is a big decision that could save you a lot of time and money.  Wear and tear on your vehicle when driving long distances is not good and auto transport to or from Alabama is a good way to save a lot of time, stress and hassle with your move. There are several factors you may want to consider for Alabama Auto Transport:\nThe time of year can play a big factor in the cost to ship a vehicle.\nWhether you need open or enclosed Car Shipping will make a difference in the price.\nDoor to door Delivery can cost more than dropping off at a terminal.',
         }
     ],
     alaska:[
-        {
+        {   
+            title:'Alaska Auto Shipping',
             header:'Ship your vehicle in Alaska with ASAP Auto Shipping',
             content:"The time of the year is the biggest determining factor when it comes to shipping a car to or from Alaska.  Alaska has some of the harshest weather in the U.S because of its very cold and snowy winters. Supply and demand of carriers is also something that will affect car shipping quotes going to or from Alaska.  It's not as popular of a state for snow bird shipping cars like some of the more southern states in the U.S.",
         },

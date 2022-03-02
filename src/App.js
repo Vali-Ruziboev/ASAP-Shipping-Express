@@ -39,8 +39,8 @@ function App() {
         <Route path='/*'>
             <PageNotFound/>
         </Route>
-        <Footer />
       </Switch>
+      <Footer />
     </div>
     </Router>
   );
