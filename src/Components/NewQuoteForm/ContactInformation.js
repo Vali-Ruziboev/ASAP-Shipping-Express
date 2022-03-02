@@ -7,12 +7,12 @@ const ContactInformation = ({ firstName, setFirstName, lastName, setLastName, nu
     const [validator] = useState(new SimpleReactValidator())
     const forceUpdate = useForceUpdate()
     const history = useHistory()
-    const { path } = useRouteMatch()
+    const { url } = useRouteMatch()
     const updatedPath = (()=>{
-        if(path === '/contact_information'){
+        if(url === '/contact_information'){
             return ''
         }else{
-            return `/${path.split('/')[1]}`
+            return `/${url.split('/')[1]}`
         }
     })()
     const handleSubmit = (e)=>{

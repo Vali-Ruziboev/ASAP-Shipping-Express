@@ -8,18 +8,16 @@ const State = () => {
     const location = useLocation()
     const { state } = useParams()
     const history = useHistory()
-    console.log(location.pathname, `${state}/vehicle_information`);
     useEffect(()=>{
-        console.log('pushing');
         history.push(`/${state}`)
     },[])
-    if(location.pathname==`/${state}/vehicle_information`||location.pathname==`/${state}/contact_information`||location.pathname==`/${state}/`||location.pathname==`/${state}/quote_submitted`){
-        history.push(`/${state}`)
-    }
-    if(Object.keys(states).includes(state)&&location.pathname===`/${state}`){
+    // if(location.pathname===`/${state}/vehicle_information`||location.pathname===`/${state}/contact_information`||location.pathname===`/${state}/`||location.pathname===`/${state}/quote_submitted`){
+    //     history.push(`/${state}`)
+    // }
+    if(Object.keys(states).includes(state)){
         console.log(states[state][0].title);
         return (
-            <div>
+            <div key={state}>
                 <Header intro={states[state][0].title} image={states[state][0].img}/>
                 <div className="state">
                     {states[state].map((s, index)=>{
@@ -37,7 +35,10 @@ const State = () => {
             </div>
         );
     }else{
-        <PageNotFound/>
+        return(
+            <PageNotFound/>
+        )
+        
     }
 }
 

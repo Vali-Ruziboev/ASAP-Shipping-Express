@@ -2,10 +2,11 @@ import { useEffect, useState } from "react";
 import NavBar from "./NavBar";
 import NewQuote from "./NewQuoteForm/NewQuote";
 import { motion, AnimatePresence, useAnimation } from "framer-motion";
-import { Link, useLocation } from "react-router-dom";
+import { Link, useLocation, useRouteMatch } from "react-router-dom";
 
 
 const Header = ({image, intro}) => {
+    const { url } = useRouteMatch()
     const [isMobile, setIsMobile] = useState(false);
     const [isMenuClicked, setIsMenuClicked] = useState(false);
     useEffect(()=>{
@@ -13,6 +14,13 @@ const Header = ({image, intro}) => {
             setIsMobile(true)
         }
     },[ ])
+    const [int, setInt] = useState('')
+    const [img, setImg] = useState('')
+    useEffect(()=>{
+        setImg(image)
+        setInt(intro)
+    },[image, intro])
+
     const location = useLocation()
     useEffect(() => {
         window.scrollTo(0, 0);
@@ -34,7 +42,7 @@ const Header = ({image, intro}) => {
         sequence()
     }, [])
     return ( 
-        <header style={{backgroundImage:`url(${image})`}} id='header'>
+        <header style={{backgroundImage:`url(${img})`}} id='header'>
             <div className="nav-wrapper">     
                 <motion.div initial={{translateY:-100}}
                 animate={{translateY:0, transition:{duration:0.5}}}
@@ -80,8 +88,8 @@ const Header = ({image, intro}) => {
                         
                     </div>}</AnimatePresence>
             <div className="header_body">
-                <motion.h1 initial={{opacity:0, y:-100}} animate={{opacity:1, y:0, transition:{delay:1, duration:2}}} className="intro">{intro}</motion.h1>
-                <NewQuote />  
+                <motion.h1 initial={{opacity:0, y:-100}} animate={{opacity:1, y:0, transition:{delay:1, duration:2}}} className="intro">{int}</motion.h1>
+                <NewQuote url={url} />  
             </div>
         </header>
     );

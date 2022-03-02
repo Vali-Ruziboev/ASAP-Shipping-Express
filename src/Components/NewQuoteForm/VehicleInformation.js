@@ -13,12 +13,12 @@ const VehicleInformation = ({year, setYear, make, setMake, model, setModel, type
         setIsRunning([...isRunning, 'Yes'])
         setType([...type, 'Open'])
     }
-    const { path } = useRouteMatch()
+    const { url } = useRouteMatch()
     const updatedPath = (()=>{
-        if(path === '/vehicle_information'){
+        if(url === '/vehicle_information'){
             return '/'
         }else{
-            return `/${path.split('/')[1]}/`
+            return `/${url.split('/')[1]}/`
         }
     })()
     console.log(updatedPath);

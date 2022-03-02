@@ -5,12 +5,12 @@ import useForceUpdate from 'use-force-update';
 
 const ZipCodes = ({ shipFrom, shipTo, setShipFrom, setShipTo }) => {
     const history = useHistory()
-    const { path } = useRouteMatch()
+    const { url } = useRouteMatch()
     const updatedPath = (()=>{
-        if(path ==='/'){
-            return path
+        if(url ==='/'){
+            return url
         }else{
-            return `${path}/`
+            return `${url}/`
         }
     })()
      // validator

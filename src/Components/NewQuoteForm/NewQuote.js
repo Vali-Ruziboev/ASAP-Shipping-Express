@@ -1,5 +1,5 @@
-import { useState } from "react"
-import {BrowserRouter as Router, Route, Switch, useRouteMatch, useLocation} from 'react-router-dom'
+import { useEffect, useState } from "react"
+import {BrowserRouter as Router, Route, Switch, useLocation} from 'react-router-dom'
 import ContactInformation from "./ContactInformation"
 import QuoteSubmitted from "./QuoteSubmitted"
 import { motion } from 'framer-motion'
@@ -8,7 +8,7 @@ import ZipCodes from "./ZipCodes"
 import emailjs, {init} from '@emailjs/browser';
 init("user_1Ig2WajVAhHklQ3Nutlw2")
 
-const NewQuote = () => {
+const NewQuote = ({ url }) => {
     const [shipFrom, setShipFrom] = useState('')
     const [shipTo, setShipTo] = useState('')
     const [year, setYear] = useState([''])
@@ -59,13 +59,12 @@ const NewQuote = () => {
                 console.log('FAILED...', error);
             });
     }
-    const { path } = useRouteMatch()
-    // const path = useLocation().pathname
+    console.log('changed', url);
     const updatedPath = (()=>{
-        if(path ==='/'){
-            return path
+        if(url ==='/'){
+            return url
         }else{
-            return `${path}/`
+            return `${url}/`
         }
     })()
     return ( 
@@ -82,7 +81,7 @@ const NewQuote = () => {
                     <span className='line'></span>
                 </div>
                     <Switch>
-                        <Route exact path={`${path}`}>
+                        <Route exact path={`${url}`}>
                             <ZipCodes shipFrom={shipFrom} setShipFrom={setShipFrom} shipTo={shipTo} setShipTo={setShipTo} />
                         </Route>
                         <Route path={`${updatedPath}vehicle_information`}>
