@@ -3,7 +3,6 @@ import { useHistory, useRouteMatch } from "react-router-dom";
 
 const WeShipEveryWhere = () => {
     const { path, params, url} = useRouteMatch()
-    console.log(params, url, path);
     useEffect(()=>{
         document.addEventListener('contextmenu', (e) => {
             e.preventDefault();

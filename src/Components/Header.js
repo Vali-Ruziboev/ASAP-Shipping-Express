@@ -13,6 +13,10 @@ const Header = ({image, intro}) => {
         if(navigator.userAgent.match(/Android|Mobile/i)){
             setIsMobile(true)
         }
+        if(document.documentElement.clientWidth<675&&!isMobile){
+            setIsMobile(true)
+            
+        }
     },[ ])
     const [int, setInt] = useState('')
     const [img, setImg] = useState('')
@@ -40,7 +44,17 @@ const Header = ({image, intro}) => {
     }
     useEffect(()=>{
         sequence()
+        window.addEventListener('resize', (e)=>{
+            if(document.documentElement.clientWidth<=675&&!isMobile){
+                setIsMobile(true)
+                
+            }
+            else if(document.documentElement.clientWidth>675){
+                setIsMobile(false)
+            }
+        })
     }, [])
+    
     return ( 
         <header style={{backgroundImage:`url(${img})`}} id='header'>
             <div className="nav-wrapper">     
