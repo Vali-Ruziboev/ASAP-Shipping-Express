@@ -59,7 +59,6 @@ const NewQuote = ({ url }) => {
                 console.log('FAILED...', error);
             });
     }
-    console.log('changed', url);
     const updatedPath = (()=>{
         if(url ==='/'){
             return url

@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react";
 import { MdStarRate } from 'react-icons/md'
-import { motion, AnimatePresence, useAnimation } from "framer-motion";
+import { motion, useAnimation } from "framer-motion";
 import Header from "./Header";
 import picture from '../Pictures/Car_Carrier1-desktop.jpg'
 
@@ -14,50 +14,17 @@ const Testimonial = () => {
         {title:"Great service & best price", name:"Angela", content:"They did a great job, even when a issue came up they handle it and made it as smooth as possible. Definitely would use them in the future and recommend them to others. ", date:"10/26/2021 9:09:00 AM "},
         {title:"Porsche Transport", name:"Christopher", content:"The delivery service was fast and efficient. Great customer service and constant updates. The fees were below the competition. Thank you Asap Shipping Express.", date:"9/30/2021 9:10:00 PM "}
     ])
-    const [isPreviewed, setIsPreviewed] = useState(false)
-    const [previewContent, setPreviewContent] = useState('')
-    const handlePreview = (index)=>{
-        setIsPreviewed(true)
-        setPreviewContent(testimonialsArray[index].content)
-        
-    }
-    const handleClose = ()=>{
-        setIsPreviewed(false)
-    }
-    const [margin, setMargin]= useState(0)
     const handleSlideBack = ()=>{
-        const slide=document.getElementsByClassName("slide")[0]
-        if(margin>0){
-            slide.style.marginLeft = `${-margin+100}vw`
-            setMargin(margin-100)
-
-        }
+        const slideWrap = document.getElementsByClassName("slides_wrapper")[0]
+        const slideWidth = document.getElementsByClassName("slide")[0].clientWidth
+        slideWrap.scrollLeft -=slideWidth
     }
     const handleSlideNext = ()=>{
-        const slide=document.getElementsByClassName("slide")
-        if(margin<(slide.length-1)*100){
-            slide[0].style.marginLeft = `${-margin-100}vw`
-            setMargin(margin+100)
-        }
-    }
-    const checkContentHeight = (index)=>{
-        if(document.getElementsByClassName("content")[index]){
-            let e = document.getElementsByClassName("content")[index]
-            const topDifference = Math.round(e.getBoundingClientRect().top)-Math.round(e.parentNode.parentNode.getBoundingClientRect().top)
-            const elementHeight = e.clientHeight+topDifference
-            const parentHeight = Math.round(e.parentNode.parentNode.getBoundingClientRect().height)
-            if(parentHeight>elementHeight){
-                return false
-            }else{
-                return true
-            }
-            
-        }
+        const slideWrap = document.getElementsByClassName("slides_wrapper")[0]
+        const slideWidth = document.getElementsByClassName("slide")[0].clientWidth
+        slideWrap.scrollLeft +=slideWidth
     }
     const [isPositoin, setIsPosition] = useState(false)
-    const [experience, setExperience]=useState(0)
-    const [customers, setCustomers]=useState(0)
-    const [vehicles, setVehicles]=useState(0)
 
     const checkScrollHeight = ()=>{
         if(document.getElementsByClassName("why-asap-shipping-wrapper")[0]){
@@ -65,9 +32,6 @@ const Testimonial = () => {
             const top = indicator.top
             const scroll = window.scrollY + indicator.height
                 if(scroll+100>top){
-                    handleLoop(experience, setExperience, 20)
-                    handleLoop(customers, setCustomers, 72)
-                    handleLoop(vehicles, setVehicles, 100)
                     setIsPosition(true)
                     return true
                 }
@@ -85,15 +49,7 @@ const Testimonial = () => {
             })
         }
     },[])
-    const handleLoop = (state, Function, number)=>{
-        for(let i=0; i<=number;i+=2){
-            setTimeout(() => {
-                if(state!==number){
-                    Function(i)
-                }
-            }, 0);
-        }
-    }
+   
     const animate = useAnimation()
     const initial_left = {
         x:'-100vw',
@@ -104,17 +60,17 @@ const Testimonial = () => {
         backgroundColor:'rgba(0,0,0,0.2)'
     }
     const sequence = async()=>{
-            await animate.start(
+            await animate.start(i=>(
             {
                 x:0, 
                 backgroundColor:'rgba(0,0,0,0.2)', 
                 rotate:720, 
-                transition:{delay:0.2,duration:1}
-            })
-            await animate.start({
+                transition:{delay:0.1+i,duration:1.5}
+            }))
+            await animate.start(i=>({
                 backgroundColor:'rgba(0,0,0,0)',
-                transition:{delay:0.1, duration:1}
-            })
+                transition:{delay:i, duration:1}
+            }))
     }
     useEffect(()=>{
         sequence()
@@ -124,70 +80,56 @@ const Testimonial = () => {
             <Header image={picture} intro='Ship Your Vehicle with ASAP Shipping Express.' />
             <div className='testimonial'>
                 <h3>Recent Reviews</h3>
-                <div className="slides_wrapper">
-                    <div className="slide_navigator">
-                        <svg onClick={handleSlideBack} className='arrow' xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="6 0 24 24" width="24px" fill="#000000"><path d="M0 0h24v24H0V0z" fill="none" opacity=".87"/><path  d="M17.51 3.87L15.73 2.1 5.84 12l9.9 9.9 1.77-1.77L9.38 12l8.13-8.13z"/></svg>
-                        <svg onClick={handleSlideNext} className='arrow'  xmlns="http://www.w3.org/2000/svg" enableBackground="new 0 0 24 24" height="24px" viewBox="-6 0 24 24" width="24px" fill="#000000"><g><path d="M0,0h24v24H0V0z" fill="none"/></g><g><polygon points="6.23,20.23 8,22 18,12 8,2 6.23,3.77 14.46,12"/></g></svg>
-                    </div>
-                    {testimonialsArray.map((i, index)=>{
-                        return(
-                            <div key={index}  className="slide" >
-                                <div className="slide_container">
-                                    <div className="review_header">
-                                        <h4>{i.title}</h4>
-                                        <div className="five_star">
-                                            {f_star.map((f, index)=>{return(<MdStarRate color='yellow' key={index}/>)})}
-                                        </div> 
+                <div className="slides">
+                    <svg onClick={handleSlideBack} className='arrow' xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="6 0 24 24" width="24px" fill="#000000"><path d="M0 0h24v24H0V0z" fill="none" opacity=".87"/><path  d="M17.51 3.87L15.73 2.1 5.84 12l9.9 9.9 1.77-1.77L9.38 12l8.13-8.13z"/></svg>
+                    <svg onClick={handleSlideNext} className='arrow'  xmlns="http://www.w3.org/2000/svg" enableBackground="new 0 0 24 24" height="24px" viewBox="-6 0 24 24" width="24px" fill="#000000"><g><path d="M0,0h24v24H0V0z" fill="none"/></g><g><polygon points="6.23,20.23 8,22 18,12 8,2 6.23,3.77 14.46,12"/></g></svg>
+                    <div className="slides_wrapper">
+                        {testimonialsArray.map((i, index)=>{
+                            return(
+                                <div key={index}  className="slide" >
+                                    <div className="slide_container">
+                                        <div className="review_header">
+                                            <h4>{i.title}</h4>
+                                            <div className="five_star">
+                                                {f_star.map((f, index)=>{return(<MdStarRate color='yellow' key={index}/>)})}
+                                            </div> 
+                                        </div>
+                                        <div className="customer">
+                                            <h5>{i.name}</h5>
+                                            <em>submitted on {i.date}</em>
+                                        </div>
+                                        <p className='content'>{i.content}</p>
                                     </div>
-                                    <div className="customer">
-                                        <h5>{i.name}</h5>
-                                        <em>submitted on {i.date}</em>
-                                    </div>
-                                    <p className='content'>{i.content}</p>
-                                    {checkContentHeight(index)&& <div className="legend"><p onClick={(e)=>handlePreview(index)}>Read more</p></div>}
                                 </div>
-                            </div>
-                        )
-                    })}
-                </div>
-                <AnimatePresence>{isPreviewed&&
-                    <motion.div 
-                    className="review_preview" 
-                    initial={{scale:0}}
-                    animate={{scale:1, transition:{type:"spring",stiffness:200}}} 
-                    exit={{scale:0}}>
-                    <div>
-                        <motion.svg onClick={handleClose} className="exit_icon" animate={{rotate:360, transition:{duration:0.4, delay:0.2}}} xmlns="http://www.w3.org/2000/svg" height="24px" strokeWidth="4" viewBox="0 0 24 24" width="24px" fill="#000000"><path d="M0 0h24v24H0V0z" fill="none"/><path d="M19 6.41L17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41z"/></motion.svg>
-                        <p>
-                        {previewContent}
-                        </p>
+                            )
+                        })}
                     </div>
-                    </motion.div> 
-                }</AnimatePresence>
+                </div>
+
                 <div className="why-asap-shipping-wrapper">
-                    {isPositoin&&<motion.h3
+                    {isPositoin&&<motion.h1
                     initial={{y:-50, opacity:0}}
-                    animate={{y:0, opacity:1, transition:{duration:1}}}
-                    >Why ASAP Shipping Express?</motion.h3>}
+                    animate={{y:0, opacity:1, transition:{duration:2}}}
+                    >Why ASAP Shipping Express?</motion.h1>}
                     {isPositoin && <div className="reason-wrapper">
                         <motion.div
                             initial={{y:-50, opacity:0}}
-                            animate={{y:0, opacity:1, transition:{duration:1}}}
+                            animate={{y:0, opacity:1, transition:{duration:2}}}
                         className="indicator-wrapper">
                             <div className="reason">
-                                <span className='indicator'>{experience}</span>
+                                <span className='indicator'>20</span>
                                 <h4>Year of Experience</h4>
                             </div>
                             <div className="reason">
                                 <div className="indicator">
-                                    <span>{customers}</span>
+                                    <span>72</span>
                                     <span>K</span>
                                 </div>
                                 <h4>Happy Customers</h4>
                             </div>
                             <div className="reason">
                                 <div className="indicator">
-                                    <span>{vehicles}</span>
+                                    <span>100</span>
                                     <span>K+</span>
                                 </div>
                                 <h4>Vehicles Shipped</h4>
@@ -196,12 +138,14 @@ const Testimonial = () => {
                         <motion.div
                         initial={initial_left}
                         animate={animate}
+                        custom={0} 
                         className="reason">
                             <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 0 24 24" width="24px" fill="#000000"><path d="M0 0h24v24H0V0z" fill="none"/><path d="M20 4H4c-1.11 0-1.99.89-1.99 2L2 18c0 1.11.89 2 2 2h16c1.11 0 2-.89 2-2V6c0-1.11-.89-2-2-2zm0 14H4v-6h16v6zm0-10H4V6h16v2z"/></svg>
                             <h4>No Down payment to scedule</h4>
                             <p>NO down payment is required to book your order and you will not be charged any payment untill we confirm a carrier for your vehicle.We will contact you to let you know when your order is dispatched. </p>
                         </motion.div>
                         <motion.div
+                        custom={0.2} 
                         initial={initial_right}
                         animate={animate}
                         className="reason">
@@ -210,6 +154,7 @@ const Testimonial = () => {
                             <p>Our State-of-art car shipping cost quoting technology allows us to provide you with the best price to ship your car 100% of the time with no hidden fees.</p>
                         </motion.div>
                         <motion.div
+                        custom={0.4} 
                         initial={initial_left}
                         animate={animate}
                         className="reason">
@@ -220,6 +165,7 @@ const Testimonial = () => {
                             </p> 
                         </motion.div>
                         <motion.div
+                        custom={0.6} 
                         initial={initial_right}
                         animate={animate}
                         className="reason">
@@ -228,6 +174,7 @@ const Testimonial = () => {
                             <p>The total cost includes full coverage insurance. We verify that all of our car transport carriers have their own active cargo insurance at all times.</p>
                         </motion.div>
                         <motion.div
+                        custom={0.8} 
                         initial={initial_left}
                         animate={animate}
                         className="reason">
@@ -236,6 +183,7 @@ const Testimonial = () => {
                             <p>Our Transport Specialists and Customer Service Representatives are here to help! Our experienced transport team is trained to handle every aspect of the shipping process from start to finish.</p>
                         </motion.div>
                         <motion.div
+                        custom={1} 
                         initial={initial_right}
                         animate={animate}
                         className="reason">
