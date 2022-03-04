@@ -56,7 +56,7 @@ const Header = ({image, intro}) => {
     }, [])
     
     return ( 
-        <header style={{backgroundImage:`url(${img})`}} id='header'>
+        <header style={{background:`linear-gradient(90deg, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)) , url(${img})`}} id='header'>
             <div className="nav-wrapper">     
                 <motion.div initial={{translateY:-100}}
                 animate={{translateY:0, transition:{duration:0.5}}}

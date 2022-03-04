@@ -14,11 +14,16 @@ const VehicleInformation = ({year, setYear, make, setMake, model, setModel, type
         setType([...type, 'Open'])
     }
     const { url } = useRouteMatch()
+    console.log(url.split('')[url.length-1]);
     const updatedPath = (()=>{
         if(url === '/vehicle_information'){
             return '/'
         }else{
-            return `/${url.split('/')[1]}/`
+            if(url.split('')[url.length-1]==='/'){
+                return `${url.split('/')[1]}/`
+            }else{
+                return `/${url.split('/')[1]}/`
+            }
         }
     })()
     console.log(updatedPath);
@@ -39,7 +44,6 @@ const VehicleInformation = ({year, setYear, make, setMake, model, setModel, type
     useEffect(()=>{
         if(validate.some(i=>i==='')){
             history.push(`${updatedPath}`)
-            console.log('worked');
         }
         for(let i=0;i<is_running.length/2;i++){
             if(isRunning[i]==='Yes'){

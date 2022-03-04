@@ -16,31 +16,35 @@ function App() {
     <Router>
     <div className="App">
       <Switch>
-        <Route path='/faqs'>
-          <Faqs />
-        </Route>
-        <Route path='/step_by_step_guide'>
-          <Step_By_Step_Guide />
-        </Route>
-        <Route path='/contact_us'>
-          <Contact_Us />
-        </Route>
-        <Route path='/terms_and_conditions'>
-          <Terms_and_conditions />
-        </Route>
-        <Route path='/:state'>
-            <State />
-        </Route>
         <Route exact path='/'>
           <Testimonial />
           <WeShipEveryWhere />
           <Location/>
+          <Footer />
+        </Route>
+        <Route path='/faqs'>
+          <Faqs />
+          <Footer />
+        </Route>
+        <Route path='/step_by_step_guide'>
+          <Step_By_Step_Guide />
+          <Footer />
+        </Route>
+        <Route path='/contact_us'>
+          <Contact_Us />
+          <Footer />
+        </Route>
+        <Route path='/terms_and_conditions'>
+          <Terms_and_conditions />
+          <Footer />
+        </Route>
+        <Route path='/:state'>
+            <State />
         </Route>
         <Route path='/*'>
             <PageNotFound/>
         </Route>
       </Switch>
-      <Footer />
     </div>
     </Router>
   );

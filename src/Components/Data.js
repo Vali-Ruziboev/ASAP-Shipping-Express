@@ -1,4 +1,18 @@
 import alabama from '../Pictures/alabama.jpg'
+import alaska from '../Pictures/alaska.jpg'
+import arizona from '../Pictures/arizona.jpg'
+import arkansas from '../Pictures/arkansas.jpg'
+import california from '../Pictures/california.jpg'
+import colorado from '../Pictures/colorado.jpg'
+import connecticut from '../Pictures/connecticut.jpg'
+import delaware from '../Pictures/delaware.jpg'
+import florida from '../Pictures/florida.jpg'
+import georgia from '../Pictures/georgia.jpg'
+import hawaii from '../Pictures/hawaii.jpg'
+import idaho from '../Pictures/idaho.jpg'
+import illinois from '../Pictures/illinois.jpg'
+import indiana from '../Pictures/indiana.jpg'
+import iowa from '../Pictures/iowa.jpg'
 export const faqsData = [
     {
         question: "How much does it cost to ship a car?",
@@ -130,6 +144,7 @@ export const states = {
     ],
     alaska:[
         {   
+            img:alaska,
             title:'Alaska Auto Shipping',
             header:'Ship your vehicle in Alaska with ASAP Auto Shipping',
             content:"The time of the year is the biggest determining factor when it comes to shipping a car to or from Alaska.  Alaska has some of the harshest weather in the U.S because of its very cold and snowy winters. Supply and demand of carriers is also something that will affect car shipping quotes going to or from Alaska.  It's not as popular of a state for snow bird shipping cars like some of the more southern states in the U.S.",
@@ -145,6 +160,8 @@ export const states = {
     ],
     arizona:[
         {
+            img:arizona,
+            title:'Arizona Auto Shipping',
             header:"Ship your vehicle in Arizona with ASAP Auto Shipping",
             content:"The state of Arizona is known to be quite a hot dry state because it is located in the southwest part of the U.S., and has been known to reach temperatures of over 115 degrees during the summer. What's really cool about Arizona is that even as hot as the state gets, it also gets snow during the winter in the mountains of flagstaff. Its nick names are the copper state and the Grand Canyon state. The state has a population of around 7 million people and is approximately 113, 998 Sq. miles. Arizona was also the 48th state and the last of the contiguous states to be admitted to the union on February 14th, 1912. Arizona is considered to be one of the more popular states for travel, which is why so many people choose car shipping Arizona with ASAP Auto Shipping.",
         },
@@ -163,6 +180,8 @@ export const states = {
     ],
     arkansas:[
         {
+            img:arkansas,
+            title:'Arkansas Auto Shipping',
             header:"Ship your vehicle in Arkansas with ASAP Auto Shipping",
             content:"Arkansas is part of the tornado alley, so if you are shipping a car to or from or even through this state consider the weather, because it can be very harsh. It has very hot and humid summers that breeds rough weather. If you are considering on moving to Arkansas, they have the 5th lowest cost of living and the 2nd lowest cost of doing business according to CNBC, and they have the 13th largest state highway system in the United States with well maintained roads to make auto transport a breeze.",
         },
@@ -176,7 +195,9 @@ export const states = {
         }
     ],
     california:[
-        {
+        {   
+            img:california,
+            title:'California Auto Shipping',
             header:"Ship your vehicle in California with ASAP Auto Shipping",
             content:"When it comes to car shipping California, let's first talk about why this state is the most popular of all the states in the US. If it were its own country, it would have the 6th largest economy in the entire world. Because of its economy, a lot of car shipping California happens. The cost of living in this state is very high and surprisingly enough it is ranked 3rd worst for having the worst roads in the country. This is due to the ever-growing population and the higher number of cars per household, which causes serve traffic in many areas of the state. With all that being said, car shipping to California and car shipping from California can be higher than many other states.",
         },
@@ -191,6 +212,8 @@ export const states = {
     ],
     colorado:[
         {
+            img:colorado,
+            title:'Colorado Auto Shipping',
             header:"Ship your vehicle in Colorado with ASAP Auto Shipping",
             content:"Thousands of people travel to Colorado every year to see the Mile-High City of Denver.  Denver is such a beautiful state as it has the Rocky Mountain Range, deserts, canyons, and great forests. Colorado is a very popular car shipping state, as it’s a major hub for dropping off and picking up cars going to and from other states throughout the country.  The Denver International Airport is also known as world class and a very busy place.  A lot of people have cars shipped to and from the airport, so you will see a lot of car shipping companies going in and out of the airport to meet the clients and their cars.  It’s the fifth busiest airport in the world.",
         },
@@ -201,6 +224,8 @@ export const states = {
     ],
     connecticut:[
         {
+            img:connecticut,
+            title:'Connecticut Auto Shipping',
             header:"Ship your vehicle in Connecticut with ASAP Auto Shipping",
             content:"Connecticut is part of New England, bordered by Massachusetts, New York, and Rhode Island.  Even though this state is tiny, a large part of it is considered to be part of the New York Metropolitan Area.  Many Connecticut people drive to New York daily for their jobs.  Due to the number of commuters there are many traffic issues along Interstate 95 heading in and out of New York City.",
         },
@@ -215,6 +240,8 @@ export const states = {
     ],
     delaware:[
         {
+            img:delaware,
+            title:'Delaware Auto Shipping',
             header:"Car Shipping To Delaware, Car Shipping From Delaware",
             content:"Delaware car shipping with ASAP Auto Shipping.  Delaware is a unique state, and one interesting fact is that it does not have any commercial airline service.  It’s a small state with only one major interstate, I-95, going through it, which goes through the county of New Castle.\nASAP Auto Shipping offers excellent car shipping service to and from Delaware.  Our auto transport service is fast, secure, and reliable for Delaware residents or anyone looking to ship a car to Delaware.",
         },
@@ -233,6 +260,8 @@ export const states = {
     ],
     florida:[
         {
+            img:florida,
+            title:'Florida Auto Shipping',
             header:"Auto Shipping in Florida With ASAP Auto Shipping",
             content:"The state of Florida is known for many things. It's your biggest traveled to state for snowbirds, which is why a lot of car shipping is going to and from Florida.  It’s the southern most contiguous state in the US. Florida is quite large, with over 65,755 square miles, making it the 22nd most extensive and 3rd most populous, with over 21,000 people living there. Miami is the largest metropolitan for most populous urban area with many types of ethnicities living there.\nMiami is also known as the melting pot of the US. Florida is a very popular vacation spot for tourist all over the world. Miami is the 12th largest urban economy in the United States and the largest in Florida, by far, with over $345 Billion GDP in 2018. Over 50 of the Worlds billionaires also call south Florida home.  Many wealthy people travel by private jet and ship cars to and from home while traveling.",
         },
@@ -247,6 +276,8 @@ export const states = {
     ],
     georgia:[
         {
+            img:georgia,
+            title:'Georgia Auto Shipping',
             header:"Auto Shipping Georgia with ASAP Auto Shipping",
             content:"With ASAP Auto Shipping car shipping Georgia is fast and easy.  Georgia is known for a lot of international car shipping because of the Port of Savannah. This port is a serious shipping point due to the Savannah River in Georgia. Georgia’s economy primarily focuses around the U.S. military, shipping and textile production. Georgia is also known for its peaches!",
         },
@@ -265,6 +296,8 @@ export const states = {
     ],
     hawaii:[
         {
+            img:hawaii,
+            title:'Hawaii Auto Shipping',
             header:"Hawaii Auto Shipping with ASAP Auto Shipping",
             content:"Hawaii is known for its beautiful tropical landscape and is a very large tourist destination spot. It’s the only state that is entirely made up of islands and doesn’t lie in the territory of the Americas. Hawaii attracts tourists year-round due to the mild climate being consistent throughout the whole year. Car Transport can be very costly if you need this service to or from Hawaii, due to it being an island, and the only way to ship a car is by air or ship. If you need car shipping Hawaii services call ASAP Auto Shipping and we will save you money and time buy finding the best option for you based on your time restrictions of needing it done.",
         },
@@ -279,6 +312,8 @@ export const states = {
     ],
     idaho:[
         {
+            img:idaho,
+            title:'Idaho Auto Shipping',
             header:"Auto Shipping in Idaho With ASAP Auto Shipping",
             content:"As many of you know, Idaho is known for potatoes and produces almost 1/3 of all the potatoes in the U.S. As far as the economy goes, manufacturing, food processing and lumber are the main industries in Idaho and Idaho also has two time zones. On the east side of the state they have the mountain time zone and on the west they use the pacific time. It’s a land lock state but this does not restrict it to still doing quite a bit of international shipping, as the state moves many barges along the Snake and Columbia Rivers up to Portland.  When it comes to car shipping Idaho, there are 7 major interstates going through it, so Auto Transport is not too tough.  ASAP Auto Shipping does a lot of Idaho Auto Transport and has a large list of preferred auto transport carriers we use regularly.",
         },
@@ -293,6 +328,8 @@ export const states = {
     ],
     illinois:[
         {
+            img:illinois,
+            title:'Illinois Auto Shipping',
             header:"Car Shipping Illinois with ASAP Auto Shipping",
             content:"There are many things you should consider if you need to ship a car to Illinois.  ASAP Auto Shipping can provide you with affordable car shipping services from anywhere in the United States to Illinois.  We are considered one of the best car shipping companies in Illinois for many reasons.  Many dealerships in Illinois rely on us for all their Auto Transport Illinois services.  Some interesting facts about Illinois are that they are the home of the largest bottle of ketchup. The ice cream sundae originated in Evanston, and Illinois has the only river in the world that flows backwards.\nBecause Chicago is the 3rd most populous city in the U.S., there is a ton of car shipping to and from Chicago daily. There are also many snowbirds from Illinois that travel south for the winter and use Auto Transport companies to move their cars while they fly making it much easier in general.  We only work with the best auto transport companies to ship a car to Illinois.  Whether you are shipping a rare classic car, your family car, or even a commercial truck, we will make sure our Illinois car shipping services are the best, and your experience will go smooth from start to finish.",
         },
@@ -307,6 +344,8 @@ export const states = {
     ],
     indiana:[
         {
+            img:indiana,
+            title:'Indiana Auto Shipping',
             header:"Auto Transport Indiana with ASAP Auto Shipping",
             content:"Indiana is in what is known as the Corn Belt, a part of the United States that stretches from Indiana to Eastern Nebraska.  This state ships over 70 million tons of cargo each year by water and is 14th in the United States. Indiana is a Midwest state, also called the Hoosier State.  Residents of this state are commonly known as Hoosiers.  Indiana’s economy is evenly split between agriculture and manufacturing.  It's also know for its train travel and with its extensive highway system, it is known for  being the “Crossroads of America.”",
         },
@@ -326,6 +365,8 @@ export const states = {
     ],
     iowa:[
         {
+            img:iowa,
+            title:'Iowa Auto Shipping',
             header:"Car Shipping Iowa With ASAP Auto Shipping",
             content:"Iowa is considered a Midwestern state and is bordered by two large rivers; the Big Sioux River and the Mississippi River.  For most of its existence, Iowa has been known for agriculture, but in recent years the economy has also added manufacturing, finance, and biotechnology to its list of industries.\nCar shipping Iowa is fairly easy, due to 4 main interstates that run through it. (I-80, I-35, I-29, and I-74) Iowa also has lots of U.S. and state routes running through it.  ASAP Auto Shipping has years of experience with Iowa Car Shipping and have plenty of 5-star car shipping reviews to back that up.  We are also a #1 choice for heavy haul carriers of farm equipment in Iowa.",
         },

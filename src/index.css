@@ -23,7 +23,7 @@
   --header:rgb(3, 140, 37);
   --india-green:rgb(48, 135, 8);
   --cultured:rgb(245, 245, 245);
-  --shadow:0 0 5px 1px rgba(0, 0, 0, 0.5);
+  --shadow:0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
   --light-shadow:0 0 6px 1px rgba(0, 0, 0, 0.2);
   --maximum-red:rgb(215, 42, 29);
   --head-text:rgb(34, 30, 27);
