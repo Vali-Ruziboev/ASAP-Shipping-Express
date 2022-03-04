@@ -17,7 +17,7 @@ const WeShipEveryWhere = () => {
         <div className="ready_and_states_wrapper">
             <div className="seal">
                 <h3>Ready to get your quote?</h3>
-                <a href="#header"><h4>Get A Quote</h4></a>
+                <a style={{display:'block', width:'max-content', margin:'0 auto'}} href="#header"><h4>Get A Quote</h4></a>
                 <p>If you would perefer to speak with one of our experts, feel free to give us a call at <a href="tel:(929) 419-5297">(555) 555-5555</a></p>
             </div>
             <div className="states">

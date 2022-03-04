@@ -1,11 +1,12 @@
 import { useEffect, useState } from "react"
-import {BrowserRouter as Router, Route, Switch, useLocation} from 'react-router-dom'
+import {BrowserRouter as Router, Route, Switch, useLocation, useHistory} from 'react-router-dom'
 import ContactInformation from "./ContactInformation"
 import QuoteSubmitted from "./QuoteSubmitted"
 import { motion } from 'framer-motion'
 import VehicleInformation from "./VehicleInformation"
 import ZipCodes from "./ZipCodes"
 import emailjs, {init} from '@emailjs/browser';
+import PageNotFound from "../PageNotFound"
 init("user_1Ig2WajVAhHklQ3Nutlw2")
 
 const NewQuote = ({ url }) => {
@@ -59,6 +60,7 @@ const NewQuote = ({ url }) => {
                 console.log('FAILED...', error);
             });
     }
+    const history = useHistory()
     const updatedPath = (()=>{
         if(url ==='/'){
             return url
@@ -66,6 +68,9 @@ const NewQuote = ({ url }) => {
             return `${url}/`
         }
     })()
+    const handleNotFound= ()=>{
+        history.push('/NotFound')
+    }
     return ( 
         <Router>
             <motion.form
@@ -91,6 +96,9 @@ const NewQuote = ({ url }) => {
                         </Route>
                         <Route path={`${updatedPath}quote_submitted`}>
                             <QuoteSubmitted />
+                        </Route>
+                        <Route path='/*'>
+                            {()=>handleNotFound()}
                         </Route>
                     </Switch>
             </motion.form>

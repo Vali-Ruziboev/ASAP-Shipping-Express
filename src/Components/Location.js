@@ -4,7 +4,7 @@ const Location = () => {
         <div className="seal">
                 <h3>Still have questions?</h3>
                 <p className="seal_pad">Check-out:</p>
-                <Link to="/faqs"><h4 className="faqs_btn">FAQs</h4></Link>
+                <Link style={{display:'block', width:'max-content', margin:'0 auto'}} to="/faqs"><h4 className="faqs_btn">FAQs</h4></Link>
                 <p className="seal_pad">OR</p>
                 <p>Give us a callback at <a href="tel:(929) 419-5297">(555) 555-5555</a> to speak with one of our experienced transport specialists.</p>
             </div>

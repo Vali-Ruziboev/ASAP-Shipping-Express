@@ -10,7 +10,11 @@ const ZipCodes = ({ shipFrom, shipTo, setShipFrom, setShipTo }) => {
         if(url ==='/'){
             return url
         }else{
-            return `${url}/`
+            if(url.split('')[url.length-1]==='/'){
+                return `${url}`
+            }else{
+                return `${url}/`
+            } 
         }
     })()
      // validator

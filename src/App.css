@@ -3,22 +3,15 @@ header{
   min-height: 100vh;
   display: flex;
   justify-content: center;
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: center;
-  background-attachment: fixed;
+  background-repeat: no-repeat !important;
+  background-size: cover !important;
+  background-position: center !important;
+  background-attachment: fixed !important;
   overflow: hidden;
   position: relative;
   align-items: center;
-  
 }
-header::before{
-  content: "";
-  position: absolute;
-  width: 100%;
-  min-height: 1000%;
-  background-color: rgba(0, 0, 0, 0.5);
-}
+
 .header_body{
   width: 80%;
   height: max-content;
@@ -32,7 +25,7 @@ header::before{
 .intro{
   color: white !important;
   z-index: 1;
-  font-size: 2rem;
+  font-size: 1.6rem;
   width: 60%;
   text-align: center;
   text-shadow:0px 0px 10px rgba(0, 0, 0, 1);
@@ -125,7 +118,8 @@ header::before{
 .nav-wrapper li:hover{
   color: var(--header);
 }
-.nav-wrapper li:last-child{
+.nav-wrapper li:last-child,
+.popup-wrapper li:last-child{
   padding: 0.8rem;
   background-color: var(--header);
   border-radius: 10px;
@@ -134,14 +128,13 @@ header::before{
   transition: 0.2s ease-in-out;
   border: 1px solid transparent;
 }
-.nav-wrapper li:last-child:hover{
+.nav-wrapper li:last-child:hover,
+.popup-wrapper li:last-child:hover{
   background-color: white;
   border: 1px solid var(--header);
   color: var(--header);
 }
 .quote-form{
-  /* margin-top: 9rem;
-  margin-bottom: 3rem; */
   justify-content: center;
   height: max-content;
   width:90%;
@@ -249,7 +242,12 @@ header::before{
   cursor: pointer;
 }
 .popup-wrapper div li{
+  transition: 0.2s ease-in-out;
   margin: 1rem 0;
+  text-align: center;
+}
+.popup-wrapper div li:hover{
+  color: var(--header);
 }
 li{
   list-style: none;
@@ -421,6 +419,7 @@ li{
   background-color: var(--india-green);
   color: var(--cultured);
 }
+
 .seal h4{
   width: max-content;
   margin: 1rem auto;
@@ -672,7 +671,7 @@ li{
   margin: 0 auto;
   width: max-content;
   padding:0.5rem;
-  background-color: rgb(17, 202, 57);
+  background-color: rgb(17, 202, 58);
   border-radius: 10px;
   
 }
@@ -691,6 +690,9 @@ li{
   height: 20px;
   fill:var(--cultured);
   animation: load infinite linear 1s;
+}
+.contact_us button:hover{
+  background-color: rgba(17, 202, 58);
 }
 @keyframes load{
   100% {
@@ -766,6 +768,23 @@ footer a:hover{
   color: var(--cultured);
   border-radius: 8px 8px 0 0;
 }
+.page_not_found{
+  text-align: center;
+}
+.page_not_found h1{
+  margin: 2rem 0;
+}
+.page_not_found svg{
+  width: 50vw;
+  height: 50vh;
+}
+.page_not_found a{
+  background-color: var(--header);
+  padding: 1rem;
+  border-radius: 10px;
+  color: var(--cultured);
+  box-shadow: var(--shadow);
+}
 a{
   color: inherit;
   text-decoration: none;
@@ -774,6 +793,9 @@ a{
   .header_body{
     flex-direction: row;
     margin: 0;
+  }
+  .header_body form{
+    margin: 15rem 0;
   }
   .intro{
     font-size: 3.5rem;
