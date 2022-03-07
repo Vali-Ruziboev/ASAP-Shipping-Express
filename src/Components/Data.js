@@ -35,6 +35,19 @@ import north_dakota from '../Pictures/north_dakota.jpg'
 import ohio from '../Pictures/ohio.jpg'
 import oklahoma from '../Pictures/oklahoma.jpg'
 import oregon from '../Pictures/oregon.webp'
+import pennsylvania from '../Pictures/pennsylvania.jpg'
+import rhode_island from '../Pictures/rhode_island.webp'
+import south_carolina from '../Pictures/south_carolina.webp'
+import south_dakota from '../Pictures/south_dakota.webp'
+import tennessee from '../Pictures/tennessee.webp'
+import texas from '../Pictures/texas.jpg'
+import utah from '../Pictures/utah.jpg'
+import vermont from '../Pictures/vermont.jpg'
+import virginia from '../Pictures/virginia.jpg'
+import washington from '../Pictures/washington.jpg'
+import west_virginia from '../Pictures/west_virginia.jpeg'
+import wisconsin from '../Pictures/wisconsin.jpg'
+import wyoming from '../Pictures/wyoming.jpg'
 
 export const faqsData = [
     {
@@ -834,160 +847,261 @@ export const states = {
             content:"When looking to ship a car to or from Oregon, we suggest you get several car shipping quotes from reputable companies. The cheapest car shipping quote is not always the best option to ship a car.  Car hauling companies always choose the highest paying cars first to fill the spot on their trucks. This means if your car is priced too low, it may sit longer than you want to wait, or not get picked up at all. We have a large list of preferred car shipping carriers that we have spent years compiling so that our clients have peace of mind when they hire us to ship cars for them.",
         }
     ],
-    // pennsylvania:[
-    //     {
-    //         img:new_jersey,
-    //         title:"Pennsylvania Auto Shipping",
-    //         header:"",
-    //         content:"",
-    //     },
-    //     {
-    //         header:"",
-    //         content:"",
-    //     }
-    // ],
-    // rhode_island:[
-    //     {
-    //         img:new_jersey,
-    //         title:"Rhode Island Auto Shipping",
-    //         header:"",
-    //         content:"",
-    //     },
-    //     {
-    //         header:"",
-    //         content:"",
-    //     }
-    // ],
-    // south_carolina:[
-    //     {
-    //         img:new_jersey,
-    //         title:"South Carolina Auto Shipping",
-    //         header:"",
-    //         content:"",
-    //     },
-    //     {
-    //         header:"",
-    //         content:"",
-    //     }
-    // ],
-    // south_dakota:[
-    //     {
-    //         img:new_jersey,
-    //         title:"South Dakota Auto Shipping",
-    //         header:"",
-    //         content:"",
-    //     },
-    //     {
-    //         header:"",
-    //         content:"",
-    //     }
-    // ],
-    // tennessee:[
-    //     {
-    //         img:new_jersey,
-    //         title:"Tennessee Auto Shipping",
-    //         header:"",
-    //         content:"",
-    //     },
-    //     {
-    //         header:"",
-    //         content:"",
-    //     }
-    // ],
-    // texas:[
-    //     {
-    //         img:new_jersey,
-    //         title:"Texas Auto Shipping",
-    //         header:"",
-    //         content:"",
-    //     },
-    //     {
-    //         header:"",
-    //         content:"",
-    //     }
-    // ],
-    // utah:[
-    //     {
-    //         img:new_jersey,
-    //         title:"Utah Auto Shipping",
-    //         header:"",
-    //         content:"",
-    //     },
-    //     {
-    //         header:"",
-    //         content:"",
-    //     }
-    // ],
-    // vermont:[
-    //     {
-    //         img:new_jersey,
-    //         title:"Vermont Auto Shipping",
-    //         header:"",
-    //         content:"",
-    //     },
-    //     {
-    //         header:"",
-    //         content:"",
-    //     }
-    // ],
-    // virginia:[
-    //     {
-    //         img:new_jersey,
-    //         title:"Virginia Auto Shipping",
-    //         header:"",
-    //         content:"",
-    //     },
-    //     {
-    //         header:"",
-    //         content:"",
-    //     }
-    // ],
-    // washington:[
-    //     {
-    //         img:new_jersey,
-    //         title:"Washington Auto Shipping",
-    //         header:"",
-    //         content:"",
-    //     },
-    //     {
-    //         header:"",
-    //         content:"",
-    //     }
-    // ],
-    // west_virginia:[
-    //     {
-    //         img:new_jersey,
-    //         title:"West Virginia Auto Shipping",
-    //         header:"",
-    //         content:"",
-    //     },
-    //     {
-    //         header:"",
-    //         content:"",
-    //     }
-    // ],
-    // wisconsin:[
-    //     {
-    //         img:new_jersey,
-    //         title:"Wisconsin Auto Shipping",
-    //         header:"",
-    //         content:"",
-    //     },
-    //     {
-    //         header:"",
-    //         content:"",
-    //     }
-    // ],
-    // wyoming:[
-    //     {
-    //         img:new_jersey,
-    //         title:"Wyoming Auto Shipping",
-    //         header:"",
-    //         content:"",
-    //     },
-    //     {
-    //         header:"",
-    //         content:"",
-    //     }
-    // ]
+    pennsylvania:[
+        {
+            img:pennsylvania,
+            title:"Pennsylvania Auto Shipping",
+            header:"Pennsylvania Auto Transport with ASAP Auto Shipping",
+            content:"Pennsylvania is in the Great Lakes, Mid-Atlantic, and Northeastern part of the United States. The climate is very similar to Ohio. There are very warm and humid summers, beautiful foliage falls, and harsh cold winters. The Appalachian Mountains run through the middle of Pennsylvania, where many well-known ski resorts call home and attract numerous winter tourists each year. Two of the biggest cites in PA are Pittsburgh and Philadelphia, which attract many people to move to Pennsylvania each year looking for new opportunities in these cities. Pennsylvania is also known as the Chocolate Capital of the U.S., birth place of the Cheesesteak Sandwich, the Liberty Bell, Declaration of Independence, and an Original Colony.\nBecause Pennsylvania plays such a large role in American History, it draws tourists from all over the United States, making tourism a big part of the PA economy. If you are planning a vacation to PA and are flying, but would like the comfort of your own car, then consider ASAP Auto Shipping for your Car Shipping Pennsylvania Services.",
+        },
+        {
+            header:"Car Shipping Pennsylvania",
+            content:"If you are planning a move to or from Pennsylvania, then you may want to consider using car shipping company Pennsylvania. Many families start off planning their move thinking that they will save money driving their cars, then quickly realize by the time they add up the time driving, hotel cost, food, gas, and wear and tear on their car, it’s cheaper to arrange a Pennsylvania Car Shipping Company to move their car. ASAP Auto Shipping helps move hundreds of cars each year to and from Pennsylvania, taking the stress off many families moving. Our car shipping Pennsylvania agents have the experience and knowledge to ship your car with peace of mind.",
+        },
+        {
+            header:"Cost Factors of Pennsylvania Auto Transport",
+            content:"With many large auto auctions located in PA, there are a lot of car shipping carriers. One of the busiest auto auctions in the country is Manheim Auto Auction. Many dealers ship cars to and from this auction each day attracting quite a few auto haulers looking for consistent business. The demand for Auto transport PA usually goes up during the late fall and early winter months, due to many of the PA seniors moving south for the winter to avoid the cold PA winters. Shipping a car out of PA can cost up to 25% more during these times. The size and weight of the car will also affect the cost to ship a car.\nAuto Haulers can only have so much weight on their trucks. If your vehicle is heavier and takes up more room, then you can expect to pay more than you would for a smaller car. Pennsylvania also has some not so favorable locations in the state that are not easy for big rigs to get to. This causes the price to drive to these spots to be higher than it would be in a major city or close to an interstate. If you are needing to ship a car in the middle of nowhere, where a car hauler will have to drive an hour or more out of his way to get your vehicle, you can expect to have to pay for that.",
+        },
+        {
+            header:"Auto Shipping Pennsylvania",
+            content:"ASAP Auto Shipping is one of the best car shipping companies in Pennsylvania.  We offer open-air and enclosed car shipping as well as expedited car transport for those that are in a hurry to move a car.  We have compiled a large list of preferred car shipping companies we use to ship our client’s cars.  All of the auto carriers we work with have verified cargo insurance and the highest safety rating with DOT and FMSCA.  We have various 5-star reviews to back that up. ASAP Auto Shipping is your best choice to ship a car Pennsylvania.\nYou can get a free car shipping quote buy filling out our car shipping form online, or calling us at 555-555-5555 to speak with one of our Auto shipping PA experts. An ASAP Auto Shipping agent will walk you through the entire car shipping process, as well as any question you may have about how much it costs to ship a vehicle.",
+        }
+    ],
+    rhode_island:[
+        {
+            img:rhode_island,
+            title:"Rhode Island Auto Shipping",
+            header:"Rhode Island Car Shipping with ASAP Auto Shipping",
+            content:"Rhode Island is part of New England and known for its seaside Colonial towns, sandy beaches, sailing, and Gilded Age mansions.  The Capital of Rhode Island is Providence, home of Brown University. Rhode Island was part of the original 13 colonies and the last one to become a state. Out of all the 50 states in the U.S., Rhode Island is the smallest. Even though it’s the smallest state, it still has over 1 million residents living there. Car Shipping Rhode Island is a very popular service that many of its residents use each year. ASAP Auto Shipping moves hundreds of cars to and from Rhode Island each year. During snowbird season the demand for auto carriers causes the price to go for car shipping headed south.",
+        },
+        {
+            header:"Rhode Island Auto Transport",
+            content:"Many wealthy families on the west coast have vacation homes in Rhode Island and ship their cars there when they visit. Many choose Enclosed Car Shipping to move their cars versus open car shipping, as these are usually very expensive cars requiring protection from outside elements during transport. All our enclosed car shipping carriers have a minimum of 1 million dollars of cargo insurance. If you are looking to ship a car on a budget, the open-air auto transport would be the best option. You can expect to pay about 30-40% less for open-air car transport. We only work with the best car haulers that have the highest safety rating at DOT and FMSCA. ASAP Auto Shipping also double vets its carrier’s insurance making sure there are not issues for our clients.",
+        },
+        {
+            header:"Rhode Island Car Transport",
+            content:"If you are buying your next vehicle online or maybe even your dream car, there is a good chance you will need it shipped back home to Rhode Island. Here are a few tips to getting your car shipped home safely. We suggest you get several car shipping quotes before you choose a company. Beware of cheap car shipping quotes, as many times they are associated with bait and switch tactics from brokers trying to get you locked in with them. Make sure the car shipping company has 5-star verified car shipping reviews from real customers.\nASAP Auto Shipping moves a lot of cars from Rhode Island to California and Florida. These are two big car shipping routes we specialize in. You can get a free car shipping quote buy filling out our car shipping form, or calling us at 555-555-5555 to speak with a car shipping expert. Our shipping agents are very experienced in every facet of the car shipping process and will help answer any questions you may have.",
+        },
+        {
+            header:"Best Car Shipping Companies Rhode Island",
+            content:"ASAP Auto Shipping is the preferred choice for many dealerships in Rhode Island that sell cars online and require auto transport services to deliver them to their clients.  ASAP Auto Shipping has a DIY car shipping portal that lets car dealers do it themselves, cutting the broker fee in half, while still getting the exact same car shipping service and experience.",
+        }
+    ],
+    south_carolina:[
+        {
+            img:south_carolina,
+            title:"South Carolina Auto Shipping",
+            header:"South Carolina Car Shipping with ASAP Auto Shipping",
+            content:"South Carolina is a state located in the southeastern part of the United States, also known as the Palmetto State.  The largest and most industrialized city in South Carolina is Charleston, but the capital is Columbia. When you think of South Carolina, you probably think of Hilton Head. This a very commercialized vacation spot for many people all over the country.\nA lot of international car shipping goes through Charleston, which is the largest seaport in the state. ASAP Auto Shipping is considered one of the best car shipping companies in South Carolina. We ship cars all over the country to the Charleston Port for international car shipping. South Carolina has numerous major interstate highways and state routes running through it, making South Carolina car shipping very reliable. If you are shipping a car to or from South Carolina, ASAP Auto Shipping is the preferred choice.",
+        },
+        {
+            header:"South Carolina Auto Shipping",
+            content:"You may be moving to or from South Carolina, or you could be buying your dream car online from a great distance. The point is, you may need South Carolina Auto Shipping. No matter what your situation is, ASAP Auto Shipping can handle all aspects of the car shipping process. Many people visiting South Carolina on vacation like to have their own cars to drive versus renting one. We can arrange for your car to arrive the same day you do, giving you the transportation you want to start your vacation.\nWe know the ins and the outs of shipping a car, as it can be a tricky thing if you’ve never done it before. There are a few different options when it comes to South Carolina Auto Transport. ASAP Auto Shipping can ship your car open-air, enclosed, and we even offer expedited car shipping. There is also a BMW plant in Spartanburg, South Carolina that does a lot of Auto Shipping to the rest of the country.",
+        },
+        {
+            header:"Cost Factors Of South Carolina Car Transport",
+            content:"One of the biggest factors of the cost to ship a car will always be the demand of auto transport carriers in the area at the time.  The more cars that need shipped in any direction, the more car haulers that will come to the area to fill their trucks.  On the same token, if there are more cars than spots available on the car transport carriers’ trucks, then it drives the price up because the carriers will usually pick the highest paying shipments first. During the snowbird season, Auto Transport going south will cost more than car shipping going north from South Carolina.\nWhen calling an Auto Transport company to get a price, they will need the year, make, and model of the vehicle you need to ship, as the size and weight plays a big factor in the cost to ship a car. DOT and the FMSCA regulate how much weight any car hauler can carry with their type of equipment. The choice between open air car shipping and enclosed car shipping plays a big role in the cost to ship a car. If you are transporting a luxury, antique, or high-end car, you may consider shipping enclosed, as it gives extra protection from the outside elements.\nAlso, all our enclosed car shipping carriers carry at least 1 million dollars in cargo insurance.  Open-air car shipping carriers usually car around 250,000 dollars of cargo insurance. The last thing that will go into the price to ship a car is the current price of diesel fuel. It's easy to get a free car shipping quote from ASAP Auto Shipping.  Fill out our car shipping form online, call us at 555-555-5555 to speak with one of our South Carolina car shipping experts.",
+        }
+        
+    ],
+    south_dakota:[
+        {
+            img:south_dakota,
+            title:"South Dakota Auto Shipping",
+            header:"South Dakota Car Shipping with ASAP Auto Shipping",
+            content:"South Dakota is best known as the Mount Rushmore State because of the large carving of 4 revered U.S Presidents into tall granite peaks . There is also another huge carving of a historic Native American tribal leader called the Crazy Horse Memorial.\nSouth Dakota is in the North Central part of the United States. Like many other Midwestern states, South Dakota has 4 seasons with very cold harsh winters and semi-hot and humid summers. South Dakota is also home to the exclusive Black Hills National Forest. It’s a sparsely populated state, with under a million people living there and lots of rolling prairies.",
+        },
+        {
+            header:"Auto Shipping South Dakota",
+            content:"If you are thinking about using South Dakota Car Shipping, ASAP Auto Shipping is the best car shipping company South Dakota that ships for businesses and individuals.  When it comes to road transportation, South Dakota has 4 major interstates running through it, including I-90, I-229, I-190, and I-29, making South Dakota Auto Transport very reliable.  ASAP Auto Shipping utilizes these major interstates and many other state highways to be the preferred South Dakota Car Shipping Company.",
+        },
+        {
+            header:"Shipping a Car to or From South Dakota",
+            content:"Please consider using our Auto Shipping South Dakota services and save money and time with ASAP Auto Shipping.  If you are moving to or from South Dakota, you may need car shipping South Dakota.  Let ASAP Auto Shipping take some of the stress of moving off your hands and we will take care of shipping your car to the new location so you can focus on the move. Using our South Dakota Auto Transport also saves you a lot of time, and wear and tear on your car, by not driving it.\nWe can provide open-air car shipping, enclosed car shipping as well as expedited car shipping.  ASAP Auto Shipping can provide cheap car shipping if you are located very close to a major interstate, as the car haulers don’t like going too far off the highway. All our car transporters are licensed, bonded, and insured. Their insurance is also strictly vetted. Contact ASAP Auto Shipping today to get a free car shipping quote.",
+        },
+        {
+            header:"Cost Factors of Dakota Car Shipping",
+            content:"Many things can affect how much it cost to ship a car, but the biggest thing is the distance you need to ship a car. In a state like South Dakota, with it being so sparsely populated, where your location is for pick up or drop off is important. The next factor that will determine how much it cost to ship a car is the number of other vehicles going on the same route as you wish to ship.\nIf you are the only vehicle on the route, then the cost may go up, as the auto hauler usually likes to pick up more than one vehicle at a time at a general location.  The current cost of diesel fuel can also affect how much it will cost to ship a car.  Enclosed Auto Transport also can affect the cost, as it cost about 40% more than open-air Auto Transport. You can get a free Auto Transport quote by filling out our car shipping form online, or calling us at 555-555-5555 to speak with one our car shipping experts South Dakota.",
+        }
+    ],
+    tennessee:[
+        {
+            img:tennessee,
+            title:"Tennessee Auto Shipping",
+            header:"Tennessee Car Transport with ASAP Auto Shipping",
+            content:"Located in the Southeastern part of the United States, Tennessee is known as the Volunteer State.  Nashville has long been recognized as the Country Music capitol of the world. Nashville is also the most industrialized and largest city in Tennessee, as well as the state's capital. With the exceptions of the Appalachian Mountains and higher elevation, the climate in Tennessee is like Alabama; hot and humid summers and very mild winters.\nThere are 5 Ports located in Tennessee, which are the port of Memphis, Port of Knoxville, Port of Chattanooga, Port of New Johnson, and the Port of Nashville.  When it comes to road transportation, there are 10 major interstates running through Tennessee making auto transport reasonable and easy.  When it comes to shipping a car to or from Tennessee, ASAP Auto Shipping can get the job done.",
+        },
+        {
+            header:"Car Transport Options for Tennessee",
+            content:"If you are planning a move to or from Tennessee, let us take the stress of shipping your car off your hands so you can focus on the move. How much does it cost to ship a car? There are several factors that will determine the price of the shipping quote.\nDo you need open or enclosed car transport? What is the size and weight of the vehicle you need to ship? What is the current supply and demand of car transporters in the area? How many car transporters are headed in the direction you want to ship a car? These are all questions our car shipping agents will ask you in order to give you an accurate Auto Transport quote Tennessee. Save the wear and tear on your car, plus a lot of stress, by calling ASAP Auto Shipping’s Tennessee Auto Transport Services.",
+        },
+        {
+            header:"Auto Shipping Tennessee",
+            content:"As the online car buying industry continues to grow, so does the demand of Auto Shipping Companies. It's important to understand how the auto shipping process works so that you can choose the company and quote that best fits your shipping needs. We suggest that you get several car shipping quotes before you choose which company to use.  ASAP Auto Shipping is a 5-star Car Shipping Company that only uses the best car haulers to ship its client’s cars.  All our car transporters are licensed, bonded, and double vetted for the proper cargo insurance.\nOur Tennessee Car Shipping services are safe, reliable, and affordable.  You can get a free car shipping quote by filling out our car shipping form online, calling us at 555-555-5555 to speak with one of our Tennessee Auto Shipping experts. They will walk you through the car shipping process from start to finish and answer any questions you may have.",
+        },
+        {
+            header:"Save Money on Tennessee Car Shipping",
+            content:"Everyone wants cheap car shipping, but you may want to consider a few things first.  Auto Transport Carriers fill their trucks with the shipments that are paying the most first. Open-air Auto transport will generally be 30-40% cheaper than Enclosed Auto Transport. If book your car shipping with ASAP Auto Shipping in advance, you are most likely to get a better rate and lock that in.  We also try to get best price car shipping for our client’s.",
+        }
+    ],
+    texas:[
+        {
+            img:texas,
+            title:"Texas Auto Shipping",
+            header:"Texas Car Transport with ASAP Auto Shipping",
+            content:"Texas is in the Central Southern part of the United States and is the 2nd largest state in the country by size and population. Also known as the Lone Star State, Texas is the only state in the United States to have the flags of six different nations fly over it. Traveling through Texas is a bigger task than most people think, due to its size.  Whether you’re traveling from the Panhandle to East Texas, or from Oklahoma to the Rio Grande, driving through this great state can take much longer than you think.\nTherefore, so many people choose to use Car Transport Texas services to avoid the long driving and wear and tear on their car. ASAP Auto Shipping is the preferred choice for Car Transport Texas. We have many years of car shipping Texas service under our belt and are considered to be the best car shipping company Texas.",
+        },
+        {
+            header:"Car Transport Texas",
+            content:"Car Shipping to Texas, Car Shipping from Texas with ASAP Auto Shipping.\nIf you are moving to or from Texas, you may be considering using a Car Transport Texas Service. Many people think they will save money by driving themselves when moving. However, when you take into consideration the time spent driving, the hotel and food money, and the wear and tear on the car, the cost to ship a car becomes way more attractive. ASAP Auto Shipping transports hundreds of cars to and from Texas each year. If you are shipping to or from one of the main cities in Texas, like Dallas, Houston, San Antonia, Austin, or El Paso, then car shipping prices are reasonable.\nIf you are shipping outside one of these main cites, then you can expect to pay much more. The reason for this is because the state is so large. A car hauler can spend half a day going out of his way to pick up or drop off your car, and he needs to get paid for that time. Many car shipping companies give good discounts if your location is on or near a major interstate. Beware of very cheap car shipping prices, as they are often associated with bait and switch tactics on the price.  The price may sound good at first, but when your car does not get picked up when it needs to and your auto transport broker calls you and says its going to cost more, you won’t be so happy.",
+        },
+        {
+            header:"Car Shipping Texas Options",
+            content:"If you are needing Car Transport Texas services, you have several different options to choose from. The most common and affordable is open-air car transport. These car carriers typically can fit 8-10 vehicles on their trucks, and there are more of these type of carriers on the road, making them more accessible to locate and contract for a shipment.\nOpen-air car shipping carriers typically carrier around 250,000 dollars of cargo coverage as well. If you are shipping a luxury, antique, or high-end car, then you may want to consider enclosed car transport for that extra protection from the outside elements, as well as a much higher cargo policy. Usually about 1,000,000 dollars for enclosed car shipping is carried by the enclosed car transporter. ASAP Auto Shipping can arrange either one of these types of car transport for you as well as expedited car shipping if you are in a hurry for car shipping Texas services. Of course, expedited car transport cost much more, but is well worth it if you are in a pinch and need your car moved quickly.",
+        },
+        {
+            header:"How much does it cost to ship a car to or from Texas?",
+            content:"There are several things that go into how much it costs to ship a car.  The biggest factor in the cost to ship car is the current supply of auto haulers in your area headed the direction you need to ship a car.  If the supply of car shipping carriers is higher than the demand of cars to ship, the pricing goes down.  If the demand to ship a car is higher than the supply of car haulers, then this drives the pricing up, as people fight for the spots on the trucks by paying more to secure a spot. The current price of diesel fuel will also affect the cost to ship a car.  Also, the weight and size for the car you need to ship with determine how much it cost to ship a car.\nYou can get a free car shipping quote by filling out our car shipping form online, calling us at 555-555-5555 to speak with a Car Transport Texas expert.  Once you book a Car Transport Texas job with ASAP Auto Shipping you will have a dedicated agent walking you through the entire car shipping process from start to finish.  We are a 5-star rated car shipping Texas company and have the car shipping reviews to back that up.",
+        }
+    ],
+    utah:[
+        {
+            img:utah,
+            title:"Utah Auto Shipping",
+            header:"Car Transport Utah with ASAP Auto Shipping",
+            content:"The great state of Utah is stuffed full of nature’s beauty. From large sand dunes that stretch for many miles, to the rugged mountains with pine forest and great ski resorts, many people each year travel to Utah to explore its natural beauty and terrain.\nIn 2002, the winter Olympics were hosted in Salt Lake City, Utah.  Utah’s economy is largely based on Agriculture, Tourism, and Mining. Salt Lake County is linked to the seaports in Portland, Seattle, Oakland, and Los Angeles by the Union Pacific Rail Road. This means international car shipping is very accessible for the residents of Utah.  ASAP Auto Shipping is one of the best car shipping companies Utah and have the knowledge and experience you want when you ship a car.",
+        },
+        {
+            header:"Car Shipping Utah",
+            content:"Car Shipping to Utah, Car Shipping from Utah with ASAP Auto Shipping.\nIf you are planning a move to or from Utah, or just a vacation, and want your recreational vehicle there, you may be needing to arrange Car Shipping Utah services. Consider using the experts at ASAP Auto Shipping to handle your Auto Transport Utah. Moving can be stressful, and many people start planning their move thinking that by driving their car, they will save money over hiring an auto shipping company.\nBut after you start adding up the things involved with driving a car a long distance, like the time, hotel, food, gas, and wear and tear on your car, the cost to ship a car becomes much more of an attractive option. If you are looking for the best car shipping companies Utah, then look no further.  ASAP Auto Shipping has spent many years compiling a preferred list of reliable auto carriers that we use for our Car Transport Utah.",
+        },
+        {
+            header:"Car Transport Utah Options",
+            content:"Let’s say you live in New York and found your dream car online at a dealership in Utah.  How are you going to get it home?  Our Car Transport Utah services is the best choice to ship your car back home. If you are looking for the most affordable way to ship a car, then open-air car transport is the best option. If you need that extra peace of mind and protection from the outside elements, then enclosed car transport is the right choice for you.  All our enclosed car carriers carry a minimum of 1,000,000 dollars in cargo insurance.\nASAP Auto Shipping also offers an expedited car shipping service if you need a car shipped quickly. However, you can expect to pay about 40% more for expedited car transport versus a standard 5 day pick up window.  Contact us today for a free car transport Utah quote by filling out our car shipping form online, or calling us at 555-555-5555 to speak with one of our car shipping experts.  All ASAP Auto Shipping car transport agents are equipped to hand all your questions about the car shipping process from A to Z.",
+        },
+        {
+            header:"Cost Factors of Car Transport Utah",
+            content:"One of the biggest factors of how much it costs to ship a car is the supply of auto transporters headed in the direction you want to go.  If the supply of carriers is greater than the demand of cars to ship, then the price goes down.\nIf the demand of cars to ship and supply of carriers is low, then the cost to ship a car goes up.  The difficulty of your pick up or drop off location will also play a role in how much it cost to ship a car.  The closer you are to a major interstate, the better price you can expect. The current price of diesel fuel will also play a role in the cost to ship a car. The larger the pickup window you can work with will also give you a better chance of getting a cheaper price. Beware of very cheap car shipping quotes, as many times they are associated with bait and switch pricing tactics.",
+        }
+    ],
+    vermont:[
+        {
+            img:vermont,
+            title:"Vermont Auto Shipping",
+            header:"Vermont Car Transport with ASAP Auto Shipping",
+            content:"Vermont is a beautiful state, from Lake Champlain in the west, to the Green Mountains in the East. Vermont also is known for great ski resorts, hiking, climbing, University of Vermont and Bennington College.  When the ski season is over, the foliage season kicks in. Fall in Vermont is beautiful, and many people travel to Vermont to see this and ride the ski lifts to get the great views. However, once the fall is over and the weather turns cold, many of the Vermont resident choose to spend the winters in Florida or a southern state with warm weather. During this time, Car Transport Vermont is in high demand and ASAP Auto Shipping is very busy shipping cars from Vermont to Florida.",
+        },
+        {
+            header:"Car Shipping Vermont",
+            content:"Car Shipping Vermont with ASAP Auto Shipping.\nWhether you are moving to or from Vermont, or even bought your dream car online and need to get it back to Vermont, ASAP Auto Shipping is the preferred choice for Vermont Car Transport Services.  It's very common to think that driving your car when moving is going to save you money. However, when you add up the time spent driving, hotel and food, gas money, and wear and tear on the car, the cost to ship car becomes much more attractive. Let ASAP Auto Shipping handle your Car Transport Vermont. We have the experience and knowledge that it requires to get a reliable and affordable car transport service.  Contact us today for a free car shipping Vermont quote.",
+        },
+        {
+            header:"Vermont Car Transport Options",
+            content:"When you are considering Vermont Car Transport, you have several options.  Open-air Car Transport is the most economical choice and very reliable.  It's cheaper, due to the car haulers being able to carry 8-10 cars at a time versus an enclosed car transporter, who can only ship 4-6 cars at a time. If you are shipping a luxury, antique, or high-end vehicle, then enclosed car transport Vermont may be your best option, as it adds protection from the outside elements and much higher cargo insurance.\nOpen-air Car transport Vermont usually carry about 250,000 dollars in cargo insurance. The enclosed car transporters Vermont carry a minimum of 1,000,000 dollars of cargo insurance, giving the client a little extra peace of mind when shipping a more expensive car to or from Vermont. ASAP Auto Shipping also offers expedited Car Transport Vermont for people that are in a hurry to get their vehicle picked up and dropped off.  You can expect to pay about 40% more for this Vermont Car Shipping Service.",
+        },
+        {
+            header:"Cost Factors of Vermont Car Transport",
+            content:"There are several things that go into the cost to ship a car. The biggest factor of how much it cost to ship car is the supply of car transporters in the area headed your way during the time you need to ship your car. The time of year will also greatly affect the cost to ship car in Vermont, as it’s a big snowbird state. You can expect the cost to ship a car south during snowbird season to raise about 30-40%. Also, the current cost of diesel fuel will affect how much it cost to ship a car.\nWe suggest you avoid very cheap car shipping quotes, as many times they are associated with bait and switch price tactics from not very reputable car shipping brokers. ASAP Auto Shipping will always be straight forward and transparent with the car shipping process and cost to ship a car.  We are a 5-star Car Transport Vermont Company and have spent many years compiling a preferred carrier list that we trust our client’s cars with. You can get a free Car Transport Vermont quote by filling out our car shipping form online, or calling us at 555-555-5555 to speak with one of our Vermont Car Transport experts.  All ASAP Auto Shipping car shipping agents have the experience to answer any questions about the car shipping process from start to finish.",
+        }
+    ],
+    virginia:[
+        {
+            img:virginia,
+            title:"Virginia Auto Shipping",
+            header:"Virginia Car Transport with ASAP Auto Shipping",
+            content:"The Capital of Virginia is Richmond. However, the most populated and largest city is Virginia Beach. Virginia Beach is also a big part of Virginia’s tourism industry. The climate in Virginia is mild most of the time. But due to its location, Virginia is prone to tropical storms, winter snow, and tornadoes. Road transportation is easily accessible in Virginia, as it has 9 major interstates running through it, including I-95. Virginia also has many United States highways, making Virginia Car Shipping very reliable.",
+        },
+        {
+            header:"Car Transport Virginia",
+            content:"Virginia does quite a bit of international car shipping with many ports along the rivers, including Newport News, Norfolk, and Portsmouth. Virginia also hosts the 3rd largest port on the East Coast. When it comes to Car Transport Virginia, ASAP Auto Shipping is the best Auto Transport Company in Virginia. We ship hundreds of cars each year to and from Virginia, giving us the experience and knowledge you want when transporting a car Virginia.\nIf you are planning a move to or from Virginia, then you may need to consider a Car Transport Company Virginia. Many people think that driving their car during a long-distance move will save them money. However, when you consider the time it takes to drive, the hotel, the food, and the gas cost, not to mention the wear and tear on your vehicle, the cost to ship a car becomes much more attractive.",
+        },
+        {
+            header:"Car Shipping Virginia Options",
+            content:"Many Virginia residents buy their dream cars online from great distances and need them shipped back home. There are a few different options for car shipping Virginia.  Open-air is the most economical way to ship a car and is very reliable. All our open car shipping carriers carry a minimum of 250,000 dollars in cargo insurance and open car shipping is generally easier to arrange quickly.\nIf you are shipping a luxury, antique, or high-end car, then enclosed car shipping would be the best choice. You can expect to pay 30-40% more for enclosed car transport. However, the protection from the outside elements, as well as the higher cargo insurance they carry, will give you that extra peace of mind.  ASAP Auto Shipping also can arrange expedited car transport if you are in a hurry to receive your dream car. Many times we hire a dedicated carrier to ship a car in this type of request, which can be very expensive. But if that is what you want, then we can do it no problem.",
+        },
+        {
+            header:"Cost Factors of Car Transport Virginia",
+            content:"Supply and demand are the biggest factors when it comes to how much it costs to ship a car. If the supply of auto haulers is higher than the demand to ship a car, then the price trends down.  However, if the demand to ship a car is higher than the supply of auto haulers, then the price will trend up. Most car transporters will fill their trucks with the highest paying loads first.\nMany Virginia residents like to escape the colder winter and move south during snowbird season driving up the cost to ship a car from Virginia to Florida. The current price of diesel will also determine how much it cost to ship a car.  Another factor is the weight and size of the car you need to ship, as the car haulers are governed by DOT and FMSCA on how much they can ship at any given time with their equipment.\nYou can get a free car shipping quote by filling out our car shipping form online, calling us at 555-555-5555 to speak with one of our car transport Virginia experts.  Once you book a job with ASAP Auto Shipping you will have a dedicated Auto Transport agent walking you through the entire process from start to finish.",
+        },
+    ],
+    washington:[
+        {
+            img:washington,
+            title:"Washington Auto Shipping",
+            header:"Car Transport from Washington State with ASAP Auto Shipping",
+            content:"Washington State is located on the most Northwestern part of the United States.  Known as the Evergreen State, Washington State has two different climate zones. In the eastern part of the state, the winters are cool and summers are warm. To the West of the Cascades, the winters are milder and summers are mildly humid. Seattle is the most industrialized and largest city in Washington State, but Olympia is the state's capital. Seattle has a large economy based in the manufacturing of transportation equipment.  With over 75 Ports in Washington State, International car shipping is very common here, with many cars going to Alaska by leaving out of Washington State on cargo ships.",
+        },
+        {
+            header:"Car Shipping Companies Washington State",
+            content:"If you are thinking about arranging auto transport Washington State and want to work with the best car transport companies Washington State, ASAP Auto Shipping is the preferred choice. ASAP Auto Shipping is a Five-Star Car Transport Washington State Company with years of experience shipping vehicles to and from Washington State. If you are thinking about moving to or from Washington State, consider taking the stress of getting your car moved by using our Car Shipping Washington State Services. We always suggest you get several quotes from Car Shipping Companies Washington State, but we consider ASAP Auto Shipping to be the best of all the Car Transport Companies Washington State.  We specialize in shipping a car to or from Washington State and have thousands of happy customer reviews online to back up what we say.",
+        },
+        {
+            header:"Car Transport Washington State Options",
+            content:"Whether you are buying your dream car online or you are moving to or from Washington State, you have several different Car Shipping Options depending on what you want to accomplish. If you are looking for Cheap Car Shipping, then open-air car transport is the most economical way to ship a car. The other benefits of shipping a car on an open trailer is that there are 10 times as many of those types of car haulers out on the road versus enclosed car transporters, making it easier to get picked up quickly.  However, if you are needing to ship a luxury, antique, or high-end car, then Enclosed Car Shipping is your best bet to ensure you have that extra protection from the outside elements.\nThere are also higher cargo insurance policies that enclosed car haulers carry versus open car haulers. Generally, an open car transporter will carry around 250,000 dollars of cargo insurance, whereas an enclosed car hauler will carry about 1 million dollars’ worth of cargo insurance, due the more expensive cars they transport. We double vet all our car shipping carriers with DOT and the FMSCA, making sure they have high safety ratings and good driving records. For a free car shipping quote, fill out our car shipping form online, or call us at 555-555-5555 to speak with one of our Car Shipping Washington experts.",
+        },
+        {
+            header:"Cost Factor Of Car Shipping Washington",
+            content:"How much does it cost to ship a car out of Washington State? That will largely be determined by what you are shipping and when. The supply and demand of Car Shipping Carriers will be the biggest cost factor in shipping cars. When there are more Car Haulers needing to fill spots, the price goes down. However, if there are more cars that need shipped than open spots on trucks, then the cost to ship a car goes up.  Also, if you want enclosed car shipping versus open-air, then you can expect to pay about 30-40% more. The weight and size of the vehicle you want to ship will also affect the cost to ship a car. Lastly, the current price of Diesel Fuel will pay a role in the cost to ship a car.",
+        },
+    ],
+    west_virginia:[
+        {
+            img:west_virginia,
+            title:"West Virginia Auto Shipping",
+            header:"Car Transport West Virginia with ASAP Auto Shipping",
+            content:"West Virginia has a nickname as the Mountain State. The most industrialized and largest city is Charleston, the state's capital. If you are looking for the best Car Shipping Company West Virginia, ASAP Auto Shipping is the preferred choice. There is only one water port located in West Virginia, The Port of Huntington-Tristate. However, there are many other dry ports located throughout the state.\nCar shipping to or from West Virginia is reasonably reliable, due to the state having 8 major interstates running through it; I-79, I-73, I-64, I-68, I-70, I-81, I-77, and I-74. West Virginia does have some hard to reach places for pick up and delivery,however, due to the mountain ranges and outskirt areas some people live in. This can drive up the price to ship a car in West Virginia.",
+        },
+        {
+            header:"Some Things To Know About West Virginia Car Shipping",
+            content:"There are many Car Transport Companies in WV, but ASAP Auto Shipping contacts the best car haulers for West Virginia Car Shipping. We ship hundreds of cars each year to and from West Virginia, and have spent years putting together a preferred list of Auto Haulers for our clients. We ask all the necessary questions to give the most accurate car shipping quotes that our clients can trust won’t change if they book a West Virginia Auto Transport with us.\nBeware of Cheap Car Shipping Quotes, as many times they are associated with bait and switch tactics some brokers use to get you in a pinch. At the last minute, they give you a reason the price needs to go up if you want your car shipped when you do. Here are some things you should consider that will affect the cost of shipping a car West Virginia.\n- How fast do you need your car picked up?\n- Do you need enclosed or open-air car transport?\n- Do you want door-to-door pickup and drop off?\n- What time of the year do you need your car transported?\nThese all are question our car shipping agents will ask you and factor into the quote for shipping a car to or from West Virginia.",
+        },
+        {
+            header:"Car Shipping West Virginia",
+            content:"If you are moving to or from West Virginia, or bought your dream car online and need it shipped home, ASAP Auto Shipping is one of the Best Auto Transport Companies West Virginia.  Let us handle the stress of moving your car, so you can focus on the moving part, as that’s stressful enough. Online car shopping has also been on the rise in the last 5 years, causing a much bigger demand for car transport for cars bought a long distance from home.\nIf you are looking for the cheapest way to ship a car, then open-air car transport is the best choice, as these car haulers can transport 8-10 vehicles at a time. You can expect to pay 30-40% more if you need enclosed car transport. However, you also get extra peace of mind with the protection from the outside elements and a much higher cargo insurance these types of carriers have.",
+        },
+        {
+            header:"Getting West Virginia Car Shipping Quotes",
+            content:"With most things, it's always good to get several different quotes when hiring for a service like car shipping. How much it cost to ship a car will vary with companies. The main difference is how much the broker fee will be and what type of quality auto haulers the broker hires.  ASAP Auto Shipping always hires the best drivers.\nWe never bait and switch our prices, and we provide our own free contingency cargo insurance to back up the car carriers. It's easy to get a free car shipping quote with ASAP Auto Shipping.  You can fill out our car shipping form online, call us at 555-555-5555 to speak with one of our West Virginia car transport agents.",
+        },
+    ],
+    wisconsin:[
+        {
+            img:wisconsin,
+            title:"Wisconsin Auto Shipping",
+            header:"Auto Transport Wisconsin with ASAP Auto Shipping",
+            content:"Located in the north central region of the United States, Wisconsin, also known as the Badger State, is a great state with many things to offer. Milwaukee is the Capital for the state, as well as the largest and most industrialized. The oldest city in Wisconsin is Green Bay, which is also one of 16 port cities Wisconsin hosts.\nIt's been a long tradition to move things by water, which started back in the late 1600’s. Car Shipping to or from Wisconsin is very reliable, due to 5 major interstates going through it, including I-90, I-39, I-43, I-41, and I-94.  The time of year can play a big role in car shipping Wisconsin.  During the winter, the state's climate can get very harsh, with major snowstorms that can shut down the road systems.",
+        },
+        {
+            header:"Best Car Shipping Companies Wisconsin",
+            content:"When moving to or from Wisconsin, you man be considering using a car shipping Wisconsin Service.  ASAP Auto Shipping is one of the Best Car Transport Companies in Wisconsin.  We ship hundreds of vehicles in and out of this state each year, giving us the knowledge and car shipping experience you will want. When planning a long distance move, many people think they will save money by driving their car instead of paying to have it shipped. But when you add up the time it takes to drive, hotel cost, fuel cost, and wear and tear on the car, the cost to ship a car becomes much more attractive.\nWhen arranging car Shipping Wisconsin, it's best to get a few different quotes from reputable car shipping companies. We suggest avoiding the cheap car shipping quotes, as many times they are associated with bait and switch tactics from brokers. With ASAP Auto Shipping you will always get an accurate quote for the time you need your car shipped, and we back that quote for 10 days. Contact us today for a free auto transport quote.",
+        },
+        {
+            header:"Cost Factors Of Wisconsin Auto Transport",
+            content:"There are three main factors that will determine the cost to ship a car Wisconsin. The first is the time of year, because during the winter many of the seniors move south to avoid the winter weather, which drives up the cost to ship a car. The second thing that will affect the cost to ship a car is the year, make, and model. This will help figure out the size and weight of the vehicle. The larger and heavier the car is, the more it will cost to ship the car.\nThe final factor that can cause the price to vary quite a bit is whether you need open-air or enclosed car transport. You can expect to pay 30-40% more for enclosed car shipping, but it also brings the extra peace of mind with protection from the outside elements during transport. ASAP Auto Shipping can arrange expedited car transport for those that need a car moved in a hurry. This type of car shipping can be very expensive, as many times we have to arrange a dedicated transporter.",
+        },
+        {
+            header:"Options For Getting A Car Shipping Wisconsin Quote",
+            content:"We always suggest getting a few quotes, but we consider ourselves the best car shipping company Wisconsin. At ASAP Auto Shipping, you can get an auto transport by filling out our car shipping form online or calling us at 555-555-5555 to speak with one of our Wisconsin Car Shipping agents.  Once you book an auto transport with us, ASAP Auto Shipping will make sure your timelines are met, your car is safe during shipping, and you have a dedicated shipping agent from start to finish.",
+        }
+    ],
+    wyoming:[
+        {
+            img:wyoming,
+            title:"Wyoming Auto Shipping",
+            header:"Auto Transport Wyoming with ASAP Auto Shipping",
+            content:"The great state of Wyoming is found in the mountain region of the United States. Also known as the Equality State, Wyoming was the first state to give women the right to vote. Wyoming is also the 2nd most sparsely populated state in the country. Even with 4 major interstates running through it, Wyoming Car shipping can be a tricky process.  ASAP Auto Shipping works with many car carriers to provide you with good auto transport quotes you can rely on. We are considered the preferred choice and one of the best car shipping companies in Wyoming.",
+        },
+        {
+            header:"Car Shipping Wyoming",
+            content:"If you are looking to move to or from Wyoming, you may be considering a car shipping company to move your car, so you don’t have to worry about driving it. Many people think that driving a car for a long distance move will save them money.\nThe truth is, when you add up the time it takes to drive the car, the cost of hotels and food, and the wear and tear on your car, the cost to ship the car vs driving it becomes way more attractive. There are several things to consider that will affect the cost to ship a car Wyoming. The supply of car carriers and open spots on trucks headed in the direction you want to go will greatly affect the price. There are many hard to reach, off the path spots in Wyoming for car haulers to have to go, which can drive up the price to ship a car if you are in one of these areas. Contact us today for a free car shipping quote so you can get back to your move.",
+        },
+        {
+            header:"Car Transport Options Wyoming",
+            content:"When considering the shipping of a vehicle, you have several options.  The most economical way to ship a car is with an open-air carrier.  These types of trucks can ship 8-10 cars at a time, spreading the cost more to move the vehicles. The downside to open-air car shipping is that your car is exposed to the outside elements of road travels and weather.\nIf you are wanting to ship a luxury, antique, or high-end car, then enclosed car shipping is the best option. This gives you the peace of mind and protection from outside elements. However, it will cost 30-40% more than an open-air car carrier. ASAP Auto Shipping can also arrange expedited car shipping for folks in a hurry, for those who just want a dedicated car shipping experience. Open car carriers usually carry around 250,000 dollars of cargo insurance, whereas enclosed car shipping carriers carry up to a million dollars of cargo coverage.",
+        },
+        {
+            header:"Getting A Wyoming Car Shipping Quote",
+            content:"As with any service, we suggest you always get a few different car shipping quotes from reputable companies.  If you get a very cheap car shipping quote, beware. Many times they can be associated with bait and switch tactics from car shipping brokers.\nASAP Auto Shipping may not be the cheapest car shipping company, but we will stand by our quote for up to 10 days and never change the price on you. It's easy to get a free quote from ASAP Auto Shipping. You can fill out our car shipping form, or call us at 555-555-5555 to speak with one of our Wyoming Car Shipping experts.  When you arrange one of our Auto Transport Wyoming services, you will get a dedicated agent that walks you through the entire car shipping process from start to finish.",
+        },
+    ]
 }
