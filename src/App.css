@@ -440,7 +440,7 @@ li{
   min-height: 25rem;
   background-image: url(Pictures/undraw_connected_world_wuay.svg);
   background-size: contain;
-  position: relative;
+  /* position: relative; */
   user-select: none;
 }
 
@@ -454,6 +454,18 @@ li{
 }
 .states svg path:hover{
   fill: rgba(3, 140, 37, 0.8) !important;
+}
+.tooltip{
+  width: max-content;
+  background-color: var(--cultured);
+  box-shadow: var(--shadow);
+  position: absolute;
+  padding: 0.5rem;
+  border-radius: 10px;
+  transition: 0.05s ease-in-out;
+  text-transform: capitalize;
+  user-select: none;
+  pointer-events: none;
 }
 #state_text{
   fill: var(--cultured);
