@@ -3,12 +3,11 @@ import { Link, useHistory, useRouteMatch } from 'react-router-dom'
 const PageNotFound = () => {
     const { url } = useRouteMatch()
     const history = useHistory()
-    const updatedPath = (()=>{
+    (()=>{
         if(url === '/vehicle_information'||url === '/contact_information'||url === '/quote_submitted'){
             history.push('/')
         }
     })()
-    console.log(updatedPath);
     return ( 
         <div className='page_not_found'>
             <svg xmlns="http://www.w3.org/2000/svg" data-name="Layer 1" width="860.13137" height="571.14799" viewBox="0 0 860.13137 571.14799" xlink="http://www.w3.org/1999/xlink">

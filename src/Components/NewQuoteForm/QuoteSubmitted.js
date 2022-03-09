@@ -1,7 +1,6 @@
 import { Link, useRouteMatch } from 'react-router-dom'
 const QuoteSubmitted = () => {
     const { url } = useRouteMatch()
-    console.log(url);
     const updatedPath = (()=>{
         if(url === '/quote_submitted'){
             return ''
@@ -9,7 +8,6 @@ const QuoteSubmitted = () => {
             return `/${url.split('/')[1]}`
         }
     })()
-    console.log(updatedPath);
     return ( 
         <div className='submitted_quote'>
             <h1>Your Quote Request has been sent!</h1>

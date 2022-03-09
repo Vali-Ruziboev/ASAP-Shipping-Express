@@ -440,7 +440,6 @@ li{
   min-height: 25rem;
   background-image: url(Pictures/undraw_connected_world_wuay.svg);
   background-size: contain;
-  /* position: relative; */
   user-select: none;
 }
 

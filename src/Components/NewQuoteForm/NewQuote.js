@@ -1,12 +1,11 @@
-import { useEffect, useState } from "react"
-import {BrowserRouter as Router, Route, Switch, useLocation, useHistory} from 'react-router-dom'
+import { useState } from "react"
+import {BrowserRouter as Router, Route, Switch, useHistory} from 'react-router-dom'
 import ContactInformation from "./ContactInformation"
 import QuoteSubmitted from "./QuoteSubmitted"
 import { motion } from 'framer-motion'
-import VehicleInformation from "./VehicleInformation"
+import VehicleInformation from "./VehicleInformation";
 import ZipCodes from "./ZipCodes"
 import emailjs, {init} from '@emailjs/browser';
-import PageNotFound from "../PageNotFound"
 init("user_1Ig2WajVAhHklQ3Nutlw2")
 
 const NewQuote = ({ url }) => {

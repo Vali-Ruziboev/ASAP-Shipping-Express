@@ -14,7 +14,6 @@ const VehicleInformation = ({year, setYear, make, setMake, model, setModel, type
         setType([...type, 'Open'])
     }
     const { url } = useRouteMatch()
-    console.log(url.split('')[url.length-1]);
     const updatedPath = (()=>{
         if(url === '/vehicle_information'){
             return '/'
@@ -26,7 +25,6 @@ const VehicleInformation = ({year, setYear, make, setMake, model, setModel, type
             }
         }
     })()
-    console.log(updatedPath);
     // getting current year
     const currentYear = new Date().getFullYear()
     // validator
