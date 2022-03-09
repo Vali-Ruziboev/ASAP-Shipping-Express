@@ -1,5 +1,3 @@
-import { useLocation } from "react-router-dom";
-import { TransitionGroup, CSSTransition  } from 'react-transition-group';
 import Header from "./Header";
 import { faqsData } from "./Data";
 import { useState } from "react";
