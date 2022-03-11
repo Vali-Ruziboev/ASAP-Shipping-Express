@@ -452,7 +452,7 @@ li{
   stroke: var(--head-text);
 }
 .states svg path:hover{
-  fill: rgba(3, 140, 37, 0.8) !important;
+  fill: rgba(16, 167, 209, 0.8) !important;
 }
 .tooltip{
   width: max-content;
@@ -682,7 +682,7 @@ li{
   margin: 0 auto;
   width: max-content;
   padding:0.5rem;
-  background-color: rgb(17, 202, 58);
+  background-color: rgb(16, 167, 209);
   border-radius: 10px;
   
 }
@@ -703,7 +703,7 @@ li{
   animation: load infinite linear 1s;
 }
 .contact_us button:hover{
-  background-color: rgba(17, 202, 58);
+  background-color: rgba(16, 167, 209);
 }
 @keyframes load{
   100% {
@@ -815,4 +815,11 @@ a{
     max-width:500px;
     min-width: 300px;
   }
+}
+.author{
+  position: absolute;
+  right: 1rem;
+  bottom: 2rem;
+  font-size: 12px;
+  color: gray;
 }
