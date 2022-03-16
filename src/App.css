@@ -310,7 +310,6 @@ li{
   position: relative;
   overflow-y: hidden;
   user-select: none;
-  background-image: url(Pictures/bg-2.svg);
   background-size: contain;
   background-attachment: fixed;
 }
@@ -438,8 +437,6 @@ li{
 .states{
   padding: 2rem;
   min-height: 25rem;
-  background-image: url(Pictures/undraw_connected_world_wuay.svg);
-  background-size: contain;
   user-select: none;
 }
 
@@ -498,7 +495,6 @@ li{
 .contact_us_today{
   margin: 2rem 0;
   height: max-content;
-  background-image: url(Pictures/undraw_my_current_location_re_whmt.svg);
   background-size: contain;
   background-repeat: no-repeat;
   
@@ -538,22 +534,8 @@ li{
   padding: 1rem;
   position: relative;
 }
-.faqs::before{
-  position: absolute;
-  content: url(Pictures/faqs_1.svg);
-  width: 50%;
-  height: max-content;
-  z-index: -1;
-}
-.faqs::after{
-  position: absolute;
-  content: url(Pictures/faqs_2.svg);
-  width: 50%;
-  height: max-content;
-  bottom: 0;
-  right: 0;
-  z-index: -1;
-}
+
+
 .faqs h2{
   display: block;
   margin: 0 auto;
@@ -587,17 +569,7 @@ li{
   color: var(--cultured);
   box-shadow: inset var(--shadow);
 }
-.guides:before{
-  content: '';
-  display: block;
-  margin: 2rem auto;
-  width:100%;
-  height: 20rem;
-  background-image: url(Pictures/undraw_completed_steps_re_h9wc.svg);
-  background-repeat: no-repeat;
-  background-size: contain;
-  background-position: center;
-}
+
 .guides_container h2{
   width: fit-content;
   display: block;
@@ -629,23 +601,8 @@ li{
   border-radius: 10px;
   background-color: var(--cultured);
 }
-.contact_us_wrapper::before{
-  width: 40%;
-  height: max-content;
-  position: absolute;
-  content: url(Pictures/conact_us_1.svg);
-  left: 0;
-  z-index: -1;
-}
-.contact_us_wrapper::after{
-  width: 40%;
-  height: max-content;
-  position: absolute;
-  content: url(Pictures/contact_us_2.svg);
-  right: 0;
-  bottom: 0;
-  z-index: -1;
-}
+
+
 .contact_us h3{
   width: 100%;
   text-align: center !important;
