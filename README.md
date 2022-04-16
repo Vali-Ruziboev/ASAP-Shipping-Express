@@ -21,7 +21,7 @@ Users are be able to:
 - Navigate to multiple pages
 - Navigate through visual menu for US states
 - Request online quote for transport a vehicle
-- Send message to busines owners on Contact Us page
+- Send message to business owners on Contact Us page
 
 
 ### Screenshot
